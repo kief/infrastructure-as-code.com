@@ -24,11 +24,6 @@ default_locale: "en" # blog sidebar language set, only include: English(en) and 
 locales:
     en:
       Archives: "Archives"
-      Blogroll: "Blogroll"
-      Categories: "Categories"
-      Copyright_Notice: "Copyright Notice"
-      Resent_Posts: "Resent Posts"
-      Tags: "Tags"
       Previous: "Older"
       Next: "Newer"
       PostedInCategories: "Posted in"
@@ -36,15 +31,13 @@ locales:
       PostDate: "on "
 
 
-### your Blogroll info, only name can shown on the page.
-
-Blogroll:
-    - name: Freshman21
-      href: http://yulijia.net/freshman21
-      title: Another Jekyll blog theme
-    - name: author's website
-      href: http://yulijia.net/
-      title: Lijia Yu's website
+Links:
+  - name: DevOpsDays
+    href: http://DevOpsDays.org
+    title: DevOpsDays website
+  - name: Kief's website
+    href: http://kief.com/
+    title: Kief's website
 
 
 ### Build settings

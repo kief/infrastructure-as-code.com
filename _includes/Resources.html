@@ -1,0 +1,7 @@
+<div class="sidebar-module">
+  <h4>Links</h4>
+  {% for site in site.Links %}
+  <li><a href="{{ site.href }}" title="{{ site.title }}">{{ site.name }}</a></li>
+  {% endfor %}
+</div>
+
