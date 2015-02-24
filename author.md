@@ -1,8 +1,7 @@
 ---
 layout: page
-title: About
-comments: yes
-permalink: /about/
+title: Author
+permalink: /author/
 ---
 
 
