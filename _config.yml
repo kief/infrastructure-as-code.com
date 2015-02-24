@@ -1,11 +1,53 @@
-# Site settings
+### Site info:
 title: Infrastructure as Code
+tagline: Information about the upcoming book by Kief Morris
+author: Kief Morris
 email: site@infrastructure-as-code.com
-description: > # The upcoming book from O'Reilly Publishing by Kief Morris.
+description: "More description"
+keywords: "infrastructure, cloud, automation"
 baseurl: ""
 url: "http://infrastructure-as-code.com"
+
+
+### Personal info and site tools info:
 twitter_username: kief
 github_username:  kief
+# disqus_shortname: freshman21
+favicon:     "/images/favicon.ico"
+aboutme_photo: "/images/kief_profile_small.jpg"
 
-markdown: redcarpet
-pygments: true
+
+### Site setting:
+default_column: "two" # blog style: two columns, if default_column != "two", you will see a one column blog.
+default_locale: "en" # blog sidebar language set, only include: English(en) and Chinese (cn)
+
+locales:
+    en:
+      Archives: "Archives"
+      Blogroll: "Blogroll"
+      Categories: "Categories"
+      Copyright_Notice: "Copyright Notice"
+      Resent_Posts: "Resent Posts"
+      Tags: "Tags"
+      Previous: "Older"
+      Next: "Newer"
+      PostedInCategories: "Posted in"
+      Taggedwith: "and tagged"  
+      PostDate: "on "
+
+
+### your Blogroll info, only name can shown on the page.
+
+Blogroll:
+    - name: Freshman21
+      href: http://yulijia.net/freshman21
+      title: Another Jekyll blog theme
+    - name: author's website
+      href: http://yulijia.net/
+      title: Lijia Yu's website
+
+
+### Build settings
+markdown: kramdown
+highlighter: pygments
+paginate: 5
