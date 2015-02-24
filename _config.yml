@@ -1,0 +1,11 @@
+# Site settings
+title: Infrastructure as Code
+email: site@infrastructure-as-code.com
+description: > # The upcoming book from O'Reilly Publishing by Kief Morris.
+baseurl: ""
+url: "http://infrastructure-as-code.com"
+twitter_username: kief
+github_username:  kief
+
+markdown: redcarpet
+pygments: true
