@@ -59,6 +59,11 @@ ul, ol, dl, figure,
   box-shadow: 1px 1px 10px #BBB;
 }
 
+.booktitle { 
+  font-style: italic;
+}
+
+
 /*for media*/
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
@@ -85,7 +90,6 @@ ul, ol, dl, figure,
 }
 
 
-
 /**
  * Images
  */
@@ -95,7 +99,12 @@ img {
   align: left;
 }
 
-
+.showcase {
+  float: right;
+  align: right;
+  width:50%;
+  height:50%;
+}
 
 /**
  * Figures
