@@ -15,7 +15,14 @@ title: Feed
     {% for post in site.posts limit:10 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
+        <description>
+{{ post.content | xml_escape }}
+<p><strong>Infrastructure as Code</strong> by Kief Morris, will be published by O'Reilly Publishing.</p>
+<p>
+  &lt;a href="http://oreil.ly/1JKIBVe"&gt;Pre-order&lt;/a&gt; |
+  &lt;a href="http://bit.ly/17WCAU1"&gt;Sign up for email announcements&lt;/a&gt;
+</p>
+</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
