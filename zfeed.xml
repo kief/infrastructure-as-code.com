@@ -19,8 +19,8 @@ title: Feed
 {{ post.content | xml_escape }}
 <p><strong>Infrastructure as Code</strong> by Kief Morris, will be published by O'Reilly Publishing.</p>
 <p>
-  &lt;a href="http://oreil.ly/1JKIBVe"&gt;Pre-order&lt;/a&gt; |
-  &lt;a href="http://bit.ly/17WCAU1"&gt;Sign up for email announcements&lt;/a&gt;
+  <a href="http://oreil.ly/1JKIBVe">Pre-order</a> |
+  <a href="http://bit.ly/17WCAU1">Sign up for email announcements</a>
 </p>
 </description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
