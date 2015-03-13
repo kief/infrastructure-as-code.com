@@ -8,11 +8,11 @@ permalink: /book/
 <span class="booktitle">Infrastructure as Code</span> by Kief Morris will be published by O'Reilly Publishing.
 </p>
 
-<img class="showcase"
+[<img class="showcase"
   title="Infrastructure as Code book cover"
   src="/images/infrastructure_as_code_medium.png"
   alt="Book cover" width="512" height="672"
-  />
+  />](http://shop.oreilly.com/product/0636920039297.do)
 
 <p>
 Virtualization, cloud infrastructure, and configuration automation tools have swept into mainstream IT over the past decade. The promise of these tools is that they will automatically do the routine work of running an infrastructure, without involving the humans on the infrastructure team. Systems will all be up to date and consistent by default. Team members can spend their time and attention on high level work that makes significant improvements to the services they support. They can quickly, easily, and confidently adapt their infrastructure to meet the changing needs of their organization.
