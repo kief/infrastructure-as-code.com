@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Talk at operability.io conference"
-date:   2015-20-02 18:18:00
+date:   2015-10-02 18:18:00
 categories: talks
 ---
 
