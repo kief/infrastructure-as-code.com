@@ -8,6 +8,8 @@ keywords: "infrastructure as code, infrastructure, cloud, automation, book, devo
 baseurl: ""
 url: "http://infrastructure-as-code.com"
 
+# Don't copy stuff
+exclude: [ "*.sh", "*.json", "LICENSE", "README" ]
 
 ### Personal info and site tools info:
 twitter_username: kief
