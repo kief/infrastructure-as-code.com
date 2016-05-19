@@ -1,9 +1,9 @@
 ### Site info:
 title: Infrastructure as Code
-tagline: Information about the upcoming book by Kief Morris
+tagline: Information about the book by Kief Morris
 author: Kief Morris
 email: site@infrastructure-as-code.com
-description: "Information about Infrastructure as Code, supporting the upcoming book by Kief Morris"
+description: "Information about Infrastructure as Code, supporting the book by Kief Morris"
 keywords: "infrastructure as code, infrastructure, cloud, automation, book, devops, automation, virtualization"
 baseurl: ""
 url: "http://infrastructure-as-code.com"
