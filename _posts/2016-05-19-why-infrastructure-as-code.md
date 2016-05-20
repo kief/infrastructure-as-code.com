@@ -6,7 +6,7 @@ categories: book
 published: true
 ---
 
-![smiley](/images/question-mark.jpg){: height="50%" width="50%" align="right" hspace="5"}
+![question mark](/images/question-mark.jpg){: height="50%" width="50%" align="right" hspace="5"}
 The thumbnail definition that I trot out for Infrastructure as Code is using development practices and tools to manage infrastructure. This sounds like a natural thing to do, if you're defining your infrastructure in definitions files used by tools like Chef, Puppet, and Ansible. These files look like source code, and can be checked into Git or other VCS systems like source code.
 
 But what are the actual benefits of treating your infrastructure this way? Configuring infrastructure by editing files in a VCS is a dramatically different way of working than the old-school alternatives - clicking in a GUI-driven configuration, or logging into servers and editing configuration files. To make this shift, and to really get the benefits from it, you need to be pretty clear on what you're trying to get out of it.
