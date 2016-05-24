@@ -32,7 +32,7 @@ Billing and budgeting also need to be structured to support on-demand, increment
 
 Also, if your "cloud" hosting provider charges you for the hardware you'll be using, and then charges you for each VM you run, then you're being taken advantage of. That's not how cloud works.
 
-![Lego SHIELD carrier](/images/lego-shield-carrier.jpg){: align="right" hspace="5"}
+![Lego SHIELD helicarrier](/images/lego-shield-carrier.jpg){: align="right" hspace="5"}
 
 ### Self-Service
 
