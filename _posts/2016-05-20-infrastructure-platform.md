@@ -3,7 +3,6 @@ layout: post
 title:  "Dynamic Infrastructure Platforms"
 date:   2016-05-20 10:20:00
 categories: book
-published: true
 ---
 
 A _dynamic infrastructure platform_ is a fundamental requirement for Infrastructure as Code. I define this as _"a system that provides computing resources, particularly servers, storage, and networking, in a way that they can be programmatically allocated and managed."_

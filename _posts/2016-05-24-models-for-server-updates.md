@@ -3,7 +3,6 @@ layout: post
 title:  "Different models for updating servers"
 date:   2016-05-24 09:40:00
 categories: book
-published: true
 ---
 
 Most teams begin using automation tools like Terraform, Puppet, Chef, and Ansible to provision new infrastructure, but don't use them regularly to make changes and apply updates once the systems are running. Building and configuring a new system from scratch is fairly easy. But writing definition files and scripts that will run reliably across a large number of existing systems is hard.

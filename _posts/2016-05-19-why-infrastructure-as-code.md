@@ -3,7 +3,6 @@ layout: post
 title:  "Why Infrastructure as Code"
 date:   2016-05-19 13:20:00
 categories: book
-published: true
 ---
 
 ![question mark](/images/question-mark.jpg){: height="50%" width="50%" align="right" hspace="5"}
