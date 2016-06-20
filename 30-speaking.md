@@ -10,7 +10,7 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 21 June, 2016 [Infracoders London](http://www.meetup.com/Infracoders-London/events/231184765/)
 
-29 June, 2016 Madrid (Details TBA)
+29 June, 2016 [ThoughtWorks Madrid](http://www.meetup.com/ThoughtWorks-Madrid/events/231646246)
 
 12 July, 2016 [XConf Hamburg](https://info.thoughtworks.com/Xconf-hamburg-2016.html)
 
