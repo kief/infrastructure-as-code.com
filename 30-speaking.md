@@ -8,15 +8,13 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-21 June, 2016 [Infracoders London](http://www.meetup.com/Infracoders-London/events/231184765/)
+27 June, 2016 [ThoughtWorks webinar](https://attendee.gotowebinar.com/register/8513452938467949314) discussion with Martin Fowler any myself on Infrastructure as Code and development practices
+
+28 June, 2016 [NGINX Webinar](https://www.nginx.com/resources/webinars/how-to-adopt-infrastructure-as-code/)
 
 29 June, 2016 [ThoughtWorks Madrid](http://www.meetup.com/ThoughtWorks-Madrid/events/231646246)
 
 12 July, 2016 [XConf Hamburg](https://info.thoughtworks.com/Xconf-hamburg-2016.html)
-
-27 June, 2016 ThoughtWorks book launch webinar / discussion with Martin Fowler
-
-28 June, 2016 [NGINX Webinar](https://www.nginx.com/resources/webinars/how-to-adopt-infrastructure-as-code/)
 
 14 July, 2016 [XConf Manchester](https://info.thoughtworks.com/Xconf-Manchester-2016.html)
 
@@ -30,6 +28,8 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 
 ## Previous
+
+21 June, 2016 [Infracoders London](http://www.meetup.com/Infracoders-London/events/231184765/)
 
 13 June, 2016 [QCon New York](https://qconnewyork.com/ny2016/presentation/implementing-infrastructure-code)
 
