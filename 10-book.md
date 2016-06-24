@@ -5,7 +5,7 @@ permalink: /book/
 ---
 
 <p>
-<span class="booktitle">Infrastructure as Code</span> by Kief Morris will be published by O'Reilly Publishing in June 2016.
+<span class="booktitle">Infrastructure as Code</span>, written by Kief Morris, from O'Reilly Publishing.
 </p>
 
 [<img class="showcase"
