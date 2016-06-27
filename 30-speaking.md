@@ -8,8 +8,6 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-27 June, 2016 [ThoughtWorks webinar](https://attendee.gotowebinar.com/register/8513452938467949314) discussion with Martin Fowler any myself on Infrastructure as Code and development practices
-
 28 June, 2016 [NGINX Webinar](https://www.nginx.com/resources/webinars/how-to-adopt-infrastructure-as-code/)
 
 29 June, 2016 [ThoughtWorks Madrid](http://www.meetup.com/ThoughtWorks-Madrid/events/231646246)
@@ -28,6 +26,8 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 
 ## Previous
+
+27 June, 2016 ThoughtWorks webinar - discussion with Martin Fowler any myself on Infrastructure as Code and development practices
 
 21 June, 2016 [Infracoders London](http://www.meetup.com/Infracoders-London/events/231184765/)
 
