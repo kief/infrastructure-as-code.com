@@ -18,6 +18,10 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 18 August, 2016 [San Francisco Book Launch](https://info.thoughtworks.com/Infrastructure-As-Code-SF-Launch.html) at ThoughtWorks.
 
+9 September, 2016 Berlin Book Launch at Thoughtworks (details TBD)
+
+10 September, 2016 Munich Book Launch at Thoughtworks (details TBD)
+
 20-22 September, 2016 [Velocity New York](http://conferences.oreilly.com/velocity/devops-web-performance-ny/public/schedule/detail/51192)
 
 18-21 October, 2016 [O'Reilly Software Architecture Conference](http://conferences.oreilly.com/software-architecture/engineering-business-eu) London
