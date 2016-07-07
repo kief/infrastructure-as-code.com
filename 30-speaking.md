@@ -8,13 +8,15 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-28 June, 2016 [NGINX Webinar](https://www.nginx.com/resources/webinars/how-to-adopt-infrastructure-as-code/)
-
-29 June, 2016 [ThoughtWorks Madrid](http://www.meetup.com/ThoughtWorks-Madrid/events/231646246)
+7 July, 2016 [London Book Launch](https://info.thoughtworks.com/Book-launch-infrastructure-as-code) at the ThoughtWorks office.
 
 12 July, 2016 [XConf Hamburg](https://info.thoughtworks.com/Xconf-hamburg-2016.html)
 
 14 July, 2016 [XConf Manchester](https://info.thoughtworks.com/Xconf-Manchester-2016.html)
+
+21 July, 2016 ThoughtWorks Barcelona (details TBA)
+
+18 August, 2016 [San Francisco Book Launch](https://info.thoughtworks.com/Infrastructure-As-Code-SF-Launch.html) at ThoughtWorks.
 
 20-22 September, 2016 [Velocity New York](http://conferences.oreilly.com/velocity/devops-web-performance-ny/public/schedule/detail/51192)
 
@@ -26,6 +28,10 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 
 ## Previous
+
+29 June, 2016 [ThoughtWorks Madrid](http://www.meetup.com/ThoughtWorks-Madrid/events/231646246)
+
+28 June, 2016 [NGINX Webinar](https://www.nginx.com/resources/webinars/how-to-adopt-infrastructure-as-code/)
 
 27 June, 2016 ThoughtWorks webinar - discussion with Martin Fowler any myself on Infrastructure as Code and development practices
 
