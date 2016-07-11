@@ -14,7 +14,7 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 14 July, 2016 [XConf Manchester](https://info.thoughtworks.com/Xconf-Manchester-2016.html)
 
-21 July, 2016 ThoughtWorks Barcelona (details TBA)
+21 July, 2016 [ThoughtWorks Barcelona](https://www.thoughtworks.com/locations/barcelona)
 
 18 August, 2016 [San Francisco Book Launch](https://info.thoughtworks.com/Infrastructure-As-Code-SF-Launch.html) at ThoughtWorks.
 
