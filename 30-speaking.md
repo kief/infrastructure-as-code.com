@@ -8,8 +8,6 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-7 July, 2016 [London Book Launch](https://info.thoughtworks.com/Book-launch-infrastructure-as-code) at the ThoughtWorks office.
-
 12 July, 2016 [XConf Hamburg](https://info.thoughtworks.com/Xconf-hamburg-2016.html)
 
 14 July, 2016 [XConf Manchester](https://info.thoughtworks.com/Xconf-Manchester-2016.html)
@@ -32,6 +30,8 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 
 ## Previous
+
+7 July, 2016 [London Book Launch](https://info.thoughtworks.com/Book-launch-infrastructure-as-code) at the ThoughtWorks office.
 
 29 June, 2016 [ThoughtWorks Madrid](http://www.meetup.com/ThoughtWorks-Madrid/events/231646246)
 
