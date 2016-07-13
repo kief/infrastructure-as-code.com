@@ -22,7 +22,7 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 18-21 October, 2016 [O'Reilly Software Architecture Conference](http://conferences.oreilly.com/software-architecture/engineering-business-eu) London
 
-14 November, 2016 [Guild42 Bern](http://guild42.ch/)
+14 November, 2016 [Guild42 Bern](http://guild42.ch/?p=622)
 
 15 November, 2016 [GOTO Berlin](http://gotocon.com/berlin-2016/)
 
