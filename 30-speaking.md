@@ -10,6 +10,8 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 18 August, 2016 [San Francisco Book Launch](https://info.thoughtworks.com/Infrastructure-As-Code-SF-Launch.html) at ThoughtWorks.
 
+30 August, 2016 Denver Infrastructure as Code talk / book launch at [Galvanize Platte](http://www.galvanize.com/campuses/denver-platte/)
+
 9 September, 2016 Berlin Book Launch at Thoughtworks (details TBD)
 
 10 September, 2016 Munich Book Launch at Thoughtworks (details TBD)
