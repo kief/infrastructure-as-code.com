@@ -8,12 +8,6 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-9 September, 2016 Berlin Book Launch at Thoughtworks (details TBD)
-
-10 September, 2016 Munich Book Launch at Thoughtworks (details TBD)
-
-20-22 September, 2016 [Velocity New York](http://conferences.oreilly.com/velocity/devops-web-performance-ny/public/schedule/detail/51192)
-
 18-21 October, 2016 [O'Reilly Software Architecture Conference](http://conferences.oreilly.com/software-architecture/engineering-business-eu) London
 
 14 November, 2016 [Guild42 Bern](http://guild42.ch/?p=622)
@@ -22,6 +16,14 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 
 ## Previous
+
+28 September, 2016 [CoOp and ThoughtWorks Manchester](https://www.meetup.com/ThoughtWorks-Manchester-Tech-Talk/events/233885562/)
+
+20-22 September, 2016 [Velocity New York](http://conferences.oreilly.com/velocity/devops-web-performance-ny/public/schedule/detail/51192)
+
+10 September, 2016 Munich Book Launch at Thoughtworks
+
+9 September, 2016 Berlin Book Launch at Thoughtworks
 
 30 August, 2016 Denver Infrastructure as Code talk / book launch at [Galvanize Platte](http://www.galvanize.com/campuses/denver-platte/)
 
