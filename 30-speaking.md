@@ -8,16 +8,18 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-28 October, 2016 [Swisscom Software Day](http://softwareday.swisscom.com/) Zurich
-
-14 November, 2016 [Guild42](http://guild42.ch/?p=622) Bern
-
-15 November, 2016 [GOTO Berlin](http://gotocon.com/berlin-2016/)
+Stay tuned ....
 
 
 ## Previous
 
-18-21 October, 2016 [O'Reilly Software Architecture Conference](http://conferences.oreilly.com/software-architecture/engineering-business-eu) London
+15 November, 2016 [GOTO Berlin](https://gotocon.com/berlin-2016/presentations/show_talk.jsp?oid=7862)
+
+14 November, 2016 [Guild42](http://guild42.ch/?p=622) Bern
+
+28 October, 2016 [Swisscom Software Day](http://softwareday.swisscom.com/) Zurich
+
+18-21 October, 2016 [O'Reilly Software Architecture Conference](http://conferences.oreilly.com/software-architecture/engineering-business-eu/public/schedule/detail/52377) London
 
 28 September, 2016 [CoOp and ThoughtWorks Manchester](https://www.meetup.com/ThoughtWorks-Manchester-Tech-Talk/events/233885562/)
 
