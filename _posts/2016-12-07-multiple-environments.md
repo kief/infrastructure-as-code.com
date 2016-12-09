@@ -2,7 +2,6 @@
 layout: post
 title:  "Managing multiple environments as code - Part 1"
 date:   2016-12-05 14:21:00
-categories: book
 published: false
 ---
 
@@ -86,7 +85,7 @@ This is a simple approach that makes everything visible in one place, but it doe
 Charity Majors shared [problems she ran into with this approach](https://charity.wtf/2016/03/30/terraform-vpc-and-why-you-want-a-tfstate-file-per-env/) using Terraform. The _blast radius_ (great term!) of a change is everything included in a stack. And note that this is still true even without Terraform state files, for example with a Cloud Formation template that defines multiple environments in the same way.
 
 
-### Pattern: Stack Per Environment
+### Pattern: Stack Definition Per Environment
 
 Charity (and others) suggests splitting your environments into separate stack definitions. Each environment would have its own directory with its own Terraform configuration:
 
@@ -108,6 +107,6 @@ So this pattern requires vigilance to keep the codebase consistent. This can be 
 
 ### Next: Stack Instance Per Environment
 
-Part 2 of this article will describe another pattern, maintaining a single, versioned definition file, which is used to provision and manage a separate stack instance for each environment.
+[Part 2 of this article](/2016/12/06/cd-for-infrastructure.html) will describe the *Environment Pipeline* pattern. This uses a single definition file, which is versioned and promoted through a Continuous Delivery-style pipeline.
 
 
