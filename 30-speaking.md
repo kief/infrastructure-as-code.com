@@ -8,16 +8,17 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-w/b 30 January, 2017, TBD ThoughtWorks meetup in Johannesburg, South Africa
+w/b 5 March, 2017, TBD ThoughtWorks meetup in Johannesburg, South Africa
 
-6-7 February, 2017 [Config Management Camp](http://cfgmgmtcamp.eu/) in Gent, Belgium
 
-13 March, 2017 [DevOps Lisbon](https://www.meetup.com/DevOps-Lisbon/) in Lisbon, Portugal
+13 March, 2017 [DevOps Lisbon](https://www.meetup.com/DevOps-Lisbon/events/237041056/) in Lisbon, Portugal
 
 25 May, 2017 [Atlantec Festival](http://www.atlantec.ie/) in Galway, Ireland
 
 
 ## Previous
+
+6-7 February, 2017 [Config Management Camp](http://cfgmgmtcamp.eu/) in Gent, Belgium. [Slides](http://www.slideshare.net/KiefMorris/implementing-infrastructure-as-code-configmgtcamp-2017)
 
 15 November, 2016 [GOTO Berlin](https://gotocon.com/berlin-2016/presentations/show_talk.jsp?oid=7862) in Berlin, Germany
 
