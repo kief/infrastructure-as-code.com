@@ -8,10 +8,11 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-w/b 5 March, 2017, TBD ThoughtWorks meetup in Johannesburg, South Africa
-
+9 March, 2017, [Book Meetup](https://info.thoughtworks.com/infrastructure-as-code-event-johannesburg.html) at the ThoughtWorks office in Johannesburg, South Africa
 
 13 March, 2017 [DevOps Lisbon](https://www.meetup.com/DevOps-Lisbon/events/237041056/) in Lisbon, Portugal
+
+21 April, 2017 [Agile Alliance Technical Conference](http://sched.co/9PB7) in Boston, MA, USA
 
 25 May, 2017 [Atlantec Festival](http://www.atlantec.ie/) in Galway, Ireland
 
