@@ -19,3 +19,5 @@ upload: build
 	  ./_site/ \
 	  s3://infrastructure-as-code.com/
 
+bundle:
+	bundle update
