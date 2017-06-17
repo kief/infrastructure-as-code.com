@@ -8,12 +8,14 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-21 April, 2017 [Agile Alliance Technical Conference](http://sched.co/9PB7) in Boston, MA, USA
+July 11, 2017 [XConf Hamburg](https://info.thoughtworks.com/XConf-2017-EU)
 
-25 May, 2017 [Atlantec Festival](http://www.atlantec.ie/) in Galway, Ireland
+July 13, 2017 [XConf Manchester](https://info.thoughtworks.com/XConf-2017-EU)
 
 
 ## Previous
+
+21 April, 2017 [Agile Alliance Technical Conference](http://sched.co/9PB7) in Boston, MA, USA
 
 13 March, 2017 [DevOps Lisbon](https://www.meetup.com/DevOps-Lisbon/events/237041056/) in Lisbon, Portugal
 
