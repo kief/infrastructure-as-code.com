@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using Pipelines to Manage Environments"
-date:   2017-08-302 07:04:00
+date:   2017-08-02 05:04:00
 categories: book
 published: true
 ---
