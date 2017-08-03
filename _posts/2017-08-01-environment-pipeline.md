@@ -34,7 +34,7 @@ I'll also assume two environments — staging and production, for the sake o
 This is the most straightforward approach, the one that most people start out using, and the most problematic. All of the environments, from development to production, are defined in a single stack definition, and they are all created and managed as a single stack instance.
 
 
-![Multiple environments managed as a single stack](images/environment-pipeline/one-stack-multiple-environments.png){: align="right" hspace="5" width="100%"}
+![Multiple environments managed as a single stack](/images/environment-pipeline/one-stack-multiple-environments.png){: align="right" hspace="5" width="100%"}
 
 Multiple environments managed as a single stack
 
@@ -105,7 +105,7 @@ Charity (and others) suggests splitting your environments into separate stack de
 These two different configurations should be identical, or nearly so. By running your infrastructure tool against each of these separately, you isolate the environments from one another (at least when it comes to using the tool, although obviously they may or may not be isolated in terms of networking, cloud account permissions, etc.) And because each environment has its own set of definition files, the intended state of each environment is very clear.
 
 
-![Each environments managed as its own stack](images/environment-pipeline/one-stack-per-environment.png){: align="left" hspace="10" width="70%"}
+![Each environments managed as its own stack](/images/environment-pipeline/one-stack-per-environment.png){: align="left" hspace="10" width="70%"}
 
 
 When you need to make a change, you edit the files for the staging environment stack, apply them, and test them. Iterate until it works the way you want. Then make the same changes to the files for the production environment and apply them to the production stack instance.
@@ -126,7 +126,7 @@ An alternative is to use a continuous delivery pipeline to promote a stack defin
 But a single stack definition is re-used to create and update each environment. The definition can be parameterized, to capture differences between instances, such as cluster sizing. The definition file is versioned, so we have visibility of what code was used for any environment, at any point in time.
 
 
-![One definition used for multiple environments](images/environment-pipeline/single-definition-for-multiple-environments.png){: align="left" hspace="10" width="100%"}
+![One definition used for multiple environments](/images/environment-pipeline/single-definition-for-multiple-environments.png){: align="left" hspace="10" width="100%"}
 
 
 ### A single definition file used to create multiple stack instances in a pipeline
@@ -141,7 +141,7 @@ A simple example workflow is:
 4. Someone triggers the CD server to apply the definition version to production.
 
 
-![Basic flow of a stack definition through a pipeline](images/environment-pipeline/pipeline-workflow.png){: align="left" hspace="10" width="70%"}
+![Basic flow of a stack definition through a pipeline](/images/environment-pipeline/pipeline-workflow.png){: align="left" hspace="10" width="70%"}
 Basic flow of a stack definition through a pipeline
 
 ### Benefits
