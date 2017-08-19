@@ -8,12 +8,15 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-July 11, 2017 [XConf Hamburg](https://info.thoughtworks.com/XConf-2017-EU)
+25 October, 2017 [DevOpsDays Singapore](https://www.devopsdays.org/events/2017-singapore/program/kief-morris/) in Singapore
 
-July 13, 2017 [XConf Manchester](https://info.thoughtworks.com/XConf-2017-EU)
-
+1-2 December, 2017 [DevTernity](http://devternity.com/) in Riga, Latvia
 
 ## Previous
+
+July 13, 2017 [XConf Manchester](https://info.thoughtworks.com/XConf-2017-EU) [Video](https://www.thoughtworks.com/talks/infrastructure-design-patterns-xconf-eu-2017)
+
+July 11, 2017 [XConf Hamburg](https://info.thoughtworks.com/XConf-2017-EU)
 
 21 April, 2017 [Agile Alliance Technical Conference](http://sched.co/9PB7) in Boston, MA, USA
 

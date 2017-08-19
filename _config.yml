@@ -38,6 +38,6 @@ markdown: kramdown
 highlighter: pygments
 paginate: 5
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
