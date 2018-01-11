@@ -8,11 +8,15 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-25 October, 2017 [DevOpsDays Singapore](https://www.devopsdays.org/events/2017-singapore/program/kief-morris/) in Singapore
+8 and 9 March, 2018 [Agile India](https://2018.agileindia.org/speaker/kief-morris/) in Bangalore, India
+
+14-15 March, 2018 [Landing Festival](https://landingfestival.com/berlin) in Berlin, Germany
+
+## Previous
 
 1-2 December, 2017 [DevTernity](http://devternity.com/) in Riga, Latvia
 
-## Previous
+25 October, 2017 [DevOpsDays Singapore](https://www.devopsdays.org/events/2017-singapore/program/kief-morris/) in Singapore
 
 July 13, 2017 [XConf Manchester](https://info.thoughtworks.com/XConf-2017-EU) [Video](https://www.thoughtworks.com/talks/infrastructure-design-patterns-xconf-eu-2017)
 
