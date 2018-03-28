@@ -8,11 +8,11 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-8 and 9 March, 2018 [Agile India](https://2018.agileindia.org/speaker/kief-morris/) in Bangalore, India
+## Previous
 
 14-15 March, 2018 [Landing Festival](https://landingfestival.com/berlin) in Berlin, Germany
 
-## Previous
+8 and 9 March, 2018 [Agile India](https://2018.agileindia.org/speaker/kief-morris/) in Bangalore, India
 
 1-2 December, 2017 [DevTernity](http://devternity.com/) in Riga, Latvia
 
