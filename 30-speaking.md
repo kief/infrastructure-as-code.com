@@ -8,6 +8,11 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
+6-10 August, 2018 [Agile2018](https://www.agilealliance.org/agile2018) in San Diego, USA
+
+
+
+
 ## Previous
 
 14-15 March, 2018 [Landing Festival](https://landingfestival.com/berlin) in Berlin, Germany
