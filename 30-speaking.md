@@ -10,7 +10,7 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 6-10 August, 2018 [Agile2018](https://www.agilealliance.org/agile2018) in San Diego, USA
 
-
+6-7 September, 2018 [Jazoon Tech Days](http://jazoon.com/) in Bern, Switzerland
 
 
 ## Previous
