@@ -8,7 +8,6 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-6-7 September, 2018 [Jazoon Tech Days](http://jazoon.com/) in Bern, Switzerland
 
 18 September, 2018 [Continuously Delivering Infrastructure as Code](https://www.eventbrite.co.uk/e/continuously-delivering-infrastructure-as-code-tickets-48119985171) in Glasgow, Scotland
 
@@ -18,6 +17,8 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 
 ## Previous
+
+6-7 September, 2018 [Jazoon Tech Days](http://jazoon.com/) in Bern, Switzerland [video](https://www.youtube.com/watch?v=YggX1YcIlLo)
 
 6-10 August, 2018 [Agile2018](https://www.slideshare.net/KiefMorris/evolutionary-infrastructure-agile-2018-kief-morris) in San Diego, USA
 
