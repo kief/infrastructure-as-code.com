@@ -54,6 +54,10 @@ This is a fairly big and complex topic. But briefly, I usually encourage organiz
 These teams should also focus on building (and in some cases running) things for other teams to use, rather than using them for the other teams. For example, the conversation should not be, "Hey monitoring team, can you add some monitoring checks for my application?" Instead it should be, "Hey monitoring team, how do I add monitoring checks for my application?" The monitoring team keeps the monitoring service running, and provide support and help to teams who need it.
 
 
+## See also
+
+The above is not official ThoughtWorks gospel, although it's probably fairly well aligned. A bunch of smart ThoughtWorkers have defined and offer a more structured engagement model for clients working on platforms, the [Digital Platform Strategy](https://www.thoughtworks.com/digital-platform-strategy).
+
 ## Acknowledgement
 
 Thanks to current and former ThoughtWorks colleagues Peter Gillard-Moss, Karl Stoney, Moritz Heiber, and Bill Codding, for the email thread that spurred me to describe my thoughts on this. Particular thanks to Peter for encouraging me to blog it.
