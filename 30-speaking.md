@@ -9,16 +9,17 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-18 September, 2018 [Continuously Delivering Infrastructure as Code](https://www.eventbrite.co.uk/e/continuously-delivering-infrastructure-as-code-tickets-48119985171) in Glasgow, Scotland
+TBD
 
-2 October, 2018 [Stack 2018 Developer Conference](https://www.govtechstack.sg/) in Singapore
-
-3 October, 2018 [ThoughtWorks Talks Tech](https://www.eventpop.me/e/4261-keifmorrisbkk) in Bangkok, Thailand
+## Previous
 
 31 October, 2018 Tutorial on building evolutionary infrastructure at [Velocity](https://conferences.oreilly.com/velocity/vl-eu/schedule/2018-10-31) in London, UK
 
+3 October, 2018 [ThoughtWorks Talks Tech](https://www.eventpop.me/e/4261-keifmorrisbkk) in Bangkok, Thailand
 
-## Previous
+2 October, 2018 [Stack 2018 Developer Conference](https://www.govtechstack.sg/) in Singapore
+
+18 September, 2018 [Continuously Delivering Infrastructure as Code](https://www.eventbrite.co.uk/e/continuously-delivering-infrastructure-as-code-tickets-48119985171) in Glasgow, Scotland
 
 6-7 September, 2018 [Jazoon Tech Days](http://jazoon.com/) in Bern, Switzerland [video](https://www.youtube.com/watch?v=YggX1YcIlLo)
 
