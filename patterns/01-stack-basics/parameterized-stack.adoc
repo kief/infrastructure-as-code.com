@@ -1,0 +1,75 @@
+:source-highlighter: pygments
+
+= Pattern: Name
+
+== Intent
+
+(1-2 sentences)
+
+Diagram
+
+== Intro
+
+== How
+
+(to implement / use the pattern)
+
+== When
+
+(to use the pattern)
+
+
+== Example of parameterized infrastructure
+
+I have an example of a [parameterized infrastructure stack project](https://github.com/kief/spin-template-standalone-service) on github, using Terraform and AWS. Below is a (trimmed) snippet of code for a webserver. 
+
+
+[source,hcl]
+----
+resource "aws_instance" "webserver" {
+  ...
+  tags {
+    Name                  = "webserver-${var.service}-${var.component}-${var.deployment_id}"
+    DeploymentIdentifier  = "${var.deployment_id}"
+    Service               = "${var.service}"
+    Component             = "${var.component}"
+  }
+}
+----
+
+This shows how it a number of variables are used to set tags, including a Name tag, to distinguish this server instance from other instances of the same server in other stack instances.
+
+These variables are passed to the terraform command by a Makefile:
+
+
+[source,console]
+----
+TERRAFORM_VARS=\
+  -var "deployment_id=$(DEPLOYMENT_ID)" \
+  -var "component=$(COMPONENT)" \
+  -var "service=$(SERVICE)"
+
+up: init ## Create or update the stack
+  terraform apply $(TERRAFORM_VARS) -auto-approve
+----
+
+
+The `SERVICE` and `COMPONENT` variables are set by a file in the stack definition project, and are always the same. The `DEPLOYMENT_ID` variable is passed to the Makefile when make is run. The pipeline stage configuration sets this, so for example, the production stage configuration (using AWS CodeBuild in this case) includes the following:
+
+
+[source,hcl]
+----
+resource "aws_codebuild_project" "prodapply-project" {
+  name = "${var.service}-${var.component}-${var.estate_id}-ApplyToProdEnvironment"
+  ...
+
+  environment {
+    environment_variable {
+      "name"  = "DEPLOYMENT_ID"
+      "value" = "prod"
+    }
+  }
+----
+
+The codebuild project simply runs `make up`, and our stack definition creates our webserver instance accordingly.
+

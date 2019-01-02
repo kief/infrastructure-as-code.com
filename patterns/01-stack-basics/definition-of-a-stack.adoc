@@ -1,0 +1,56 @@
+:source-highlighter: pygments
+
+= What is an infrastructure stack
+
+Infrastructure on a dynamic, IaaS platform is provisioned and managed as discrete units by tools such as [Hashicorp Terraform](https://www.terraform.io/), [AWS CloudFormation](https://aws.amazon.com/cloudformation/), [Azure Resource Manager Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview), [Google Cloud Deployment Manager Templates](https://cloud.google.com/deployment-manager/) and [OpenStack Heat](https://wiki.openstack.org/wiki/Heat). These tools (and others) all define a collection of infrastructure in a declarative way, and there are design patterns (and anti-patterns) that apply regardless of which one you work with. However, these tools and their documentation don't use a common term to describe the collection of infrastructure they work with, so for the purposes of cross-tool design patterns, we will use the term "[stack](http://infrastructure-as-code.com/patterns/2018/03/28/defining-stacks.html)".
+
+So, an infrastructure stack is a collection of infrastructure elements defined and changed as a unit.
+
+![An infrastructure stack is a collection of infrastructure elements managed as a unit](/images/infrastructure-stack.png)
+
+
+== Stack definitions
+
+A stack definition is the code that declares what a stack should be. It is a Terraform project, CloudFormation template, and so on. A stack definition may use shared infrastructure code - for example, [CloudFormation nested stacks](https://aws.amazon.com/blogs/devops/use-nested-stacks-to-create-reusable-templates-and-support-role-specialization/) or [Terraform modules](https://www.terraform.io/docs/modules/index.html).
+
+![A stack definition is code used to provision stack instances](/images/stack-definition.png)
+
+Below is an example stack definition, a Terraform project:
+
+
+[source,console]
+----
+stack-definition/
+   ├── src/
+   │   ├── backend.tf
+   │   ├── bastion.tf
+   │   ├── dns.tf
+   │   ├── load_balancers.tf
+   │   ├── networking.tf
+   │   ├── outputs.tf
+   │   ├── provider.tf
+   │   ├── variables.tf
+   │   └── webserver.tf
+   └── test/
+----
+
+
+== Stack instances
+
+A stack definition can be used to provision, and update, one or more stack instances. Multiple instances can be created from one definition, either a [parameterized stack](parameterized-stack.adoc) or an [extensible stack](extensible-stack.adoc). 
+
+![Multiple stack instances can be provisioned from a single stack definition](/images/stack-instances.png)
+
+
+== A note on state
+
+One of the pain points of using Terraform is dealing with [statefiles](https://www.terraform.io/docs/state/). All stack management tools, including CloudFormation, etc., maintain data structures that reflect which infrastructure elements belong to a given stack instance. 
+
+
+![Stack state](/images/stack-state.png)
+
+
+CloudFormation and similar tools provided by cloud platform vendors have the advantage of being able to manage instance state transparently - they keep these data structures on their servers. Terraform and other third party tools need to do this themselves.
+
+Arguably, the explicit state management of Terraform gives you more control and transparency. When your CloudFormation stack gets wedged, you can't examine the state data structures to see what's happening. And you (and third parties) have the option of writing tools that use the state data for various purposes. But it does require you to put a bit more work into keeping track of statefiles and making sure they're available when running the stack management tool.
+
