@@ -6,14 +6,14 @@ Infrastructure on a dynamic, IaaS platform is provisioned and managed as discret
 
 So, an infrastructure stack is a collection of infrastructure elements defined and changed as a unit.
 
-![An infrastructure stack is a collection of infrastructure elements managed as a unit](/images/infrastructure-stack.png)
+![An infrastructure stack is a collection of infrastructure elements managed as a unit](images/infrastructure-stack.png)
 
 
 == Stack definitions
 
 A stack definition is the code that declares what a stack should be. It is a Terraform project, CloudFormation template, and so on. A stack definition may use shared infrastructure code - for example, [CloudFormation nested stacks](https://aws.amazon.com/blogs/devops/use-nested-stacks-to-create-reusable-templates-and-support-role-specialization/) or [Terraform modules](https://www.terraform.io/docs/modules/index.html).
 
-![A stack definition is code used to provision stack instances](/images/stack-definition.png)
+![A stack definition is code used to provision stack instances](images/stack-definition.png)
 
 Below is an example stack definition, a Terraform project:
 
@@ -37,9 +37,9 @@ stack-definition/
 
 == Stack instances
 
-A stack definition can be used to provision, and update, one or more stack instances. Multiple instances can be created from one definition, either a [parameterized stack](parameterized-stack.adoc) or an [extensible stack](extensible-stack.adoc). 
+A stack definition can be used to provision, and update, one or more stack instances. Multiple instances can be created from one definition.
 
-![Multiple stack instances can be provisioned from a single stack definition](/images/stack-instances.png)
+![Multiple stack instances can be provisioned from a single stack definition](images/stack-instances.png)
 
 
 == A note on state
@@ -47,10 +47,18 @@ A stack definition can be used to provision, and update, one or more stack insta
 One of the pain points of using Terraform is dealing with [statefiles](https://www.terraform.io/docs/state/). All stack management tools, including CloudFormation, etc., maintain data structures that reflect which infrastructure elements belong to a given stack instance. 
 
 
-![Stack state](/images/stack-state.png)
+![Stack state](images/stack-state.png)
 
 
 CloudFormation and similar tools provided by cloud platform vendors have the advantage of being able to manage instance state transparently - they keep these data structures on their servers. Terraform and other third party tools need to do this themselves.
 
 Arguably, the explicit state management of Terraform gives you more control and transparency. When your CloudFormation stack gets wedged, you can't examine the state data structures to see what's happening. And you (and third parties) have the option of writing tools that use the state data for various purposes. But it does require you to put a bit more work into keeping track of statefiles and making sure they're available when running the stack management tool.
 
+
+== Stack patterns and antipatterns
+
+A naive implementation of stacks is the [Singleton Stack antipattern](singleton-stack.adoc), where a separate stack definition is maintained for each stack instance. Defining [Reusable Stacks](reusable-stack.adoc) helps to make infrastructure testable, scalable, and more resilient, as well as more maintainable.
+
+Parameterizing stacks makes stack definition code more reusable. There are a number of patterns for [implementing parameterization](../stack-parameters/README.adoc) of stacks.
+
+Stacks can also be [organized](../stack-structures/README.adoc) at different levels of granularity.

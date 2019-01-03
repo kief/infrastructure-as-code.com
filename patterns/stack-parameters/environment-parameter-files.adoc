@@ -1,0 +1,6 @@
+:source-highlighter: pygments
+
+= Pattern: Environment Parameter Files
+
+Provide parameter values to instances of [parameterized stacks](parameterized-stack.adoc) by putting them into files, checked into version control. Usually the same project as the stack definition.
+

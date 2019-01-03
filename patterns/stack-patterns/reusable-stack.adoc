@@ -1,0 +1,46 @@
+:source-highlighter: pygments
+
+= Pattern: Reusable Stack
+
+Defining an [infrastructure stack](definition-of-a-stack.adoc) as code enables the creation of multiple instances of that stack. There are a number of reasons where this is useful. One is to create
+
+
+This might be used as an [environment template](environment-template.adoc), to replicate a stack instance in multiple environments, or else as a [library stack](library-stack.adoc) that can be re-used for different things.
+
+
+A  definition can be used to create multiple instances of 
+
+
+== Alternative to:
+
+- Stack Module (re-uses infrastructure code at a different level)
+- Singleton Stack (maintain a single stack definition for each stack instance)
+
+
+== Things to consider
+
+Avoid conflicts when multiple instances of the stack definition are created, e.g. names and IDs.
+
+
+== Parameterized Stacks
+
+Define parameters as part of the stack definition, pass in values for these parameters when creating a stack instance.
+
+Specific types of re-usable stacks:
+
+
+== Intent
+
+(1-2 sentences)
+
+Diagram
+
+== Intro
+
+== How
+
+(to implement / use the pattern)
+
+== When
+
+(to use the pattern)
