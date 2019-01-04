@@ -15,7 +15,7 @@ A stack definition is the code that declares what a stack should be. It is a Ter
 
 ![A stack definition is code used to provision stack instances](images/stack-definition.png)
 
-Below is an example stack definition, a Terraform project:
+Below is an example stack definition, in this case a Terraform project:
 
 
 [source,console]
@@ -37,13 +37,19 @@ stack-definition/
 
 == Stack instances
 
-A stack definition can be used to provision, and update, one or more stack instances. Multiple instances can be created from one definition.
+A stack definition can be used to provision one or more stack instances. When the relevant stack management tool is run, it reads the stack definition and then interacts with the API of an infrastructure platform to either provision new infrastructure elements, or make changes to existing infrastructure elements. After running, the infrastructure elements should be consistent with the definition.
+
+If changes are made to the definition and the tool is run again, then the existing infrastructure elements are changed accordingly. If the tool is run another time without any changes to the definition, then the existing infrastructure elements will be left as is. The set of infrastructure elements managed together according to the definition is the stack instance.
+
+It's also possible to provision and manage multiple stack instances with a single stack definition. This is typically done by providing options to the stack management tool to indicate which stack instance it should apply the definition to. With CloudFormation, this is done by passing a stack name. If you pass it a stack name that doesn't exist, a new one is created from the definition. If the stack name does exist, then the definition is applied to the existing stack elements.
 
 ![Multiple stack instances can be provisioned from a single stack definition](images/stack-instances.png)
 
+With Terraform, each stack instance has its own state file, which contains information used to map specific infrastructure elements provisioned in the platform to the stack definition (the Terraform project). You pass arguments to the terraform command to tell it which statefile to use, so that it knows which stack instance to create or update.
 
-== A note on state
 
+.A note on state
+****
 One of the pain points of using Terraform is dealing with [statefiles](https://www.terraform.io/docs/state/). All stack management tools, including CloudFormation, etc., maintain data structures that reflect which infrastructure elements belong to a given stack instance. 
 
 
@@ -53,12 +59,13 @@ One of the pain points of using Terraform is dealing with [statefiles](https://w
 CloudFormation and similar tools provided by cloud platform vendors have the advantage of being able to manage instance state transparently - they keep these data structures on their servers. Terraform and other third party tools need to do this themselves.
 
 Arguably, the explicit state management of Terraform gives you more control and transparency. When your CloudFormation stack gets wedged, you can't examine the state data structures to see what's happening. And you (and third parties) have the option of writing tools that use the state data for various purposes. But it does require you to put a bit more work into keeping track of statefiles and making sure they're available when running the stack management tool.
+****
 
 
-== Stack patterns and antipatterns
+== Singleton stacks and reusable stacks
 
-A naive implementation of stacks is the [Singleton Stack antipattern](singleton-stack.adoc), where a separate stack definition is maintained for each stack instance. Defining [Reusable Stacks](reusable-stack.adoc) helps to make infrastructure testable, scalable, and more resilient, as well as more maintainable.
+A naive implementation of stacks is the [Singleton Stack antipattern](singleton-stack.adoc), where a separate stack definition project is used to manage each stack instance. Creating stack definitions to be [reusable](reusable-stack.adoc) helps to make infrastructure testable, scalable, and resilient, as well as more maintainable.
 
 Parameterizing stacks makes stack definition code more reusable. There are a number of patterns for [implementing parameterization](../stack-parameters/README.adoc) of stacks.
 
-Stacks can also be [organized](../stack-structures/README.adoc) at different levels of granularity.
+Stacks can also be [organized](../stack-structures/README.adoc) at different levels of granularity, which is particularly important as the size and complexity of the stack grows.
