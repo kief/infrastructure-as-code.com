@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="post">
+
+{% for pattern in site.patterns %}
+  <p>
+    <a href="{{ pattern.url | prepend: site.baseurl }}">{{ pattern.title }}</a>
+    ({{ pattern.group_name }})
+  </p>
+{% endfor %}
+
+  </div>
+</div>

@@ -2,7 +2,7 @@
 layout: post
 title:  "Term: Infrastructure Stack"
 date:   2018-03-28 09:01:01
-categories: patterns
+categories: book
 published: true
 ---
 

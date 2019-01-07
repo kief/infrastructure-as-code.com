@@ -1,16 +1,22 @@
-:source-highlighter: pygments
-
-
+---
+layout: pattern
+title:  "Library Stack Pattern"
+date:   2019-01-01 16:20:00
+categories: patterns
+group_name: Core stack patterns
+group_folder: core-stack
+published: false
+---
 
 
 It is often useful to define basic, re-usable stack code that can be customized to define different stacks with more specific attributes. For example, you may define a stack that defines a load balancer, but allow it to be customized to manage different types of network traffic. A basic load balancer stack might be used to create an HTTP load balancer. This stack could then be extended to create an HTTPS load balancer, adding configuration and code to provision SSL certificates.
 
 
-== Alternative to:
+## Alternative to:
 
 - Stack Module (re-uses infrastructure code at a different level)
 
-= Pattern: Extensible Stack
+# Pattern: Extensible Stack
 
 It is often useful to define basic, re-usable stack code that can be customized to define different stacks with more specific attributes. For example, you may define a stack that defines a load balancer, but allow it to be customized to manage different types of network traffic. A basic load balancer stack might be used to create an HTTP load balancer. This stack could then be extended to create an HTTPS load balancer, adding configuration and code to provision SSL certificates.
 

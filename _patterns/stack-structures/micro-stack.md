@@ -1,3 +1,12 @@
+---
+layout: pattern
+title:  "Micro Stack Pattern"
+date:   2019-01-01 16:20:00
+categories: patterns
+group_name: Patterns for structuring stacks
+group_folder: stack-structures
+published: false
+---
 
 = Pattern: Micro Stack
 

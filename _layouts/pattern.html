@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="pattern">
+
+  <header class="pattern-header">
+    <h1 class="pattern-title">{{ page.group_name }}: {{ page.title }}</h1>
+  </header>
+
+  <article class="pattern-content">
+    {{ content }}
+  </article>
+  <hr />
+</div>
+
+
+{% include page_pagination.html %}
+

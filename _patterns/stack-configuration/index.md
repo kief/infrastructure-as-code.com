@@ -1,6 +1,12 @@
-:source-highlighter: pygments
-
-= Pattern: Parameterized Stack
+---
+layout: pattern
+title:  "Parameterized Stack"
+date:   2019-01-01 16:20:00
+categories: patterns
+group_name: Stack configuration patterns
+group_folder: stack-configuration
+published: false
+---
 
 Defining an infrastructure stack as code enables the creation of multiple instances of the stack. This might be used as an [environment template](environment-template.adoc), to replicate a stack instance in multiple environments, or else as a [library stack](library-stack.adoc) that can be re-used for different things.
 

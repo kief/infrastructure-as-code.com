@@ -8,6 +8,12 @@ keywords: "infrastructure as code, infrastructure, cloud, automation, book, devo
 baseurl: ""
 url: "http://infrastructure-as-code.com"
 
+# Pattern catalog
+collections:
+  patterns:
+    output: true
+    permalink: /patterns/:path.html
+
 # Don't copy stuff
 exclude: [ "*.sh", "*.json", "LICENSE", "README" ]
 
