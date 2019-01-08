@@ -2,9 +2,7 @@
 layout: pattern
 title:  "Monolithic Stack Antipattern"
 date:   2019-01-01 16:20:00
-categories: patterns
-group_name: Patterns for structuring stacks
-group_folder: stack-structures
+category: Stack Structural Patterns
 published: false
 ---
 

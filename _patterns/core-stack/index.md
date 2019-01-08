@@ -1,10 +1,9 @@
 ---
-layout: pattern
-title:  "Infrastructure Stack"
+layout: pattern-group
+title:  "Core Infrastructure Stack Patterns"
 date:   2019-01-01 16:20:00
-categories: patterns
-group_name: Definition
-group_folder: core_stack
+category: Core Stack Patterns
+order: 0
 published: false
 ---
 

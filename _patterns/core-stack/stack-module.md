@@ -2,9 +2,8 @@
 layout: pattern
 title:  "Stack Module Pattern"
 date:   2019-01-01 16:20:00
-categories: patterns
-group_name: Core stack patterns
-group_folder: core-stack
+category: Core Stack Patterns
+order: 5
 published: false
 ---
 

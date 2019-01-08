@@ -2,13 +2,10 @@
 layout: pattern
 title:  "Template Stack Pattern"
 date:   2019-01-01 16:20:00
-categories: patterns
-group_name: Core stack patterns
-group_folder: core-stack
+category: Core Stack Patterns
+order: 2
 published: false
 ---
-
-# Pattern: Template Stack
 
 A great benefit of defining infrastructure as code is that it's easy to replicate infrastructure. This has a variety of uses, including:
 

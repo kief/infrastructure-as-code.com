@@ -1,10 +1,9 @@
 ---
-layout: pattern
-title:  "Parameterized Stack"
+layout: pattern-group
+title:  "Parameterized Stack Patterns"
 date:   2019-01-01 16:20:00
-categories: patterns
-group_name: Stack configuration patterns
-group_folder: stack-configuration
+category: Stack Configuration Patterns
+order: 0
 published: false
 ---
 

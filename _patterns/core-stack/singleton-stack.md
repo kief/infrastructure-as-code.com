@@ -2,9 +2,8 @@
 layout: pattern
 title:  "Singleton Stack Antipattern"
 date:   2019-01-01 16:20:00
-categories: patterns
-group_name: Core stack patterns
-group_folder: core-stack
+category: Core Stack Patterns
+order: 1
 published: false
 ---
 
