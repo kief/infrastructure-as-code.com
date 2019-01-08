@@ -6,7 +6,7 @@ category: Stack Structural Patterns
 published: false
 ---
 
-= Pattern: Micro Stack
+Keeping stacks small.
 
 Infrastructure for systems comprised of multiple services, and worked on by multiple people or teams, can become too unwieldy to manage as a single [stack](definition-of-a-stack.adoc). Designing (or evolving) infrastructure into multiple, smaller Micro Stacks is a useful way to keep system design loosely coupled and easier to change. This architectural style is heavily influenced by [microservices](https://martinfowler.com/articles/microservices.html), and many of the same forces, principles, and practices apply.
 

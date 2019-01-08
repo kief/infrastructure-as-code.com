@@ -6,7 +6,7 @@ category: Stack Configuration Patterns
 published: false
 ---
 
-= Pattern: Name
+Using stack definitions to provide parameters to environments. Pretty much the same as [a wrapper stack](/patterns/core-stack/wrapper-stack.html).
 
 == Intent
 

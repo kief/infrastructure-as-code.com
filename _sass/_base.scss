@@ -153,10 +153,6 @@ a {
   color: $brand-top-color;
   text-decoration: none;
 
-  &:visited {
-    color: darken($brand-top-color, 25%);
-  }
-
   &:hover {
     color: #669900; //$hover-color;
     text-decoration: underline;

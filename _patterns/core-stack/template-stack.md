@@ -7,7 +7,7 @@ order: 2
 published: false
 ---
 
-A Template Stack is an [infrastructure stack](/patterns/core-stack/) that is designed to be replicated consistently.
+A Template Stack is an [infrastructure stack](/patterns/core-stack/) that is designed to be consistently replicated.
 
 A great benefit of defining infrastructure as code is that it's easy to replicate infrastructure. This has a variety of uses, including:
 
@@ -17,13 +17,13 @@ A great benefit of defining infrastructure as code is that it's easy to replicat
 - *Consistency* - provision a replica of production in order to deploy and test software,
 - *Testability* - provision and test an instance of infrastructure after making a change to the code, before applying it to production environments.
 
-In all of these cases, it is useful to define an [infrastructure stack](index.html) so that it can be used to manage multiple, highly consistent instances. A stack defined this way is a Template Stack.
+In all of these cases, it is useful to define an infrastructure stack so that it can be used to manage multiple, highly consistent instances. A stack defined this way is a Template Stack.
 
-This pattern is similar to the [library stack pattern](library-stack.adoc), in which a single stack definition is used to create multiple instances. However, instances of a library stack are normally extended and customized for different purposes, while instances of a template stack are intended to be very consistent.
+This pattern is similar to the [library stack pattern](/patterns/core-stack/library-stack.html), in which a single stack definition is used to create multiple instances. However, instances of a library stack are normally extended and customized for different purposes, while instances of a template stack are intended to be very consistent.
 
 So a defining characteristic of the template stack pattern is that there is very little variation between each instance of the stack. Therefore, implementations of this pattern should aim to minimize the scope for variance.
 
-Variance between stack instances is enabled by the use of [stack parameters](../stack-parameter/README.adoc). The stack definition specifies a number of parameters which can be set. For each stack instance, values are passed for these parameters, which the definition uses to custoomize the instance.
+Variance between stack instances is enabled by the use of [stack parameters](/patterns/stack-configuration/). The stack definition specifies a number of parameters which can be set. For each stack instance, values are passed for these parameters, which the definition uses to customize the instance.
 
 Typically, parameters are used to define names and IDs to distinguish the elements of each instance from one another. This is particularly useful to avoid clashes between instances of infrastructure. For example, it may not be possible to create more than one subnet called `myAppSubnet`, so it would be useful to have a parameter named `INSTANCE_NAME`, and use this to name the subnet `myAppSubnet-${INSTANCE_NAME}`.
 
@@ -38,12 +38,12 @@ It is a red flag when a parameter is used as a conditional that decides whether 
 
 Some teams use the [singleton stack anti-pattern](singleton-stack.html) to manage multiple instances of a stack. This involves creating a new copy of the stack definition code for each new environment or other instance. While this is a straightforward approach to implement, it makes it difficult to keep each instance consistent.
 
-A variation of the singleton stack is the [wrapper stack pattern](wrapper-stack.adoc). Each stack instance has a separate definition. However, the bulk of the infrastructure code is contained in a [stack module](stack-module.adoc), a library which is imported into the stack definition. This way the code is declared once - in the module - and re-used across each stack instance. Each stack definition is effectively used as a mechanism to define parameter values for its stack instance. 
+A variation of the singleton stack is the [wrapper stack pattern](wrapper-stack.html). Each stack instance has a separate definition. However, the bulk of the infrastructure code is contained in a [stack module](stack-module.html), a library which is imported into the stack definition. This way the code is declared once - in the module - and re-used across each stack instance. Each stack definition is effectively used as a mechanism to define parameter values for its stack instance. 
 
 
 ## Testing stack definitions
 
-When making changes to an infrastructure stack definition, being able to provision a test instance enables you to test your changes before applying them to your production stack instance. As an individual engineer making changes to infrastructure code, you can provision and test your changes on your own sandbox instance before committing changes. As a team, you can use [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) and [Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) to facilitate a consistent and reliable process for testing and delivering changes to your infrastructure. There are a number of considerations for [testing infrastructure changes](../stack-testing/README.adoc) effectively.
+When making changes to an infrastructure stack definition, being able to provision a test instance enables you to test your changes before applying them to your production stack instance. As an individual engineer making changes to infrastructure code, you can provision and test your changes on your own sandbox instance before committing changes. As a team, you can use [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) and [Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) to facilitate a consistent and reliable process for testing and delivering changes to your infrastructure. There are a number of considerations for [testing infrastructure changes](/patterns/testing-stacks/) effectively.
 
 
 ## Managing consistent test environments

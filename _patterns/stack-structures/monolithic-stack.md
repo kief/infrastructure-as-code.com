@@ -6,9 +6,9 @@ category: Stack Structural Patterns
 published: false
 ---
 
-= AntiPattern: Monolithic Stack
+A Monolithic Stack is an [infrastructure stack](/patterns/core-stack/) that includes too many elements, so that it is difficult to work with.
 
-Infrastructure often grows organically, each new piece being naturally added into the existing codebase as we go. Over time, the codebase can become messy and unwieldy. A Monolithic Stack is a a single deployable unit of infrastructure - [a stack](definition-of-a-stack.adoc) - that includes too many elements, so that it is difficult to work with.
+Infrastructure often grows organically, each new piece being naturally added into the existing codebase as we go. Over time, the codebase can become messy and unwieldy. 
 
 image:images/monolithic-stack.png[Stack boundary containing way too much stuff]
 

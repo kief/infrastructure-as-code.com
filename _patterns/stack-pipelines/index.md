@@ -1,10 +1,11 @@
 ---
 layout: pattern-group
-title:  "Patterns for structuring stacks"
+title:  "Stack Pipelines Patterns"
 date:   2019-01-01 16:20:00
-category: Stack Structural Patterns
+category: Stack Pipeline Patterns
 order: 0
 published: false
 ---
 
 TBD
+
