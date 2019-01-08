@@ -7,26 +7,27 @@ layout: default
 {% assign pattern_categories = site.patterns | group_by: 'category' %}
 {% for category in pattern_categories %}
 
-
   {% assign pattern_items = category.items | sort: 'order' %}
 
   {% for item in pattern_items %}
     {% if item.order == 0 %}
-  <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
-<p>{{ item.excerpt }}</p>
+      <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+      <p>{{ item.excerpt }}</p>
     {% endif %}
   {% endfor %}
 
-
-<ul>
+  <ul>
   {% for item in pattern_items %}
     {% if item.order != 0 %}
-  <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      <li>
+        <em><a href="{{ item.url }}">{{ item.title }}</a></em>
+        {{ item. excerpt }}
+      </li>
     {% endif %}
   {% endfor %}
-</ul>
-{% endfor %}
+  </ul>
 
-  </div>
+{% endfor %}
+</div>
 
 </div>

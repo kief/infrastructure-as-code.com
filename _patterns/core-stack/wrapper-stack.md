@@ -7,6 +7,7 @@ order: 5
 published: false
 ---
 
-A stack definition which is a wrapper that imports a module which contains the core code for the stack. This is usually a variation of the singleton stack, in that you have a definition for each stack instance, although that definition is just a wrapper.
+A Wrapper Stack is an [infrastructure stack definition](/patterns/core-stack/) whose only purpose is to import a [stack module](/patterns/core-stack/stack-module.html) that contains most of the actual stack code.
 
+This is usually a variation of the singleton stack, in that you have a definition for each stack instance, although that definition is just a wrapper.
 

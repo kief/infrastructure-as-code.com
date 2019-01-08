@@ -7,7 +7,7 @@ order: 5
 published: false
 ---
 
-# Pattern: Name
+A Stack Module is a unit of infrastructure code that can be included into one or more [infrastructure stack](/patterns/core-stack/) definitions.
 
 ## Intent
 

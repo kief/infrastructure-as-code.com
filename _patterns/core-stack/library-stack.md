@@ -7,6 +7,7 @@ order: 3
 published: false
 ---
 
+A Library Stack is an [infrastructure stack](/patterns/core-stack/) that is designed to be used to create more specialised stacks.
 
 It is often useful to define basic, re-usable stack code that can be customized to define different stacks with more specific attributes. For example, you may define a stack that defines a load balancer, but allow it to be customized to manage different types of network traffic. A basic load balancer stack might be used to create an HTTP load balancer. This stack could then be extended to create an HTTPS load balancer, adding configuration and code to provision SSL certificates.
 

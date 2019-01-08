@@ -7,9 +7,9 @@ order: 0
 published: false
 ---
 
-Infrastructure on a dynamic, IaaS platform is provisioned and managed as discrete units by tools such as [Hashicorp Terraform](https://www.terraform.io/), [AWS CloudFormation](https://aws.amazon.com/cloudformation/), [Azure Resource Manager Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview), [Google Cloud Deployment Manager Templates](https://cloud.google.com/deployment-manager/) and [OpenStack Heat](https://wiki.openstack.org/wiki/Heat). These tools (and others) all define a collection of infrastructure in a declarative way, and there are design patterns (and anti-patterns) that apply regardless of which one you work with. However, these tools and their documentation don't use a common term to describe the collection of infrastructure they work with, so for the purposes of cross-tool design patterns, we will use the term "[stack](http://infrastructure-as-code.com/patterns/2018/03/28/defining-stacks.html)".
+An *Infrastructure Stack* is a collection of infrastructure elements that are defined and managed as a single unit.
 
-So, an infrastructure stack is a collection of infrastructure elements defined and changed as a unit.
+Infrastructure on a dynamic, IaaS platform is provisioned and managed as discrete units by tools such as [Hashicorp Terraform](https://www.terraform.io/), [AWS CloudFormation](https://aws.amazon.com/cloudformation/), [Azure Resource Manager Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview), [Google Cloud Deployment Manager Templates](https://cloud.google.com/deployment-manager/) and [OpenStack Heat](https://wiki.openstack.org/wiki/Heat). These tools (and others) all define a collection of infrastructure in a declarative way, and there are design patterns (and anti-patterns) that apply regardless of which one you work with. However, these tools and their documentation don't use a common term to describe the collection of infrastructure they work with, so for the purposes of cross-tool design patterns, we will use the term "[stack](http://infrastructure-as-code.com/patterns/2018/03/28/defining-stacks.html)".
 
 ![An infrastructure stack is a collection of infrastructure elements managed as a unit](images/infrastructure-stack.png)
 
