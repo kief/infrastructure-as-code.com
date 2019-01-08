@@ -4,7 +4,7 @@ title:  "Core Infrastructure Stack Patterns"
 date:   2019-01-01 16:20:00
 category: Core Stack Patterns
 order: 0
-published: false
+published: true
 ---
 
 An *Infrastructure Stack* is a collection of infrastructure elements that are defined and managed as a single unit.
