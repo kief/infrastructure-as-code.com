@@ -1,6 +1,6 @@
 ---
 layout: pattern-group
-title:  "Parameterized Stack Patterns"
+title:  "Stack Configuration Patterns"
 date:   2019-01-01 16:20:00
 category: Stack Configuration Patterns
 order: 0
