@@ -3,8 +3,8 @@ layout: pattern
 title:  "Singleton Stack Antipattern"
 date:   2019-01-01 16:20:00
 category: Core Stack Patterns
-order: 1
-published: false
+order: 3
+published: true
 ---
 
 The Singleton Stack antipattern uses a separate stack definition for each [infrastructure stack](/patterns/core-stack/) instance.
