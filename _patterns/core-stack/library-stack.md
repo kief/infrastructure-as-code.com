@@ -9,26 +9,73 @@ published: true
 
 A Library Stack is an [infrastructure stack](/patterns/core-stack/) that is designed to be used as a base to create more specialised stacks.
 
-It is often useful to define basic, re-usable stack code that can be customized to define different stacks with more specific attributes. For example, you may define a stack that defines a load balancer, but allow it to be customized to manage different types of network traffic. A basic load balancer stack might be used to create an HTTP load balancer. This stack could then be extended to create an HTTPS load balancer, adding configuration and code to provision SSL certificates.
+Often, multiple infrastructure stacks are needed which are largely similar, but require customisation. For example, an organisation may run multiple applications which each require a database and a pool of servers behind a firewall. However, the servers will be configured differently, perhaps using different base images, and may run different code to install and configure the applications on each.
 
 
-## Alternative to:
+![A Library Stack is an infrastructure stack that is designed to be used as a base to create more specialised stacks](images/library-stack.png)
 
-- Stack Module (re-uses infrastructure code at a different level)
 
-# Pattern: Extensible Stack
+In this situation, a base stack definition could include most of the common infrastructure code, such as networking, database provisioning, and basic server provisioning. For each instance, additional code could be added to customize the server provisioning to deploy and configure the relevant application.
 
-It is often useful to define basic, re-usable stack code that can be customized to define different stacks with more specific attributes. For example, you may define a stack that defines a load balancer, but allow it to be customized to manage different types of network traffic. A basic load balancer stack might be used to create an HTTP load balancer. This stack could then be extended to create an HTTPS load balancer, adding configuration and code to provision SSL certificates.
 
-Extending an extensible stack definition creates a new stack definition, which can be used to create multiple instances. So the HTTPS load balancer stack definition is treated as its own stack definition, which happens to import the base load balancer code.
+## Comparison with the template stack pattern
 
-An extensible stack is different from a [stack module](stack-module.adoc), which is code that can be imported into a stack definition, but which is not a complete stack in itself. An extensible stack can be used to create an infrastructure instance on its own, although it may or may not be very useful without changes.
+A library stack is similar to a [template stack](template-stack.html), in that a single definition is used to create multiple stack instances. The implementation may also be very similar. For example, a template stack may be customized by passing a handful of parameters. Our example of the application service stacks could be implemented by passing the name of a different server role to each instance, which is then used by provisioning code to apply a completely different set of server-level configuration.
 
-This may be more of a pedantic difference. In practice, the distinction is an implementation detail of the tooling. For example, you can put load balancer definition code into a Terraform module. This can't be provisioned on its own, without creating a Terraform project, so we'd consider this a stack module rather than a stack library. A Terraform stack library for a load balancer, on the other hand, would be a complete Terraform project, that can be provisioned. Extending it would be a matter of importing the load balancer terraform code, then adding some more terraform files to extend its behavior.
+The difference between a library stack and a template stack is the intent. A template stack is used to create multiple copies of essentially the same stack instance. A library stack is used to create stack instances which have different purposes. Each instance of a template stack would be expected to run the same application, whereas instances of a library stack may run different applications.
 
-(There is some question as to whether this is really a common pattern, or more a theoretical one?)
+The main reason for defining these as two separate patterns is to clearly emphasize the intention of a given stack definition. If the intention is to replicate infrastructure, e.g. to manage multiple environments to test and run an application, then describing it as a template stack should make it easier to keep the design clean and focused.
 
-Extensible stacks are related to [parameterized stacks](parameterized-stack.adoc). Instances of a parameterized stack can only be customized with simple variables, such as strings, numbers, and perhaps lists or hashes. An extensible stack, on the other hand, can be customized by adding further code. For example, an extensible stack definition for a postgres database cluster may include the code for a basic servers and storage, but need further code to define networking configuration to connect the database to application infrastructure for more specific use cases.
+Because of this difference, it's common for to implement a library stack in a way that enables significant variations between instances, as opposed to a template stack which aims to minimize differences between instances.
 
-An analogy can be made to object oriented software code. An extensible stack definition is like a base class, which can be extended to add behaviors.
+
+## Implementation
+
+As mentioned, a simple method for customizing instances of a library stack is to pass variables when applying the stack definition, which the stack definition code uses to customize the infrastructure. However, it may be useful to customize instances further. In some cases, this could be done by taking a copy of the template stack definition, and adding additional infrastructure code (e.g. Terraform or CloudFormation files). When the stack management tool is run, it applies all of the code together - the code from the library stack as well as the added code which customizes the instance.
+
+
+The following is an example Terraform project structure for a library stack. It defines a load balancer, networking, and database:
+
+~~~ console
+service-library-stack/
+   ├── src/
+   │   ├── load_balancer.tf
+   │   ├── networking.tf
+   │   └── database.tf
+   └── test/
+~~~
+
+Another definition project contains the code for a particular application's servers:
+
+~~~ console
+search-service-stack-additions/
+   ├── src/
+   │   └── search-servers.tf
+   └── test/
+~~~
+
+To apply the stack instance, these two projects are combined:
+
+~~~ console
+search-service-stack-full/
+   ├── src/
+   │   ├── search-servers.tf
+   │   ├── load_balancer.tf
+   │   ├── networking.tf
+   │   └── database.tf
+   └── test/
+~~~
+
+Generally speaking, few (if any) infrastructure stack tools support this structure naturally. It is generally implemented by teams using stack orchestration tools (which will be described in future content in this pattern catalogue).
+
+Another way to implement a library stack is through stack modules. The main code is defined in a module, which is imported into a stack project which includes code to add the customizations. This is very similar to the [wrapper stack] pattern, which will be described in a future entry to these patterns.
+
+
+## How stack modules relate to library stacks
+
+A [stack module] is infrastructure code that is packaged to be re-used by multiple stack definitions. For example, a module may contain code that defines a block storage device (a mountable hard drive, such as an EBS volume on AWS). A stack definition can reference this module, probably passing some parameters, to provision an EBS volume.
+
+Stack modules are mechanisms provided by specific stack management tools. Terraform has [modules](https://www.terraform.io/docs/modules/index.html), Cloudformation has [nested stacks](https://aws.amazon.com/blogs/devops/use-nested-stacks-to-create-reusable-templates-and-support-role-specialization/), etc.
+
+In practice, there is not much difference between a stack module and a library stack. The main difference is that a library stack is intended to represent a mostly complete stack, whereas a stack module is usually a smaller component designed to be included in a stack. A stack definition might include multiple modules, maybe even the same one. For example, a stack that creates a set of servers to run an application might use a "disk volume module" several times, to create different disks for different servers in the stack.
 
