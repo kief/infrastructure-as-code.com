@@ -11,11 +11,11 @@ A Many-Headed Stack manages the infrastructure for multiple environments in a si
 
 For example, if there are three environments for testing and running an application, a single Terraform project (and single statefile) includes the code for all three of the environments.
 
+Many people new to an infrastructure stack tool start out by creating this type of structure, because it seems natural to simply add new environments into a project that already exists. But a bit of experience shows the drawbacks of the approach.
+
 
 ![A many-headed stack manages the infrastructure for multiple environments in a single stack](images/many-headed-stack.png)
 
-
-Many people new to an infrastructure stack tool start out by creating this type of structure, because it seems natural to simply add new environments into a project that already exists. But a bit of experience shows the drawbacks of the approach.
 
 The problem with including multiple environments in a single stack is that when the tool is run to apply the definition to the deployed infrastructure, its scope is everything in the stack. So if you apply a change to the "test" environment in the example above, it's entirely possible that changes will be inadvertently made to "staging" or "production" environments. 
 

@@ -1,10 +1,10 @@
 ---
 layout: pattern-group
-title:  "Stack Configuration Patterns"
+title:  "Patterns For Configuring Stacks"
 date:   2019-01-01 16:20:00
 category: Stack Configuration Patterns
 order: 0
-published: false
+published: next
 ---
 
 Defining an infrastructure stack as code enables the creation of multiple instances of the stack. This might be used as an [environment template](environment-template.adoc), to replicate a stack instance in multiple environments, or else as a [library stack](library-stack.adoc) that can be re-used for different things.

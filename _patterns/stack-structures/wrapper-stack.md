@@ -2,9 +2,9 @@
 layout: pattern
 title:  "Wrapper Stack Pattern"
 date:   2019-01-01 16:20:00
-category: Core Stack Patterns
-order: 5
-published: false
+category: Stack Structural Patterns
+order: 4
+published: next
 ---
 
 A Wrapper Stack is an [infrastructure stack definition](/patterns/core-stack/) whose only purpose is to import a [stack module](/patterns/core-stack/stack-module.html) that contains most of the actual stack code.

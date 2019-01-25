@@ -3,6 +3,7 @@ layout: pattern
 title:  "Micro Stack Pattern"
 date:   2019-01-01 16:20:00
 category: Stack Structural Patterns
+order: 1
 published: false
 ---
 

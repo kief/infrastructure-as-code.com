@@ -3,6 +3,7 @@ layout: pattern
 title:  "Monolithic Stack Antipattern"
 date:   2019-01-01 16:20:00
 category: Stack Structural Patterns
+order: 2
 published: false
 ---
 
