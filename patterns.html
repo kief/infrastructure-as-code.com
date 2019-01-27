@@ -12,7 +12,10 @@ layout: default
   {% for item in pattern_items %}
     {% if item.order == 0 %}
       <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
-      <p>{{ item.excerpt | strip_html }}</p>
+      <p>
+        {{ item.excerpt | strip_html }}
+        (<a href="{{ item.url }}">Read more</a>)
+      </p>
     {% endif %}
   {% endfor %}
 
