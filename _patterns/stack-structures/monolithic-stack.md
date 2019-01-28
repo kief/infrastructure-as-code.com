@@ -3,15 +3,16 @@ layout: pattern
 title:  "Monolithic Stack Antipattern"
 date:   2019-01-01 16:20:00
 category: Stack Structural Patterns
-order: 2
-published: false
+order: 1
+published: next
 ---
 
 A Monolithic Stack is an [infrastructure stack](/patterns/core-stack/) that includes too many elements, so that it is difficult to work with.
 
 Infrastructure often grows organically, each new piece being naturally added into the existing codebase as we go. Over time, the codebase can become messy and unwieldy. 
 
-image:images/monolithic-stack.png[Stack boundary containing way too much stuff]
+
+![A Monolithic Stack is an infrastructure stack that includes too many elements, so that it is difficult to work with](images/monolithic-stack.png)
 
 
 Whether a given infrastructure stack is a monolith is a matter of judgement. The symptoms of a monolithic stack include:
@@ -31,11 +32,14 @@ A key indicator of whether a stack is becoming monolithic is how many people are
 
 These describe issues within a single team working on an infrastructure stack. Multiple teams often making changes to a single stack is a clear sign of a monolith. Enabling different teams to work easily on clearly separated parts of a system is a key goal for good system architecture.
 
-Dividing a monolithic stack into multiple smaller [micro stacks](micro-stack.adoc) can make it easier for multiple people, and multiple teams, to maintain and evolve the system. It's possible that related services can be cleanly maintained in a single [multi-service stack](multi-service-stack.adoc), with strong engineering discipline. It's often more natural to split a system into [single-service stacks](single-service-stack.adoc). In some situations, breaking services down into [multiple stacks](multie-stack-service.adoc) has value.
+
+## Alternatives to monolithic stacks
+
+Dividing a monolithic stack into multiple smaller [micro stacks](micro-stack.html) can make it easier for multiple people, and multiple teams, to maintain and evolve the system. It's possible that related services can be cleanly maintained in a single [multi-service stack](multi-service-stack.html), with strong engineering discipline. It's often more natural to split a system into [single-service stacks](single-service-stack.html). In some situations, breaking services down into [multiple stacks](cross-stack-service.html) has value.
 
 Splitting monolithic stacks does not guarantee to fix the issues described above with messy, fragile stacks. With smaller stacks, design challenges are pushed out to the integration between the stacks. As with many architectural decisions, how far to go between small, micro-stacks and large, monolithic stacks, involves tradeoffs.
 
 The benefit of a single stack is that deployment is a single operation. When a system is comprised of multiple stacks which must integrate with one another, managing the delivery of changes is more complex. Delivery requires versioning of stack code, maintaining integration contracts between stacks, and more sophisticated testing.
 
-However small, clearly defined stacks can make the design of the overall system more clear. Having each stack easy to change and apply on its own should reduce barriers to making further improvements to the system. Particularly for infrastructure, which can be very slow and risky to change, breaking a monolith is a useful first step.
+But small, cleanly defined stacks can make the design of the overall system more clear. Having each stack easy to change and apply on its own should reduce barriers to making further improvements to the system. Particularly for infrastructure, which can be very slow and risky to change, breaking a monolith is a useful first step.
 

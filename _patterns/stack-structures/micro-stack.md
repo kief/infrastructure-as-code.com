@@ -3,28 +3,25 @@ layout: pattern
 title:  "Micro Stack Pattern"
 date:   2019-01-01 16:20:00
 category: Stack Structural Patterns
-order: 1
-published: false
+order: 2
+published: next
 ---
 
-Keeping stacks small.
+The Micro Stack pattern involves dividing a system into multiple, loosely coupled [infrastructure stacks](/patterns/core-stack/), so that it is easy manage them independently.
 
-Infrastructure for systems comprised of multiple services, and worked on by multiple people or teams, can become too unwieldy to manage as a single [stack](definition-of-a-stack.adoc). Designing (or evolving) infrastructure into multiple, smaller Micro Stacks is a useful way to keep system design loosely coupled and easier to change. This architectural style is heavily influenced by [microservices](https://martinfowler.com/articles/microservices.html), and many of the same forces, principles, and practices apply.
+Designing (or evolving) infrastructure into multiple, smaller Micro Stacks is a useful way to keep system design loosely coupled and easier to change. Smaller stacks are quicker to provision and test.
 
+Micro stacks can also be useful where there is a need to manage multiple instances of stacks within an overall deployed system, for instance for scaling and availability. In addition to the advantages of being able to quickly provision and destroy smaller stacks, each stack can be scaled and distributed independently. In some high volume scenarios it is useful to be able to scale up the number of some parts of the system, without having to scale everything in the same ratio. For example, a system may be able to handle peak volumes by deploying more instances of front end services across locations, without needing to deploy the same number of additional instances of back end services.
 
-== Componentization of infrastructure
-
-A key driver of microservice as micro stacks is to organize a system into clearly defined components. There are different ways to do this with infrastructure, of which micro stacks are only one.
-
-Modules, such as [Terraform modules](https://www.terraform.io/docs/modules/index.html) and [CloudFormation nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html), are code that is included into a stack definition. A module offers a way to re-use code across stacks. However, a module is not changed separately, it is changed as part of a single stack.
-
-Infrastructure elements can be defined using a different mechanism from stack definitions, such as a server configuration tool like Ansible, Chef, or Puppet, or a server image definition tool like Packer. A stack definition will often include servers as elements of the stack. In these cases, the configuration of the server itself is delegated to a separate tool with its own definition files. There are different ways to orchestrate the use of these tools within a stack (to be defined in "Server Management" patterns).
-
-Applications are also often defined and provisioned using a separate mechanism to the stack management, although these again need to be orchestrated with the stack. (See application deployment patterns)
+This architectural style is heavily influenced by [microservices](https://martinfowler.com/articles/microservices.html), and many of the same forces, principles, and practices apply.
 
 
-== More specific patterns for micro stacks
+## Related patterns
 
-Single service stack, Multi-stack service
+The appropriate sizing of stacks is very dependent on the situation. Micro stacks are the opposite end of the spectrum from a [monolithic stack](monolithic-stack.html), where all of the infrastructure for a system is defined in a single stack.
+
+A [multi-service stack](multi-service-stack.html) is a step away from a monolith, where each stack contains the infrastructure for multiple, related applications. [Single service stacks](single-service-stack.html) define the infrastructure specific to one particular application or service in each stack.
+
+Breaking things down to the next level, a [cross-stack service](cross-stack-service.html) splits the infrastructure for a single application across multiple stacks, for example splitting web servers, application servers, database servers, etc. each into their own stack.
 
 
