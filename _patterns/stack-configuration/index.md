@@ -3,7 +3,8 @@ layout: pattern-group
 title:  "Patterns For Configuring Stacks"
 date:   2019-01-01 16:20:00
 category: Stack Configuration Patterns
-order: 0
+section: true
+order: 20
 published: false
 ---
 

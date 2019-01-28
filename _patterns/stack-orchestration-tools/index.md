@@ -3,7 +3,8 @@ layout: pattern
 title:  "Stack Orchestration Tools"
 date:   2019-01-01 16:20:00
 category: Stack Tools
-order: 0
+section: true
+order: 100
 published: false
 ---
 

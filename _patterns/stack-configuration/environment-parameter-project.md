@@ -3,6 +3,7 @@ layout: pattern
 title:  "Environment Parameter Project"
 date:   2019-01-01 16:20:00
 category: Stack Configuration Patterns
+order: 21
 published: false
 ---
 

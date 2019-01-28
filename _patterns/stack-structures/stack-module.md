@@ -3,7 +3,7 @@ layout: pattern
 title:  "Stack Module Pattern"
 date:   2019-01-01 16:20:00
 category: Stack Structural Patterns
-order: 8
+order: 18
 published: true
 ---
 

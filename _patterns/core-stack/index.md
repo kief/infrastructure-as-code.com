@@ -3,6 +3,7 @@ layout: pattern-group
 title:  "Core Infrastructure Stack Patterns"
 date:   2019-01-01 16:20:00
 category: Core Stack Patterns
+section: true
 order: 0
 published: true
 ---
