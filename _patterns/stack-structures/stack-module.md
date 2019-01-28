@@ -4,12 +4,16 @@ title:  "Stack Module Pattern"
 date:   2019-01-01 16:20:00
 category: Stack Structural Patterns
 order: 3
-published: false
+published: true
 ---
 
 A Stack Module is a unit of infrastructure code that can be included into one or more [infrastructure stack](/patterns/core-stack/) definitions.
 
 Most stack management tools implement modularization for re-use. Terraform has [modules](https://www.terraform.io/docs/modules/index.html), Cloudformation has [nested stacks](https://aws.amazon.com/blogs/devops/use-nested-stacks-to-create-reusable-templates-and-support-role-specialization/), etc.
+
+
+![A Stack Module is a unit of infrastructure code that can be included into one or more infrastructure stack definitions](images/stack-module.png)
+
 
 The use case for stack modules is to re-use code across stacks, and in some cases within stacks. For example, a stack that includes a pool of web servers and a pool of application servers could re-use a "load balancer" module to create two load balancer VIPs, one in front of each server pool.
 
