@@ -17,9 +17,9 @@ Limiting the scope for a change to one application reduces the scope of release 
 
 ## Related patterns
 
-A single service stack might be a consumer stack, depending on infrastructure managed by a provider stack, as described in the [shared infrastructure stack pattern](shared-infrastructure-stack.html). But nothing in the shared infrastructure is specific to the single service stack, so the provider stack should not need to be changed in order to change the consumer stack.
+A single service stack might be a consumer stack, depending on infrastructure managed by a provider stack, as [will be] described in the [shared infrastructure stack pattern]. But nothing in the shared infrastructure is specific to the single service stack, so the provider stack should not need to be changed in order to change the consumer stack.
 
 On the other side, a single service stack could be a provider, creating infrastructure used by one or more consumer stacks. In these cases, the contracts between provider and consumer should be clearly defined. This ensures that people working on the provider stack know which parts of the stack they can change independently, and which parts need more care and communication.
 
-A [shared nothing stack](shared-nothing-stack.html) avoids this completely, by ensuring that the service stack has no inbound or outbound dependencies, giving it maximum latitude for independent changes.
+A [shared nothing stack] avoids this completely, by ensuring that the service stack has no inbound or outbound dependencies, giving it maximum latitude for independent changes.
 

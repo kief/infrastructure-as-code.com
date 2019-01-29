@@ -3,7 +3,7 @@
 preview: bundle ## View unpublished
 	bundle exec jekyll serve --watch --unpublished
 
-check: bundle ## View published
+ready: bundle ## View ready to publish
 	bundle exec jekyll serve --watch
 
 build:
@@ -21,6 +21,11 @@ upload: build ## Publish to live
 
 bundle:
 	bundle install
+
+linkcheck:
+	mkdir -p tmp
+	rm -f tmp/linkcheck.log
+	wget --spider --accept-regex '\/patterns' -r -nv -l 3 -w 2 -p -P tmp/ --delete-after -nd -o tmp/linkcheck.log http://localhost:4000/patterns.html
 
 help:
 	@grep -h -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

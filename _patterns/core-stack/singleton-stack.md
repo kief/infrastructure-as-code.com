@@ -13,7 +13,7 @@ So if there are three environments, _test_, _staging_, and _production_, there w
 
 ![A singleton stack has a separate definition for each instance](images/singleton-stack.png)
 
-This is a fairly intuitive way to maintain multiple environments. It avoids issues with the more naive [multi-headed stack](/patterns/core-stack/multi-headed-stack.html) anti-pattern, because at least each environment has its own stack instance, reducing the blast radius of problems with a stack.
+This is a fairly intuitive way to maintain multiple environments. It avoids issues with the more naive [multi-headed stack](/patterns/core-stack/many-headed-stack.html) anti-pattern, because at least each environment has its own stack instance, reducing the blast radius of problems with a stack.
 
 There are several problems with singleton stacks as an approach for multiple instances of the same infrastructure. One is that it increases the chances of errors. After a changed is tested in one environment, it is copied into the definition code for the next environment. The change may not be copied correctly, especially if it actually involves changing the code in several places. The risk might be lower if the code can be completely replaced with the code from the environment.
 

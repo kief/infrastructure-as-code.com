@@ -16,6 +16,6 @@ Deciding on appropriate sizing and boundaries for splitting stack is a particula
 
 In the other direction, multiple services are run in a single [multi-service stack](multi-service-stack.html). For example, a number of applications may combine to provide a single overall service, such as search, in which case it could make sense to combine them in a single infrastructure stack, although this risks becoming a monolith.
 
-[Shared nothing stacks](shared-nothing-stack.html) take the single service pattern to the extreme of ensuring that stacks do not have dependencies on other stacks. More commonly, stacks do have dependencies, for example a service stack's infrastructure may use networking structures managed by another stack. [Stack integration patterns] is an important topic in infrastructure design.
+[Shared nothing stacks] take the single service pattern to the extreme of ensuring that stacks do not have dependencies on other stacks. More commonly, stacks do have dependencies, for example a service stack's infrastructure may use networking structures managed by another stack. [Stack integration patterns] is an important topic in infrastructure design.
 
 It is common to simplify infrastructure design by having a stack provide infrastructure used by other stacks. Another technique is to share common infrastructure code as a [stack module](stack-module.html), imported into multiple stack definitions.
