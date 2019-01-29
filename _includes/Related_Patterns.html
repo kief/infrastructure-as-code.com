@@ -1,18 +1,22 @@
----
-title: Infrastructure Design Pattern Catalogue
-layout: default
----
 
-<header class="post-header">
-  <h1 class="post-title">{{ page.title }}</h1>
-</header>
 
-<div class="home">
+{% if page.category != "" %}
 
-{% assign pattern_categories = site.patterns | sort: 'order' | group_by: 'category' %}
-{% for category in pattern_categories %}
+<div class="sidebar-module">
+  <h4>>>{{ page.category }}<<</h4>
 
-  {% assign pattern_items = category.items | sort: 'order' %}
+<p>-- site: {{ site }}</p>
+<p>-- site.collections:  {{ site.collections }}</p>
+<p>-- site.collections.patterns:  {{ site.collections.patterns }}</p>
+<p>-- site.patterns:   site.patterns </p>
+
+  {% assign category = site.patterns[page.category] %}
+
+category: {{ category }}
+
+| sort: 'order'
+
+  {% assign pattern_items = category.items  %}
 
   {% for item in pattern_items %}
     {% if item.section == true %}
@@ -35,7 +39,6 @@ layout: default
   {% endfor %}
   </ul>
 
-{% endfor %}
 </div>
+{% endif %}
 
-</div>
