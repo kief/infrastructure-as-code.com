@@ -19,7 +19,7 @@ The use case for stack modules is to re-use code across stacks, and in some case
 
 A stack module has some similarities to a [library stack](/patterns/core-stack/library-stack.html). A library stack normally represents a complete stack, or nearly complete stack, which is customized for different purposes, whereas a stack module is typically a smaller unit of code that is included within a larger stack definition. But this distinction is subjective.
 
-The [wrapper stack](wrapper-stack.html) pattern makes use of stack modules in a variation of the library stack and [template stack](/patterns/core-stack/template-stack.html) pattern.
+The [wrapper stack](/patterns/core-stack/wrapper-stack.html) pattern makes use of stack modules in a variation of the library stack and [template stack](/patterns/core-stack/template-stack.html) pattern.
 
 
 ## Pitfalls of stack modules

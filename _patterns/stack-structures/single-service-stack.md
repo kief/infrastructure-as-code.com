@@ -4,7 +4,7 @@ title:  "Single Service Stack Pattern"
 date:   2019-01-01 16:20:00
 category: Stack Structural Patterns
 order: 13
-published: next
+published: true
 ---
 
 A Single Service Stack defines the infrastructure specific to a single application in its own

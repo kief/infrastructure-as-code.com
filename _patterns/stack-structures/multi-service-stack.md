@@ -4,7 +4,7 @@ title:  "Multi-Service Stack Pattern"
 date:   2019-01-01 16:20:00
 category: Stack Structural Patterns
 order: 14
-published: next
+published: true
 ---
 
 A Multi-Service Stack hosts multiple applications in a single instance of the [infrastructure stack](/patterns/core-stack/).
