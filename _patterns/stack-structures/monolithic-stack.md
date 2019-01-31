@@ -5,6 +5,7 @@ date:   2019-01-01 16:20:00
 category: Stack Structural Patterns
 order: 11
 published: true
+status: review
 ---
 
 A Monolithic Stack is an [infrastructure stack](/patterns/core-stack/) that includes too many elements, so that it is difficult to work with.

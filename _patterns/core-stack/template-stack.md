@@ -5,6 +5,7 @@ date:   2019-01-01 16:20:00
 category: Core Stack Patterns
 order: 1
 published: true
+status: review
 ---
 
 A Template Stack is an [infrastructure stack](/patterns/core-stack/) that is designed to be consistently replicated.

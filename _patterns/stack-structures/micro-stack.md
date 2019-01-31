@@ -5,6 +5,7 @@ date:   2019-01-01 16:20:00
 category: Stack Structural Patterns
 order: 12
 published: true
+status: review
 ---
 
 The Micro Stack pattern involves dividing a system into multiple, loosely coupled [infrastructure stacks](/patterns/core-stack/), so that it is easy manage them independently.

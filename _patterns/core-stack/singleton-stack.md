@@ -5,6 +5,7 @@ date:   2019-01-01 16:20:00
 category: Core Stack Patterns
 order: 3
 published: true
+status: review
 ---
 
 The Singleton Stack antipattern uses a separate stack definition for each [infrastructure stack](/patterns/core-stack/) instance.

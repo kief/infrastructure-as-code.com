@@ -6,6 +6,7 @@ category: Core Stack Patterns
 section: true
 order: 0
 published: true
+status: review
 ---
 
 An *Infrastructure Stack* is a collection of infrastructure elements that are defined and managed as a single unit.

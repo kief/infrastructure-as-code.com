@@ -5,6 +5,7 @@ date:   2019-01-01 16:20:00
 category: Stack Structural Patterns
 order: 18
 published: true
+status: review
 ---
 
 A Stack Module is a unit of infrastructure code that can be included into one or more [infrastructure stack](/patterns/core-stack/) definitions.

@@ -6,6 +6,7 @@ category: Stack Structural Patterns
 section: true
 order: 10
 published: true
+status: review
 ---
 
 A key challenge with infrastructure design is deciding how to size and structure [stacks](/patterns/core-stack/). The infrastructure for a given system may be defined as a single stack, or spread across multiple stacks. Shared code may also be used across stacks.

@@ -5,10 +5,11 @@ date:   2019-01-01 16:20:00
 category: Stack Configuration Patterns
 section: true
 order: 20
-published: false
+published: true
+status: todo
 ---
 
-Defining an infrastructure stack as code enables the creation of multiple instances of the stack. This might be used as an [environment template](environment-template.adoc), to replicate a stack instance in multiple environments, or else as a [library stack](library-stack.adoc) that can be re-used for different things.
+Defining an [infrastructure stack](/patterns/core-stack/) as code enables the creation of multiple instances of the stack. This might be used as an [environment template](environment-template.adoc), to replicate a stack instance in multiple environments, or else as a [library stack](library-stack.adoc) that can be re-used for different things.
 
 In the environment template scenario, each instance of the stack represents the same infrastructure, but is replicated in different environments. For example, you may have a product database stack with instances for the QA environment, Staging environment, and Production environment. Or you may have instances of the product database stack in different regions. The code is re-used for the same use case in each instance.
 

@@ -5,7 +5,8 @@ date:   2019-01-01 16:20:00
 category: Stack Tools
 section: true
 order: 100
-published: false
+published: true
+status: todo
 ---
 
 A stack orchestration tool is a tool, usually written by a team, that is used to run a stack management tool such as Terraform, CloudFormation, etc. These are usually written in order to manage configuration and parameters, and in some cases to marshal stack definition code.

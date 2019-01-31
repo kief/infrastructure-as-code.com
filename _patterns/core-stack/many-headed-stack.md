@@ -5,6 +5,7 @@ date:   2019-01-01 16:20:00
 category: Core Stack Patterns
 order: 4
 published: true
+status: review
 ---
 
 A Many-Headed Stack manages the infrastructure for multiple environments in a single stack.

@@ -16,7 +16,14 @@ layout: default
 
   {% for item in pattern_items %}
     {% if item.section == true %}
-      <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+      <h2>
+          {% if item.status == "review" %}
+            &#x1F50D
+          {% elsif item.status == "todo" %}
+            &#x1F477
+          {% endif %}
+        <a href="{{ item.url }}">{{ item.title }}</a>
+      </h2>
       <p>
         {{ item.excerpt | strip_html }}
         (<a href="{{ item.url }}">Read more</a>)
@@ -28,7 +35,14 @@ layout: default
   {% for item in pattern_items %}
     {% if item.section != true %}
       <li>
-        <strong><a href="{{ item.url }}">{{ item.title }}</a>:</strong>
+        <strong>
+          {% if item.status == "review" %}
+            &#x1F50D
+          {% elsif item.status == "todo" %}
+            &#x1F477
+          {% endif %}
+          <a href="{{ item.url }}">{{ item.title }}</a>:
+        </strong>
         {{ item. excerpt | strip_html }}
       </li>
     {% endif %}
