@@ -9,6 +9,7 @@ layout: default
 
 <div class="home">
 
+<table>
 {% assign pattern_categories = site.patterns | sort: 'order' | group_by: 'category' %}
 {% for category in pattern_categories %}
 
@@ -16,40 +17,52 @@ layout: default
 
   {% for item in pattern_items %}
     {% if item.section == true %}
+  <tr>
+    <td colspan="2">
       <h2>
+        <a href="{{ item.url }}">{{ item.title }}</a>
           {% if item.status == "review" %}
             &#x1F50D
           {% elsif item.status == "todo" %}
             &#x1F477
           {% endif %}
-        <a href="{{ item.url }}">{{ item.title }}</a>
       </h2>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
       <p>
         {{ item.excerpt | strip_html }}
         (<a href="{{ item.url }}">Read more</a>)
       </p>
+  </td>
+  </tr>
     {% endif %}
   {% endfor %}
 
-  <ul>
   {% for item in pattern_items %}
     {% if item.section != true %}
-      <li>
-        <strong>
-          {% if item.status == "review" %}
-            &#x1F50D
-          {% elsif item.status == "todo" %}
-            &#x1F477
-          {% endif %}
-          <a href="{{ item.url }}">{{ item.title }}</a>:
-        </strong>
-        {{ item. excerpt | strip_html }}
-      </li>
+  <tr>
+    <td>
+      <strong>
+        <a href="{{ item.url }}">{{ item.title }}</a>:
+      </strong>
+      {% if item.status == "review" %}
+        &#x1F50D
+      {% elsif item.status == "todo" %}
+        &#x1F477
+      {% endif %}
+    </td>
+    <td>
+      {{ item. excerpt | strip_html }}
+    </td>
+  </tr>
     {% endif %}
   {% endfor %}
-  </ul>
 
+  </tr>
 {% endfor %}
+</table>
 </div>
 
 </div>
