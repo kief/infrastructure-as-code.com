@@ -46,7 +46,7 @@ It is a red flag when a parameter is used as a conditional that decides whether 
 
 Some teams use the [singleton stack anti-pattern](singleton-stack.html) to manage multiple instances of a stack. This involves creating a new copy of the stack code for each new environment or other instance. While this is a straightforward approach to implement, it makes it difficult to keep each instance consistent.
 
-A variation of the singleton stack is the [wrapper stack pattern]. Like the singleton stack, there is a separate copy of the stack code for each stack instance. However, the bulk of the infrastructure code is contained in a [stack module](/patterns/stack-structures/stack-module.html), a library which is imported into the stack project. This way the code is declared once - in the module - and re-used across each stack instance. Each stack project is effectively used as a mechanism to define parameter values for one stack instance.
+A variation of the singleton stack is the [wrapper stack pattern]. Like the singleton stack, there is a separate copy of the stack code for each stack instance. However, the bulk of the infrastructure code is contained in a [stack module](/patterns/stack-structures/stack-code-module.html), a library which is imported into the stack project. This way the code is declared once - in the module - and re-used across each stack instance. Each stack project is effectively used as a mechanism to define parameter values for one stack instance.
 
 
 ## Testing infrastructure stack code

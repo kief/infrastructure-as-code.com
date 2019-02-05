@@ -77,12 +77,12 @@ search-service-stack-full/
 
 Generally speaking, few (if any) infrastructure stack tools support this structure directly. It is generally implemented by teams using [stack orchestration tools](/patterns/stack-orchestration-tools/).
 
-Another way to implement a library stack is through [stack modules](/patterns/stack-structures/stack-module.html). The main code is defined in a module, which is imported into a stack project which includes code to add the customizations.
+Another way to implement a library stack is through [stack modules](/patterns/stack-structures/stack-code-module.html). The main code is defined in a module, which is imported into a stack project which includes code to add the customizations.
 
 
 ## How stack modules relate to library stacks
 
-A [stack module](/patterns/stack-structures/stack-module.html) is infrastructure code that is packaged to be re-used by multiple stack projects. For example, a module may contain code that defines a block storage device (a mountable hard drive, such as an EBS volume on AWS). A stack project's code can reference this module, probably passing some parameters, to provision an EBS volume.
+A [stack module](/patterns/stack-structures/stack-code-module.html) is infrastructure code that is packaged to be re-used by multiple stack projects. For example, a module may contain code that defines a block storage device (a mountable hard drive, such as an EBS volume on AWS). A stack project's code can reference this module, probably passing some parameters, to provision an EBS volume.
 
 Stack modules are mechanisms provided by specific stack management tools. Terraform has [modules](https://www.terraform.io/docs/modules/index.html), Cloudformation has [nested stacks](https://aws.amazon.com/blogs/devops/use-nested-stacks-to-create-reusable-templates-and-support-role-specialization/), etc.
 
