@@ -1,6 +1,6 @@
 ---
 layout: pattern-group
-title:  "Infrastructure Stacks"
+title:  "Overview of Infrastructure Stacks"
 date:   2019-01-01 16:20:00
 category: Core Stack Patterns
 section: true
