@@ -22,9 +22,9 @@ layout: default
       <h2>
         <a href="{{ item.url }}">{{ item.title }}</a>
           {% if item.status == "review" %}
-            &#x1F50D
+            &#x1F50D (Ready for review)
           {% elsif item.status == "todo" %}
-            &#x1F477
+            &#x1F477 (In progress, not ready for review)
           {% endif %}
       </h2>
     </td>
