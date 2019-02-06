@@ -10,6 +10,11 @@ status: review
 
 Stack instance configuration values can be stored in a parameter registry. The appropriate set of values can be retrieved from the registry by the stack management tool or [stack orchestration tool](/patterns/stack-orchestration-tools/) when applying the code to a stack instance.
 
+<figure>
+  <img src="images/configuration-registry.png" alt="Stack instance configuration values can be stored in a parameter registry"/>
+  <figcaption>Stack instance configuration values can be stored in a parameter registry.</figcaption>
+</figure>
+
 This is normally used with a [template stack](/patterns/core-stack/template-stack.html), which has parameters that can be set differently for different instances of the stack. For example, a stack that is used to create a web server cluster may have different values for the sizing of the cluster in different environments:
 
 
