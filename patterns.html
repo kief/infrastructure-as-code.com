@@ -47,11 +47,6 @@ layout: default
       <strong>
         <a href="{{ item.url }}">{{ item.title }}</a>:
       </strong>
-      {% if item.status == "review" %}
-        &#x1F50D
-      {% elsif item.status == "todo" %}
-        &#x1F477
-      {% endif %}
     </td>
     <td>
       {{ item. excerpt | strip_html }}
