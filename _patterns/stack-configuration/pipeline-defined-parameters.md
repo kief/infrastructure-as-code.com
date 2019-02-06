@@ -4,6 +4,34 @@ title:  "Pipeline-Defined Parameters"
 date:   2019-01-01 16:20:00
 category: Stack Configuration Patterns
 order: 24
-published: false
-status: todo
+published: true
+status: review
 ---
+
+When infrastructure code is applied to environments using a Continuous Delivery Pipeline, stack instance values can be defined in pipeline job configuration. Each stage which applies the stack code to a given environment includes configuration values for that environment, which is then passed to the command which applies to the code.
+
+
+<figure>
+  <img src="images/pipeline-defined-parameters.png" alt="Each stage which applies the stack code passes the configuration values for the environment"/>
+  <figcaption>Each stage which applies the stack code passes the configuration values for the environment.</figcaption>
+</figure>
+
+
+This is normally used with a [template stack](/patterns/core-stack/template-stack.html), which has parameters that can be set differently for different instances of the stack. For example, a stack that is used to create a web server cluster may have different values for the sizing of the cluster in different environments:
+
+
+| Stack Instance | environment_id | cluster_minimum | cluster_maximum |
+|-------|--------|---------|
+| web_test | test | 1 | 1 |
+| web_staging | staging | 1 | 2 |
+| web_production | production | 2 | 5 |
+
+
+The pipeline job configuration could specify the command line for running the stack management tool, passing the parameter values on the commandline. This essentially implements the [command-line parameter pattern](command-line-parameters.html).
+
+This pattern could also be used in conjunction with the [stack instance configuration file pattern](stack-parameter-files.html), passing the path to the relevant configuration file to the stack management tool on its command line.
+
+Or, the pipeline job could pass an *instance_id* value to the stack management tool, or to the [orchestration tool](/patterns/stack-orchestration-tools/), that is then used to look up the needed parameter values for the instance in a [parameter registry](stack-parameter-registry.html).
+
+Generally speaking, these later approaches are preferable, because it keeps the pipeline configuration from becoming overly complicated.
+

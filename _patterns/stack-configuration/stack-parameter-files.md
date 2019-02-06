@@ -1,6 +1,6 @@
 ---
 layout: pattern
-title:  "Stack Parameter Files Pattern"
+title:  "Instance Configuration File Pattern"
 date:   2019-01-01 16:20:00
 category: Stack Configuration Patterns
 order: 22
