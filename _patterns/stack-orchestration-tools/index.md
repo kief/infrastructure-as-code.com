@@ -4,7 +4,7 @@ title:  "Stack Orchestration Tools"
 date:   2019-01-01 16:20:00
 category: Stack Tools
 section: true
-order: 100
+order: 40
 published: true
 status: todo
 ---

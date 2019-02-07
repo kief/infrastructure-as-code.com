@@ -2,8 +2,8 @@
 layout: pattern-group
 title:  "Shared Infrastructure Stack Pattern"
 date:   2019-01-01 16:20:00
-category: Stack Integration Patterns
-order: 31
+category: Separated Stack Patterns
+order: 41
 published: false
 status: todo
 ---

@@ -2,8 +2,8 @@
 layout: pattern-group
 title:  "Shared Nothing Stack"
 date:   2019-01-01 16:20:00
-category: Stack Integration Patterns
-order: 32
+category: Separated Stack Patterns
+order: 42
 published: false
 status: todo
 ---
