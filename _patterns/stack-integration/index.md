@@ -4,7 +4,7 @@ title:  "Patterns For Integrating Stacks"
 date:   2019-01-01 16:20:00
 category: Stack Integration Patterns
 section: true
-order: 30
+order: 40
 published: true
 status: todo
 ---
