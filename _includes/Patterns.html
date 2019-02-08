@@ -1,0 +1,44 @@
+
+{% if page.layout == "pattern" %}
+
+<div class="sidebar-module">
+  <h4>Pattern List</h4>
+
+<table>
+{% assign pattern_categories = site.patterns | sort: 'order' | group_by: 'category' %}
+{% for category in pattern_categories %}
+
+  {% assign pattern_items = category.items | sort: 'order' %}
+
+  {% for item in pattern_items %}
+    {% if item.section == true %}
+  <tr>
+    <td colspan="2">
+      <p>
+        <strong><a href="{{ item.url }}">{{ item.title }}</a></strong>
+      </p>
+    </td>
+  </tr>
+    {% endif %}
+  {% endfor %}
+
+  {% for item in pattern_items %}
+    {% if item.layout == "pattern" %}
+  <tr>
+    <td>
+      <ul>
+      <li>
+        <a href="{{ item.url }}">{{ item.title }}</a>
+      </li>
+      </ul>
+    </td>
+  </tr>
+    {% endif %}
+  {% endfor %}
+
+  </tr>
+{% endfor %}
+</table>
+
+</div>
+{% endif %}
