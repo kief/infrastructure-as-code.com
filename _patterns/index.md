@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: pattern-group
 title:  "Overview of Infrastructure Patterns"
 date:   2019-01-01 16:20:00
 published: true

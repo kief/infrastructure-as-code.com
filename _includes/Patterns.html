@@ -1,10 +1,9 @@
 
-{% if page.layout == "pattern" %}
+{% if page.layout == "pattern" or page.layout == "pattern-group" %}
 
 <div class="sidebar-module">
   <h4>Pattern List</h4>
 
-<table>
 {% assign pattern_categories = site.patterns | sort: 'order' | group_by: 'category' %}
 {% for category in pattern_categories %}
 
@@ -12,33 +11,21 @@
 
   {% for item in pattern_items %}
     {% if item.section == true %}
-  <tr>
-    <td colspan="2">
-      <p>
-        <strong><a href="{{ item.url }}">{{ item.title }}</a></strong>
-      </p>
-    </td>
-  </tr>
+      </ul>
+      <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+      <ul>
     {% endif %}
   {% endfor %}
 
   {% for item in pattern_items %}
     {% if item.layout == "pattern" %}
-  <tr>
-    <td>
-      <ul>
       <li>
         <a href="{{ item.url }}">{{ item.title }}</a>
       </li>
-      </ul>
-    </td>
-  </tr>
     {% endif %}
   {% endfor %}
 
-  </tr>
 {% endfor %}
-</table>
 
 </div>
 {% endif %}
