@@ -3,12 +3,8 @@ layout: pattern-group
 title:  "Overview of Infrastructure Patterns"
 date:   2019-01-01 16:20:00
 published: true
-status: review
 permalink: /patterns.html
 ---
-
-(See the full [list of patterns](/patterns/list.html) that have been written so far.)
-
 
 ## What is this for?
 
