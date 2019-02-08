@@ -22,6 +22,11 @@ upload: build ## Publish to live
 bundle:
 	bundle install
 
+# update: ## Put update time on files that have changed
+#   UPDATED_MARKDOWN_FILES=$(shell git diff --cached --name-status | perl -ne 'if ( /^[MA]\s*(\S+\.md)$/ ) { print "$1 " }' )
+#   sed -i "/---.*/,/---.*/s/^updated:.*$/updated: $(date -u "+%Y-%m-%d %T %Z")/" $(UPDATED_MARKDOWN_FILES)
+#   git add $(UPDATED_MARKDOWN_FILES)
+
 linkcheck: ## Check links in the pattern catalogue
 	mkdir -p tmp
 	rm -f tmp/linkcheck.log

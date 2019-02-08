@@ -1,6 +1,6 @@
 ---
 layout: pattern-group
-title:  "Overview of Infrastructure Stacks"
+title:  "Core Stack Patterns"
 date:   2019-01-01 16:20:00
 category: Core Stack Patterns
 section: true
@@ -9,9 +9,20 @@ published: true
 status: review
 ---
 
-An *Infrastructure Stack* is a collection of infrastructure elements that are defined and managed as a single unit.
+An *Infrastructure Stack* is a collection of infrastructure elements that is defined, provisioned, and updated as a unit. The elements of the stack are defined in source code. A stack management tool reads the source code and interacts with an infrastructure platform to create and update an instance of the stack.
 
-Infrastructure on a dynamic, IaaS platform is provisioned and managed as discrete units by tools such as [Hashicorp Terraform](https://www.terraform.io/), [AWS CloudFormation](https://aws.amazon.com/cloudformation/), [Azure Resource Manager Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview), [Google Cloud Deployment Manager Templates](https://cloud.google.com/deployment-manager/) and [OpenStack Heat](https://wiki.openstack.org/wiki/Heat). These tools (and others) all define a collection of infrastructure in a declarative way, and there are design patterns (and anti-patterns) that apply regardless of which one you work with. However, these tools and their documentation don't use a common term to describe the collection of infrastructure they work with, so for the purposes of cross-tool design patterns, we will use the term "stack".
+## Stack management tools
+
+Examples of stack management tools include [Hashicorp Terraform](https://www.terraform.io/), [AWS CloudFormation](https://aws.amazon.com/cloudformation/), [Azure Resource Manager Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview), [Google Cloud Deployment Manager Templates](https://cloud.google.com/deployment-manager/) and [OpenStack Heat](https://wiki.openstack.org/wiki/Heat). Some toolchains designed to configure servers also have capabilities to manage stacks, for example [Ansible Cloud Modules](https://www.ansible.com/integrations/cloud), [Chef Provisioning](https://docs.chef.io/provisioning.html), [Puppet modules](https://forge.puppet.com/puppetlabs/aws/readme), and [Salt Cloud](https://docs.saltstack.com/en/latest/topics/cloud/).
+
+
+### Stack as a term
+
+These tools, and others like them, all define a collection of infrastructure in a declarative way, but they don't use a single common term to describe the collection.
+
+a collection of infrastructure they work with, so for the purposes of cross-tool design patterns, we will use the term "stack".
+
+and there are design patterns (and anti-patterns) that apply regardless of which one you work with. 
 
 
 <figure>

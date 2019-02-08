@@ -6,6 +6,7 @@ layout: default
   <header class="pattern-header">
     <h1 class="pattern-title">{{ page.title }}</h1>
     <p class="post-meta"><a href="/patterns.html">Infrastructure Patterns</a> => <a href=".">{{ page.category }}</a></p>
+
     <p class="post-meta">
       {% if page.status == "review" %}
         &#x1F50D (Ready for review)
@@ -13,6 +14,7 @@ layout: default
         &#x1F477 (In progress, not ready for review)
       {% endif %}
     </p>
+
   </header>
 
   <article class="pattern-content">

@@ -9,7 +9,17 @@ layout: default
 
 <div class="home">
 
+<h2>
+  <a href="/patterns/">Overview of Infrastructure Patterns</a>
+</h2>
+
+<p>
+  This catalogue describes useful approaches for designing infrastructure which is defined as code, and managed like software. Each pattern in the catalogue describes a recurring and useful solution, giving the context in which it may be useful, and some advice on implementation.
+  (<a href="/patterns/">Read more</a>)
+</p>
+
 <table>
+
 {% assign pattern_categories = site.patterns | sort: 'order' | group_by: 'category' %}
 {% for category in pattern_categories %}
 
@@ -41,7 +51,7 @@ layout: default
   {% endfor %}
 
   {% for item in pattern_items %}
-    {% if item.section != true %}
+    {% if item.layout == "pattern" %}
   <tr>
     <td>
       <strong>
