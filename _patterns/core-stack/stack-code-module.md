@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Stack Code Module Pattern"
-date:   2019-01-01 16:20:00
+date: 2019-02-10 11:08:54 +0000
 category: Core Stack Patterns
 order: 5
 published: true

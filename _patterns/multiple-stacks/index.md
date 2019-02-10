@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Patterns For Multiple Stacks"
-date:   2019-01-01 16:20:00
+date: 2019-02-07 12:54:30 +0000
 category: Multiple Stack Patterns
 section: true
 order: 30

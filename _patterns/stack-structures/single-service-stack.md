@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Single Service Stack Pattern"
-date:   2019-01-01 16:20:00
+date: 2019-02-07 12:54:30 +0000
 category: Stack Structural Patterns
 order: 13
 published: true

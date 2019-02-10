@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Shared Infrastructure Stack Pattern"
-date:   2019-01-01 16:20:00
+date: 2019-02-07 12:54:30 +0000
 category: Multiple Stack Patterns
 order: 31
 published: true

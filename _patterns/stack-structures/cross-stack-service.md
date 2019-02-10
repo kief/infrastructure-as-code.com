@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Cross-Stack Service Pattern"
-date:   2019-01-01 16:20:00
+date: 2019-01-31 14:48:13 +0000
 category: Stack Structural Patterns
 order: 15
 published: true

@@ -61,9 +61,9 @@ layout: default
     <td>
       {{ item. excerpt | strip_html }}
           {% if item.status == "review" %}
-            (&#x1F50D <em>Ready for review)</em>
+            (&#x1F50D <em>Ready for review</em>)
           {% elsif item.status == "todo" %}
-            (&#x1F477 <em>In progress, not ready for review)</em>
+            (&#x1F477 <em>In progress, not ready for review</em>)
           {% endif %}
     </td>
   </tr>

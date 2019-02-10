@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Commandline Stack Parameters Pattern"
-date:   2019-01-01 16:20:00
+date: 2019-02-05 16:52:43 +0000
 category: Stack Configuration Patterns
 order: 21
 published: true
