@@ -110,7 +110,7 @@ An alternative is to define parameter values in [Parameter Files](stack-paramete
 ~~~
 
 
-A variation of parameter files is a [wrapper stack](wrapper-stack.html). With this approach, the code that defines an environment stack is kept in a [stack code module](/patterns/stack-structures/stack-code-module.html). A stack project is then created for each stack instance, whose purpose is to pass values to the module code for the specific instance.
+A variation of parameter files is a [wrapper stack](wrapper-stack.html). With this approach, the code that defines an environment stack is kept in a [stack code module](/patterns/core-stack/stack-code-module.html). A stack project is then created for each stack instance, whose purpose is to pass values to the module code for the specific instance.
 
 When infrastructure code is applied to environments using a Continuous Delivery Pipeline, [values can be defined in pipeline job configuration](pipeline-defined-parameters.html). Each stage which applies the stack code to a given environment includes configuration values for that environment, which is then passed to the command which applies to the code.
 

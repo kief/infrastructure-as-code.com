@@ -9,38 +9,33 @@ published: true
 status: review
 ---
 
-An *Infrastructure Stack* is a collection of infrastructure elements that is defined, provisioned, and updated as a unit. The elements of the stack are defined in source code. A stack management tool reads the source code and interacts with an infrastructure platform to create and update an instance of the stack.
+An *Infrastructure Stack* is a collection of infrastructure elements that is defined, provisioned, and updated as a unit. The elements of the stack are defined in *source code*, and may include a combination of compute, networking, and/or storage resources. A *stack management tool* reads the source code and interacts with an infrastructure platform to ensure the specified resources are provisioned as an *instance* of the stack.
+
+
+<figure>
+  <img src="images/infrastructure-stack.png" alt="An infrastructure stack is a collection of infrastructure elements managed as a unit"/>
+  <figcaption>Figure 1. An infrastructure stack is a collection of infrastructure elements managed as a unit.</figcaption>
+</figure>
+
 
 ## Stack management tools
 
 Examples of stack management tools include [Hashicorp Terraform](https://www.terraform.io/), [AWS CloudFormation](https://aws.amazon.com/cloudformation/), [Azure Resource Manager Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview), [Google Cloud Deployment Manager Templates](https://cloud.google.com/deployment-manager/) and [OpenStack Heat](https://wiki.openstack.org/wiki/Heat). Some toolchains designed to configure servers also have capabilities to manage stacks, for example [Ansible Cloud Modules](https://www.ansible.com/integrations/cloud), [Chef Provisioning](https://docs.chef.io/provisioning.html), [Puppet modules](https://forge.puppet.com/puppetlabs/aws/readme), and [Salt Cloud](https://docs.saltstack.com/en/latest/topics/cloud/).
 
 
-### Stack as a term
+### "Stack" as a term
 
-These tools, and others like them, all define a collection of infrastructure in a declarative way, but they don't use a single common term to describe the collection.
-
-a collection of infrastructure they work with, so for the purposes of cross-tool design patterns, we will use the term "stack".
-
-and there are design patterns (and anti-patterns) that apply regardless of which one you work with. 
-
-
-<figure>
-  <img src="images/infrastructure-stack.png" alt="An infrastructure stack is a collection of infrastructure elements managed as a unit"/>
-  <figcaption>An infrastructure stack is a collection of infrastructure elements managed as a unit.</figcaption>
-</figure>
+These tools, and others like them, all define a collection of infrastructure in a declarative way, but they don't use a single common term to describe the collection. So for the purposes of cross-tool design patterns, we will use the term "stack". 
 
 
 ## Stack code project
 
 Each stack has source code project that declares what infrastructure elements should be provisioned as a part of the stack. It may be a Terraform project, CloudFormation template, or code for another tool which manages cloud infrastructure as code. A stack project contains the source code that correlates to an instance of infrastructure. With Terraform, this relates to a statefile; with CloudFormation, it is a CloudFormation Stack, etc.
 
-A stack project may use shared infrastructure code - for example, [CloudFormation nested stacks](https://aws.amazon.com/blogs/devops/use-nested-stacks-to-create-reusable-templates-and-support-role-specialization/) or [Terraform modules](https://www.terraform.io/docs/modules/index.html).
-
 
 <figure>
   <img src="images/stack-source.png" alt="A stack source code project is used to provision stack instances"/>
-  <figcaption>A stack source code project is used to provision stack instances.</figcaption>
+  <figcaption>Figure 2. A stack source code project is used to provision stack instances.</figcaption>
 </figure>
 
 
@@ -49,17 +44,23 @@ Below is an example stack source code project, in this case Terraform:
 ~~~ console
 stack-project/
    ├── src/
-   │   ├── backend.tf
-   │   ├── bastion.tf
    │   ├── dns.tf
    │   ├── load_balancers.tf
    │   ├── networking.tf
-   │   ├── outputs.tf
-   │   ├── provider.tf
-   │   ├── variables.tf
    │   └── webserver.tf
    └── test/
 ~~~
+
+
+### Stack component modules
+
+A [stack component module](stack-component-module.html) is a package of code that can be shared by multiple stack projects.
+
+
+<figure>
+  <img src="images/stack-component-module.png" alt="A stack component module packages code to be shared by multiple stack projects"/>
+  <figcaption>Figure 3. A stack component module packages code to be shared by multiple stack projects.</figcaption>
+</figure>
 
 
 ## Stack instance
@@ -70,19 +71,19 @@ If changes are made to the code and the tool is run again, then the existing inf
 
 The [Singleton Stack antipattern](singleton-stack.html) is a naive implementation, where each stack instance is defined and managed by its own separate copy of the stack source code. This is useful for very simple use cases, particularly when learning something, but it isn't a suitable approach for important infrastructure.
 
-In most cases, a single stack code project can be used to provision and manage multiple stack instances. There are two main patterns for this, which address different use cases.
 
+## Multiple stack instances
+
+A single stack code project may be used to provision and manage multiple stack instances. There are two main patterns for this, which address different use cases.
+
+The first pattern for reusing a stack project's code is a [template stack](template-stack.html), which aims to ensure consistency across instances. The common uses for this are: to provide consistent environments for testing software and other system elements; to test changes to the infrastructure code itself; or to replicate system elements for scaling, geographic available, or resilience. There is very little variation between instances of the stack, since the intention is for them to be replicas of the same system elements.
 
 
 <figure>
   <img src="images/stack-instances.png" alt="Multiple stack instances can be provisioned from a single stack code project"/>
-  <figcaption>Multiple stack instances can be provisioned from a single stack code project.</figcaption>
+  <figcaption>Figure 4. Multiple stack instances can be provisioned from a single stack code project.</figcaption>
 </figure>
 
-
-## Multiple stack instances
-
-The first pattern for reusing a stack project's code is a [template stack](template-stack.html), which aims to ensure consistency across instances. The common uses for this are: to provide consistent environments for testing software and other system elements; to test changes to the infrastructure code itself; or to replicate system elements for scaling, geographic available, or resilience. There is very little variation between instances of the stack, since the intention is for them to be replicas of the same system elements.
 
 The second pattern for reusing a stack project's code is a [library stack](library-stack.html), where stack code is reused to create multiple instances which have similar infrastructure elements, but which are used for different purposes. For example, code that defines a database cluster may be used to create one stack instance for a product service database, a second instance for a customer service database, and a third instance for a transaction service database. Unlike template stacks, two instances of a given library stack may be very different, since they may serve different purposes.
 

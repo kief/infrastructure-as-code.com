@@ -1,21 +1,21 @@
 ---
 layout: pattern
-title:  "Stack Code Module Pattern"
+title:  "Stack Component Module Pattern"
 date:   2019-01-01 16:20:00
-category: Stack Structural Patterns
-order: 18
+category: Core Stack Patterns
+order: 5
 published: true
 status: review
 ---
 
-A Stack Code Module is a unit of infrastructure code that can be included into one or more [infrastructure stack](/patterns/core-stack/) projects.
+A Stack Component Module is infrastructure code that can be included into one or more [infrastructure stack](/patterns/core-stack/) projects.
 
 Most stack management tools implement modularization for re-use. Terraform has [modules](https://www.terraform.io/docs/modules/index.html), Cloudformation has [nested stacks](https://aws.amazon.com/blogs/devops/use-nested-stacks-to-create-reusable-templates-and-support-role-specialization/), etc.
 
 
 <figure>
-  <img src="images/stack-code-module.png" alt="A Stack Code Module is a unit of infrastructure code that can be included into one or more infrastructure stack projects"/>
-  <figcaption>A Stack Code Module is a unit of infrastructure code that can be included into one or more infrastructure stack projects.</figcaption>
+  <img src="images/stack-component-module.png" alt="A Stack Component Module is a unit of infrastructure code that can be included into one or more infrastructure stack projects"/>
+  <figcaption>A Stack Component Module is a unit of infrastructure code that can be included into one or more infrastructure stack projects.</figcaption>
 </figure>
 
 
