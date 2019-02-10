@@ -54,12 +54,12 @@ stack-project/
 
 ### Stack component modules
 
-A [stack component module](stack-component-module.html) is a package of code that can be shared by multiple stack projects.
+A [stack code module](stack-code-module.html) is a package of code that can be shared by multiple stack projects.
 
 
 <figure>
-  <img src="images/stack-component-module.png" alt="A stack component module packages code to be shared by multiple stack projects"/>
-  <figcaption>Figure 3. A stack component module packages code to be shared by multiple stack projects.</figcaption>
+  <img src="images/stack-code-module.png" alt="A stack code module packages code to be shared by multiple stack projects"/>
+  <figcaption>Figure 3. A stack code module packages code to be shared by multiple stack projects.</figcaption>
 </figure>
 
 

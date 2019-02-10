@@ -15,7 +15,7 @@ collections:
     permalink: /patterns/:path.html
 
 # Don't copy stuff
-exclude: [ "*.sh", "*.json", "LICENSE", "README" ]
+exclude: [ "*.sh", "*.json", "LICENSE", "README", "bin" ]
 
 ### Personal info and site tools info:
 twitter_username: kief
