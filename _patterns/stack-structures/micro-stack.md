@@ -8,7 +8,7 @@ published: true
 status: review
 ---
 
-The Micro Stack pattern involves dividing a system into multiple, loosely coupled [infrastructure stacks](/patterns/stack-replication/), so that it is easy manage them independently.
+The Micro Stack pattern involves dividing a system into multiple, loosely coupled [infrastructure stacks](/patterns/stack-concept/), so that it is easy manage them independently.
 
 Designing (or evolving) infrastructure into multiple, smaller Micro Stacks is a useful way to keep system design loosely coupled and easier to change. Smaller stacks are quicker to provision and test.
 

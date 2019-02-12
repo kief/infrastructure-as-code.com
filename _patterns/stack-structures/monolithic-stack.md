@@ -8,7 +8,7 @@ published: true
 status: review
 ---
 
-A Monolithic Stack is an [infrastructure stack](/patterns/stack-replication/) that includes too many elements, so that it is difficult to work with.
+A Monolithic Stack is an [infrastructure stack](/patterns/stack-concept/) that includes too many elements, so that it is difficult to work with.
 
 Infrastructure often grows organically, each new piece being naturally added into the existing codebase as we go. Over time, the codebase can become messy and unwieldy. 
 

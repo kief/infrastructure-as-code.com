@@ -9,7 +9,7 @@ status: review
 ---
 
 A Single Service Stack defines the infrastructure specific to a single application in its own
-[infrastructure stack](/patterns/stack-replication/).
+[infrastructure stack](/patterns/stack-concept/).
 
 Aligning the stack directly to the infrastructure for the one application or service means updates and other changes can be applied to it without directly affecting the infrastructure for other services. This is in contrast with a [multi-service stack](multi-service-stack.html), where the scope for a change may include infrastructure for other applications.
 

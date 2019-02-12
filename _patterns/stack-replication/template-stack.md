@@ -8,7 +8,7 @@ published: true
 status: review
 ---
 
-A Template Stack is an [infrastructure stack](/patterns/stack-replication/) that is designed so that its source code can be used to create and manage multiple, consistent instances.
+A Template Stack is an [infrastructure stack](/patterns/stack-concept/) that is designed so that its source code can be used to create and manage multiple, consistent instances.
 
 A great benefit of defining infrastructure as code is that it's easy to replicate infrastructure. This has a variety of uses, including:
 

@@ -8,4 +8,4 @@ published: true
 status: todo
 ---
 
-A Shared Nothing [infrastructure stack](/patterns/stack-replication/) defines everything needed to spin up. Does not use, for example, shared networking constructs.
+A Shared Nothing [infrastructure stack](/patterns/stack-concept/) defines everything needed to spin up. Does not use, for example, shared networking constructs.

@@ -8,7 +8,7 @@ published: true
 status: review
 ---
 
-A Shared Infrastructure [stack](/patterns/stack-replication/) includes infrastructure elements that are used by other stacks.
+A Shared Infrastructure [stack](/patterns/stack-concept/) includes infrastructure elements that are used by other stacks.
 
 For example, the stack might provision a VPC with several subnets. Other stacks can then define servers and assign them to those subnets. The first stack - the one which creates infrastructure for use by other stacks - is referred to as a *Provider* stack. Stacks which use elements from a provider stack are called *Consumer* stacks.
 

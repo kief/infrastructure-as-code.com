@@ -8,7 +8,7 @@ published: true
 status: review
 ---
 
-A Stack Code Module is infrastructure code that can be included into one or more [infrastructure stack](/patterns/stack-replication/) projects.
+A Stack Code Module is infrastructure code that can be included into one or more [infrastructure stack](/patterns/stack-concept/) projects.
 
 Most stack management tools implement modularization for re-use. Terraform has [modules](https://www.terraform.io/docs/modules/index.html), Cloudformation has [nested stacks](https://aws.amazon.com/blogs/devops/use-nested-stacks-to-create-reusable-templates-and-support-role-specialization/), etc.
 

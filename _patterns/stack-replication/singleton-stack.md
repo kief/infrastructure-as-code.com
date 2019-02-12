@@ -8,7 +8,7 @@ published: true
 status: review
 ---
 
-The Singleton Stack antipattern uses a separate copy of the stack source code project for each [infrastructure stack](/patterns/stack-replication/) instance.
+The Singleton Stack antipattern uses a separate copy of the stack source code project for each [infrastructure stack](/patterns/stack-concept/) instance.
 
 So if there are three environments, _test_, _staging_, and _production_, there will be a separate copy of the infrastructure code for each of these environments. Changes are made by editing the code in one environment, and then copying the changes into each of the other environments in turn.
 

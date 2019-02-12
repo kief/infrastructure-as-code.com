@@ -9,7 +9,7 @@ published: true
 status: review
 ---
 
-A key challenge with infrastructure design is deciding how to size and structure [stacks](/patterns/stack-replication/). The infrastructure for a given system may be defined as a single stack, or spread across multiple stacks. Shared code may also be used across stacks.
+A key challenge with infrastructure design is deciding how to size and structure [stacks](/patterns/stack-concept/). The infrastructure for a given system may be defined as a single stack, or spread across multiple stacks. Shared code may also be used across stacks.
 
 It's very common to start by defining infrastructure in a single stack. However, this tends to grow over time, and can become an unmanageable [monolithic stack](monolithic-stack.html). The other end of the spectrum is the [micro stack](micro-stack.html) pattern, which divides the infrastructure into small, loosely coupled stacks that can be easily changed independently.
 

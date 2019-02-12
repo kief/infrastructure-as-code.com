@@ -8,7 +8,7 @@ published: true
 status: review
 ---
 
-A Library Stack is an [infrastructure stack](/patterns/stack-replication/) project that is designed to be used as a base to create more specialised stacks.
+A Library Stack is an [infrastructure stack](/patterns/stack-concept/) project that is designed to be used as a base to create more specialised stacks.
 
 Often, multiple infrastructure stacks are needed which are largely similar, but require customisation. For example, an organisation may run multiple applications which each require a database and a pool of servers behind a firewall. However, the servers will be configured differently, perhaps using different base images, and may run different code to install and configure the applications on each.
 

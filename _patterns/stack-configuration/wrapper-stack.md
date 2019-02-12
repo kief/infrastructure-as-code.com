@@ -8,7 +8,7 @@ published: true
 status: review
 ---
 
-A Wrapper Stack is an [infrastructure stack project](/patterns/stack-replication/) which is used to import stack code from a module, and pass configuration values for a specific stack instance. This is essentially a mechanism to [configure stacks](/patterns/stack-configuration/).
+A Wrapper Stack is an [infrastructure stack project](/patterns/stack-concept/) which is used to import stack code from a module, and pass configuration values for a specific stack instance. This is essentially a mechanism to [configure stacks](/patterns/stack-configuration/).
 
 
 <figure>
