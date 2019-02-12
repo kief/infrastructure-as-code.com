@@ -8,7 +8,7 @@ published: true
 status: review
 ---
 
-Defining the infrastructure to host an application across multiple [infrastructure stacks](/patterns/core-stack/) is the Cross Stack Service pattern. This is a variation of the [micro stack pattern](micro-stack.html).
+Defining the infrastructure to host an application across multiple [infrastructure stacks](/patterns/stack-replication/) is the Cross Stack Service pattern. This is a variation of the [micro stack pattern](micro-stack.html).
 
 For example, the infrastructure for an application might be divided into one stack for an application server pool, a second stack for a database cluster, and a third stack for networking structures. Defining separate infrastructure stacks for each of these means that each piece can be independently changed and improved, which may speed up the time needed to apply a change. Different parts of the application may also have different scaling characteristics, in which case it is useful to be able to provision multiple instances of some services without needing to replicate the entire application's infrastructure.
 

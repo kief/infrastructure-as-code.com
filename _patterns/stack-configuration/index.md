@@ -9,7 +9,7 @@ published: true
 status: review
 ---
 
-Defining an [infrastructure stack](/patterns/core-stack/) as code enables the creation of multiple instances of the stack. Some aspects of the stack may need to vary for different instances of the stack - at the least, different names, identifiers, and/or tags are needed to distinguish the different instances. There are different techniques for setting configuration for instances of a stack.
+Defining an [infrastructure stack](/patterns/stack-replication/) as code enables the creation of multiple instances of the stack. Some aspects of the stack may need to vary for different instances of the stack - at the least, different names, identifiers, and/or tags are needed to distinguish the different instances. There are different techniques for setting configuration for instances of a stack.
 
 
 <figure>
@@ -20,20 +20,20 @@ Defining an [infrastructure stack](/patterns/core-stack/) as code enables the cr
 
 ## Typical uses for configuring stack instances differently
 
-As described in the [core patterns](/patterns/core-stack), there are two main patterns used to create multiple stack instances from a single stack project. One is a [template stack](/patterns/core-stack/template-stack.html), where all of the instances created from a stack project are intended to be highly consistent. There should be very little variation between them. The common case of this is when creating stack instances to test software - the same stack source code is used to create instances for development, test, and production, so that the software is tested in an environment that is consistent with production.
+As described in the [core patterns](/patterns/stack-replication), there are two main patterns used to create multiple stack instances from a single stack project. One is a [template stack](/patterns/stack-replication/template-stack.html), where all of the instances created from a stack project are intended to be highly consistent. There should be very little variation between them. The common case of this is when creating stack instances to test software - the same stack source code is used to create instances for development, test, and production, so that the software is tested in an environment that is consistent with production.
 
 
 <figure>
-  <img src="/patterns/core-stack/images/template-stack.png" alt="Template stack, all of the instances are intended to be highly consistent"/>
+  <img src="/patterns/stack-replication/images/template-stack.png" alt="Template stack, all of the instances are intended to be highly consistent"/>
   <figcaption>Template stack, all of the instances are intended to be highly consistent.</figcaption>
 </figure>
 
 
-The other pattern is the [library stack](/patterns/core-stack/library-stack.html), where the stack project provides the core configuration for the stack's infrastructure, but each instance is customized or extended to serve a different purpose. An example of this is a stack that creates a database cluster, but separate instances are each customized to be used as a product database, a user database, and a search database.
+The other pattern is the [library stack](/patterns/stack-replication/library-stack.html), where the stack project provides the core configuration for the stack's infrastructure, but each instance is customized or extended to serve a different purpose. An example of this is a stack that creates a database cluster, but separate instances are each customized to be used as a product database, a user database, and a search database.
 
 
 <figure>
-  <img src="/patterns/core-stack/images/library-stack.png" alt="Library stack, each instance is customized or extended to serve a different purpose"/>
+  <img src="/patterns/stack-replication/images/library-stack.png" alt="Library stack, each instance is customized or extended to serve a different purpose"/>
   <figcaption>Library stack, each instance is customized or extended to serve a different purpose.</figcaption>
 </figure>
 
@@ -110,7 +110,7 @@ An alternative is to define parameter values in [Parameter Files](stack-paramete
 ~~~
 
 
-A variation of parameter files is a [wrapper stack](wrapper-stack.html). With this approach, the code that defines an environment stack is kept in a [stack code module](/patterns/core-stack/stack-code-module.html). A stack project is then created for each stack instance, whose purpose is to pass values to the module code for the specific instance.
+A variation of parameter files is a [wrapper stack](wrapper-stack.html). With this approach, the code that defines an environment stack is kept in a [stack code module](/patterns/stack-replication/stack-code-module.html). A stack project is then created for each stack instance, whose purpose is to pass values to the module code for the specific instance.
 
 When infrastructure code is applied to environments using a Continuous Delivery Pipeline, [values can be defined in pipeline job configuration](pipeline-defined-parameters.html). Each stage which applies the stack code to a given environment includes configuration values for that environment, which is then passed to the command which applies to the code.
 

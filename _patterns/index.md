@@ -73,7 +73,7 @@ With infrastructure as code, a stack is defined in source code. A stack project 
 
 Examples of stack management tools include [Hashicorp Terraform](https://www.terraform.io/), [AWS CloudFormation](https://aws.amazon.com/cloudformation/), [Azure Resource Manager Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview), [Google Cloud Deployment Manager Templates](https://cloud.google.com/deployment-manager/) and [OpenStack Heat](https://wiki.openstack.org/wiki/Heat). Some toolchains designed to configure servers also have capabilities to manage stacks, for example [Ansible Cloud Modules](https://www.ansible.com/integrations/cloud), [Chef Provisioning](https://docs.chef.io/provisioning.html), [Puppet modules](https://forge.puppet.com/puppetlabs/aws/readme), and [Salt Cloud](https://docs.saltstack.com/en/latest/topics/cloud/).
 
-Stacks are a core concept in the patterns described in this catalogue. More details on stacks can be found in the [core stack patterns](/patterns/core-stack/)
+Stacks are a core concept in the patterns described in this catalogue. More details on stacks can be found in the [core stack patterns](/patterns/stack-replication/)
 
 
 ## Server configuration

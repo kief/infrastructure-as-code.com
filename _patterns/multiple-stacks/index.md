@@ -9,7 +9,7 @@ published: true
 status: review
 ---
 
-As a system grows, it often makes sense to divide the infrastructure into multiple [stacks](/patterns/core-stack/), in order to avoid a [monolithic stack](/patterns/stack-structures/monolithic-stack.html).
+As a system grows, it often makes sense to divide the infrastructure into multiple [stacks](/patterns/stack-replication/), in order to avoid a [monolithic stack](/patterns/stack-structures/monolithic-stack.html).
 
 Breaking a system into multiple, smaller, and loosely coupled infrastructure stacks can make it easier and safer to make changes to the system. The "blast radius" for each change can be minimized to the contents of the given stack.
 

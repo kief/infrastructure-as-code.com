@@ -8,7 +8,7 @@ published: true
 status: review
 ---
 
-A Multi-Service Stack hosts multiple applications in a single instance of the [infrastructure stack](/patterns/core-stack/).
+A Multi-Service Stack hosts multiple applications in a single instance of the [infrastructure stack](/patterns/stack-replication/).
 
 For example, a search application might involve running several services - a front end UI, an indexing service, a search API service, and a data store. Defining the infrastructure for all of these services together may make it easier to manage the application as a whole. This works well when a single team owns the infrastructure and deployment of all of the pieces of the application, so the boundaries of the stack match the boundaries of the team.
 

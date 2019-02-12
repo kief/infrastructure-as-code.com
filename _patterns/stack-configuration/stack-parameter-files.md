@@ -8,9 +8,9 @@ published: true
 status: review
 ---
 
-Values can be provided to instances of [template stacks](/patterns/core-stack/template-stack.html) by putting them into files, checked into version control.
+Values can be provided to instances of [template stacks](/patterns/stack-replication/template-stack.html) by putting them into files, checked into version control.
 
-[Template stacks](/patterns/core-stack/template-stack.html) typically define parameters which can be set differently for different instances of the stack. For example, a stack that is used to create a web server cluster may have different values for the sizing of the cluster in different environments:
+[Template stacks](/patterns/stack-replication/template-stack.html) typically define parameters which can be set differently for different instances of the stack. For example, a stack that is used to create a web server cluster may have different values for the sizing of the cluster in different environments:
 
 
 | Stack Instance | environment_id | cluster_minimum | cluster_maximum |

@@ -2,13 +2,13 @@
 layout: pattern
 title:  "Stack Code Module Pattern"
 date: 2019-02-10 11:08:54 +0000
-category: Core Stack Patterns
-order: 5
+category: Stack Replication Patterns
+order: 6
 published: true
 status: review
 ---
 
-A Stack Code Module is infrastructure code that can be included into one or more [infrastructure stack](/patterns/core-stack/) projects.
+A Stack Code Module is infrastructure code that can be included into one or more [infrastructure stack](/patterns/stack-replication/) projects.
 
 Most stack management tools implement modularization for re-use. Terraform has [modules](https://www.terraform.io/docs/modules/index.html), Cloudformation has [nested stacks](https://aws.amazon.com/blogs/devops/use-nested-stacks-to-create-reusable-templates-and-support-role-specialization/), etc.
 

@@ -15,7 +15,7 @@ Stack instance configuration values can be stored in a parameter registry. The a
   <figcaption>Stack instance configuration values can be stored in a parameter registry.</figcaption>
 </figure>
 
-This is normally used with a [template stack](/patterns/core-stack/template-stack.html), which has parameters that can be set differently for different instances of the stack. For example, a stack that is used to create a web server cluster may have different values for the sizing of the cluster in different environments:
+This is normally used with a [template stack](/patterns/stack-replication/template-stack.html), which has parameters that can be set differently for different instances of the stack. For example, a stack that is used to create a web server cluster may have different values for the sizing of the cluster in different environments:
 
 
 | Stack Instance | environment_id | cluster_minimum | cluster_maximum |

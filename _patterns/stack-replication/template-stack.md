@@ -2,13 +2,13 @@
 layout: pattern
 title:  "Template Stack Pattern"
 date: 2019-02-10 10:29:34 +0000
-category: Core Stack Patterns
-order: 1
+category: Stack Replication Patterns
+order: 2
 published: true
 status: review
 ---
 
-A Template Stack is an [infrastructure stack](/patterns/core-stack/) that is designed so that its source code can be used to create and manage multiple, consistent instances.
+A Template Stack is an [infrastructure stack](/patterns/stack-replication/) that is designed so that its source code can be used to create and manage multiple, consistent instances.
 
 A great benefit of defining infrastructure as code is that it's easy to replicate infrastructure. This has a variety of uses, including:
 
@@ -27,7 +27,7 @@ In all of these cases, it is useful to write infrastructure stack code so that i
 </figure>
 
 
-This pattern is similar to the [library stack pattern](/patterns/core-stack/library-stack.html), in which a single stack's project code is also used to create multiple instances. However, instances of a library stack are normally extended and customized for different purposes, while instances of a template stack are intended to be nearly identical.
+This pattern is similar to the [library stack pattern](/patterns/stack-replication/library-stack.html), in which a single stack's project code is also used to create multiple instances. However, instances of a library stack are normally extended and customized for different purposes, while instances of a template stack are intended to be nearly identical.
 
 So a defining characteristic of the template stack pattern is that there is very little variation between each instance of the stack. Therefore, implementations of this pattern should aim to minimize the scope for variance.
 
@@ -46,7 +46,7 @@ It is a red flag when a parameter is used as a conditional that decides whether 
 
 Some teams use the [singleton stack anti-pattern](singleton-stack.html) to manage multiple instances of a stack. This involves creating a new copy of the stack code for each new environment or other instance. While this is a straightforward approach to implement, it makes it difficult to keep each instance consistent.
 
-A variation of the singleton stack is the [wrapper stack pattern]. Like the singleton stack, there is a separate copy of the stack code for each stack instance. However, the bulk of the infrastructure code is contained in a [stack module](/patterns/core-stack/stack-code-module.html), a library which is imported into the stack project. This way the code is declared once - in the module - and re-used across each stack instance. Each stack project is effectively used as a mechanism to define parameter values for one stack instance.
+A variation of the singleton stack is the [wrapper stack pattern]. Like the singleton stack, there is a separate copy of the stack code for each stack instance. However, the bulk of the infrastructure code is contained in a [stack module](/patterns/stack-replication/stack-code-module.html), a library which is imported into the stack project. This way the code is declared once - in the module - and re-used across each stack instance. Each stack project is effectively used as a mechanism to define parameter values for one stack instance.
 
 
 ## Testing infrastructure stack code
