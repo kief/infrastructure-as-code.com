@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Pipeline-Defined Parameters"
-date: 2019-02-06 14:27:15 +0000
+date: 2019-02-12 09:30:20 +0000
 category: Stack Configuration Patterns
 order: 24
 published: true

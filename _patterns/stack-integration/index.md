@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Patterns For Integrating Stacks"
-date: 2019-02-07 12:54:30 +0000
+date: 2019-02-12 09:30:20 +0000
 category: Stack Integration Patterns
 section: true
 order: 40

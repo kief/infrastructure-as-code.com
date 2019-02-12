@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Testing Infrastructure Stacks"
-date: 2019-01-31 14:48:13 +0000
+date: 2019-02-10 13:58:59 +0000
 category: Stack Testing Patterns
 section: true
 order: 80

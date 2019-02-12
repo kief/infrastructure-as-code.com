@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Infrastructure Stack Definition"
-date: 2019-02-10 11:08:54 +0000
+date: 2019-02-12 09:30:20 +0000
 category: Stack Concept
 section: true
 order: 0

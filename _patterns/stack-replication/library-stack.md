@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Library Stack Pattern"
-date: 2019-02-10 10:29:34 +0000
+date: 2019-02-12 09:30:20 +0000
 category: Stack Replication Patterns
 order: 3
 published: true

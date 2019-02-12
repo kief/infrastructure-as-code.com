@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Wrapper Stack Pattern"
-date: 2019-02-05 16:52:43 +0000
+date: 2019-02-12 09:30:20 +0000
 category: Stack Configuration Patterns
 order: 23
 published: true

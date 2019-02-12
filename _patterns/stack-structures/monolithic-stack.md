@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Monolithic Stack Antipattern"
-date: 2019-01-31 14:48:13 +0000
+date: 2019-02-12 09:30:20 +0000
 category: Stack Structural Patterns
 order: 11
 published: true
