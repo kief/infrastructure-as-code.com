@@ -8,7 +8,7 @@ permalink: /patterns.html
 
 ## What is this for?
 
-This catalogue describes useful approaches for designing infrastructure which is defined as code, and managed like software. Each pattern in the catalogue describes a recurring and useful solution, giving the context in which it may be useful, and some advice on implementation.
+This catalogue describes potentially useful approaches for designing infrastructure which is defined as code, and managed like software. Each pattern in the catalogue describes a recurring and useful solution, giving the context in which it may be useful, and some advice on implementation. The catalogue also includes antipatterns, which are approaches and strategies which seem useful, or which are in popular use, but which have drawbacks that make them less useful.
 
 These solutions are written as [design patterns](https://www.martinfowler.com/articles/writingPatterns.html), each of which should be relevant to any cloud or virtualization platform, and to any toolchain which defines infrastructure as code. The examples tend to use Terraform code and AWS infrastructure, because these are widely understood. But the concepts and techniques should be usable with others.
 
@@ -19,7 +19,7 @@ This catalogue is a work in progress. There are many topics I'd like to cover he
 
 ## The key parts of an infrastructure as code system
 
-The patterns in this catalogue are based on a particular way of seeing the parts of an infrastructure system, as shown in figure 1:
+The patterns in this catalogue are based on a particular way of seeing the parts of an infrastructure, as shown in figure 1:
 
 
 <figure>
@@ -95,6 +95,4 @@ Server configuration patterns is a broad topic. The patterns that will be docume
 ## Applications
 
 The purpose of computing infrastructure is almost always to run application software of some sort. Patterns for integrating applications with infrastructure will be covered in this catalogue as it evolves.
-
-
 
