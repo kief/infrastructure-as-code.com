@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Introduction to Infrastructure Patterns"
-date: 2019-02-12 09:30:20 +0000
+date: 2019-02-13 09:09:39 +0000
 published: true
 permalink: /patterns.html
 ---

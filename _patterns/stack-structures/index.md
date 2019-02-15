@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Patterns For Structuring Stacks"
-date: 2019-02-12 09:30:20 +0000
+date: 2019-02-12 09:38:53 +0000
 category: Stack Structural Patterns
 section: true
 order: 10

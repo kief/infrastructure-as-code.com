@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  
-date: 
+date: 2019-02-15 08:53:14 +0000
 category: 
 order: 999
 published: false

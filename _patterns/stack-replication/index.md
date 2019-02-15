@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Patterns for Replicating Stacks"
-date: 2019-02-12 09:30:20 +0000
+date: 2019-02-12 09:32:50 +0000
 category: Stack Replication Patterns
 section: true
 order: 1

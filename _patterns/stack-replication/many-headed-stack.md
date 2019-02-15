@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Many-headed Stack Antipattern"
-date: 2019-02-12 09:30:20 +0000
+date: 2019-02-12 09:32:50 +0000
 category: Stack Replication Patterns
 order: 5
 published: true

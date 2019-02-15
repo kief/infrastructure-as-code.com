@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Instance Configuration File Pattern"
-date: 2019-02-12 09:30:20 +0000
+date: 2019-02-12 09:32:50 +0000
 category: Stack Configuration Patterns
 order: 22
 published: true

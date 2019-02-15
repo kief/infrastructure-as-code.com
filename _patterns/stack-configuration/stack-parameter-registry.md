@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Stack Parameter Registry"
-date: 2019-02-12 09:30:20 +0000
+date: 2019-02-12 09:32:50 +0000
 category: Stack Configuration Patterns
 order: 25
 published: true

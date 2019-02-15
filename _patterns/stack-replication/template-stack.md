@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Template Stack Pattern"
-date: 2019-02-12 09:38:53 +0000
+date: 2019-02-15 08:53:14 +0000
 category: Stack Replication Patterns
 order: 2
 published: true

@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Swiss Army Module Antipattern"
-date: 2019-02-12 09:30:20 +0000
+date: 2019-02-13 09:09:39 +0000
 category: Stack Replication Patterns
 order: 7
 published: true
