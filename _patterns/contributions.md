@@ -9,4 +9,9 @@ Vincenzo Fabrizi, suggestions on principles
 
 Angel Villalain, a bunch of feedback
 
+Michael Strasser
+Marcos Brizeno
+Fulvio Meden
+Mark Taylor
+Jim Barritt
 
