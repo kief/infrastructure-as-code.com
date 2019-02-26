@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
-title:  "Patterns for Replicating Stacks"
-date: 2019-02-12 09:32:50 +0000
+title:  "Patterns for Replicating Infrastructure"
+date: 2019-02-26 09:32:50 +0000
 category: Stack Replication Patterns
 section: true
 order: 1
@@ -9,43 +9,52 @@ published: true
 status: review
 ---
 
-Most organisations need to run multiple [infrastructure stacks](/patterns/stack-concept/), whether it's multiple environments for testing a system, multiple instances of a service for different purposes, and/or multiple deployable applications and services.
+Most organisations need to run multiple copies of infrastructure, whether it's multiple environments for testing a system, or separate instances of an application for different customers. This pattern catalogue describes the concept of an [infrastructure stack](/patterns/stack-concept/) as a collection of infrastructure defined and provisioned as a unit - a Terraform project, CloudFormation stack, etc. There are different ways to replicate infrastructure in relation to these stacks. Some of these ways are useful, which are described here as patterns. Other ways are best avoided, which are described as antipatterns.
 
 
-### Multiple stack instances
+## [Template stack pattern](template-stack.html)
 
-A single stack code project may be used to provision and manage multiple stack instances. There are two main patterns for this, which address different use cases.
-
-The first pattern for reusing a stack project's code is a [template stack](template-stack.html), which aims to ensure consistency across instances. The common uses for this are: to provide consistent environments for testing software and other system elements; to test changes to the infrastructure code itself; or to replicate system elements for scaling, geographic available, or resilience. There is very little variation between instances of the stack, since the intention is for them to be replicas of the same system elements.
+With the [template stack pattern](/patterns/stack-replication/template-stack.html), a stack source code project is implemented so that it can be used to create multiple instances of the stack, in a consistent way.
 
 
 <figure>
-  <img src="/patterns/stack-concept/images/stack-instances.png" alt="Multiple stack instances can be provisioned from a single stack code project"/>
-  <figcaption>Figure 4. Multiple stack instances can be provisioned from a single stack code project.</figcaption>
+  <img src="images/template-stack.png" alt="A Template Stack is an infrastructure stack project that is designed to be replicated consistently"/>
+  <figcaption>Figure 1. A Template Stack is an infrastructure stack project that is designed to be replicated consistently.</figcaption>
 </figure>
 
 
-The second pattern for reusing a stack project's code is a [library stack](library-stack.html), where stack code is reused to create multiple instances which have similar infrastructure elements, but which are used for different purposes. For example, code that defines a database cluster may be used to create one stack instance for a product service database, a second instance for a customer service database, and a third instance for a transaction service database. Unlike template stacks, two instances of a given library stack may be very different, since they may serve different purposes.
+## [Singleton stack antipattern](singleton-stack.html)
 
-The typical way to create multiple stack instances from a single stack code project, whether it's a template or library stack, is to provide options to the stack management tool to give each stack instance a unique identity.
-
-
-~~~ console
-terraform apply -var 'instance_id=A'
-terraform apply -var 'instance_id=B'
-~~~
+The [singleton stack antipattern](singleton-stack.html) is a naive implementation, where each stack instance is defined and managed by its own separate copy of the stack source code. This is useful for very simple use cases, particularly when learning something, but it isn't a suitable approach for important infrastructure.
 
 
-With CloudFormation, this is done by setting a different stack name for each instance. If you pass it a stack name that doesn't exist, the tool creates a new instance. If the stack name does exist, then the tool re-applies the code to the existing stack elements.
+<figure>
+  <img src="images/singleton-stack.png" alt="A singleton stack has a separate copy of the source code project for each instance"/>
+  <figcaption>Figure 2. A singleton stack has a separate copy of the source code project for each instance.</figcaption>
+</figure>
 
-Terraform uses a separate state file for each stack instance. The state file contains information used to map specific infrastructure elements provisioned in the platform to the code in the stack project. You pass arguments to the terraform command to tell it which statefile to use, so that it knows which stack instance to create or update.
+
+## [Many-headed stack antipattern](many-headed-stack.html)
+
+A Many-Headed Stack defines multiple copies of infrastructure in a single stack project. For example, if there are three environments for testing and running an application, a single Terraform project (and single statefile) includes the code for all three of the environments.
 
 
-## Patterns for replicating infrastructure stacks
+<figure>
+  <img src="images/many-headed-stack.png" alt="A many-headed stack manages the infrastructure for multiple environments in a single stack project"/>
+  <figcaption>Figure 3. A many-headed stack manages the infrastructure for multiple environments in a single stack project.</figcaption>
+</figure>
 
-* With the [singleton stack antipattern](singleton-stack.html), stack source code is only used to create one instance of the stack. If multiple stack instances are needed, the source code is copied and modified.
-* A [many-headed stack antipattern](many-headed-stack.html) has multiple copies of stack code in a single stack project, typically to provision multiple environments.
-* The [template stack pattern](template-stack.html) uses a single copy of stack source code to create multiple, highly consistent instances of a stack. Each instance is intended to represent the same stack, but in different conditions - different environments for testing, different locations for replication, etc.
-* A [library stack](library-stack.html) also uses a single copy of stack source code to create multiple stacks. However, each instance is can be customized so that it serves a different purpose. One way to distinguish these two patterns is that once a version of a template stack code has been tested, it can be relied on to create stack instances that behave essentially the same. Library stacks, on the other hand, are customizable to the extent that testing either requires many different cases, or else separate testing cases are  needed for separate configurations. A library stack project can be used to provision stack instances, without needing to be included in a separate stack project.
-* A [stack code module](stack-code-module.html) is a package of code that is packaged so that it can be used by a stack code project. A module can't be used on its own to provision a stack instance. Module code is usually intended to be shared and re-used across multiple stack projects.
+
+## [Stack code module pattern](stack-code-module.html)
+
+A [stack code module](stack-code-module.html) is infrastructure code that can be included into one or more [infrastructure stack](/patterns/stack-concept/) projects. Most stack management tools implement modularization for re-use. Terraform has [modules](https://www.terraform.io/docs/modules/index.html), Cloudformation has [nested stacks](https://aws.amazon.com/blogs/devops/use-nested-stacks-to-create-reusable-templates-and-support-role-specialization/), etc.
+
+
+<figure>
+  <img src="images/stack-code-module.png" alt="A Stack Code Module is a unit of infrastructure code that can be included into one or more infrastructure stack projects"/>
+  <figcaption>Figure 4. A Stack Code Module is a unit of infrastructure code that can be included into one or more infrastructure stack projects.</figcaption>
+</figure>
+
+
+The difference between a stack code module and a template stack is that a module is code that is included into multiple stack projects, so that it can be re-used. A template stack is a complete stack project, which can be used to create multiple instances. Generally speaking, a module defines a smaller set of elements, that is not useful on its own. However, the [wrapper stack pattern](/patterns/stack-configuration/wrapper-stack.html) is an implementation where an entire stack is defined within a module, using separate stack projects to provide per-instance configuration.
 

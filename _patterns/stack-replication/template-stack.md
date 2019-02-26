@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Template Stack Pattern"
-date: 2019-02-15 08:57:44 +0000
+date: 2019-02-26 09:32:50 +0000
 category: Stack Replication Patterns
 order: 2
 published: true
@@ -43,6 +43,8 @@ Parameters may also be used to vary sizing, for example creating different minim
 In cases where there is greater variation between instances of a stack, either the template stack may not be the appropriate pattern, or else more thought may be needed to keep a clean architecture. As a rule, the parameters used to define differences between stack instances should be very simple - strings, numbers, or in some cases lists. Additionally, parameters should not cause significant differences in which code is applied.
 
 It is a red flag when a parameter is used as a conditional that decides whether to create large chunks of infrastructure. An example would be a parameter that indicates whether or not to provision a database cluster. If some instances require a database, and some do not, it may be preferable to split the database cluster into its own stack. The decision is then taken at a higher level of which stacks to provision. This keeps each stack simple, and easier to test.
+
+>>>  without conflicts. For example, it may not be possible to create more than one instance of an infrastructure element with exactly the same configuration - names, identifiers, IP addresses, etc. may conflict. So the template stack code is written to ensure these are different for each stack instance.
 
 
 ## Related patterns

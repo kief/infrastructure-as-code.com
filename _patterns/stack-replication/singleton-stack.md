@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Singleton Stack Antipattern"
-date: 2019-02-12 09:38:53 +0000
+date: 2019-02-26 09:32:50 +0000
 category: Stack Replication Patterns
 order: 4
 published: true
@@ -47,5 +47,4 @@ What typically happens in these cases is that each change needed for one custome
 
 This problem becomes even worse as the business scales to many customers and/or products. Maintaining multiple copies of stack code is annoying for 3 or 4 customers. For 10, 50, 100, or more it is simply unworkable.
 
-So the main challenge with singleton stacks is they make it difficult to keep instances consistently configured. In cases where stack instances are meant to represent the same stack, the [template stack pattern](/patterns/stack-replication/template-stack.html) is usually more appropriate. These are particularly helpful when you need to strictly minimize variations between each instance - particularly important for scaling to very large numbers of instances. In other cases, where there is a need to enable more variation between instances, a [library stack](/patterns/stack-replication/library-stack.html) is probably more appropriate.
-
+So the main challenge with singleton stacks is they make it difficult to keep instances consistently configured. In cases where stack instances are meant to represent the same stack, the [template stack pattern](/patterns/stack-replication/template-stack.html) is usually more appropriate. These are particularly helpful when you need to strictly minimize variations between each instance - particularly important for scaling to very large numbers of instances.

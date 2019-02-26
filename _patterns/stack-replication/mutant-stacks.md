@@ -4,7 +4,7 @@ title:  "Mutant Stack Instance Pattern"
 date: 2019-02-13 09:09:39 +0000
 category: Stack Replication Patterns
 order: 6
-published: true
+published: false
 status: todo
 ---
 
