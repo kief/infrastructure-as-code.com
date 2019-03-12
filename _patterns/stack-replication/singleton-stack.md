@@ -15,18 +15,32 @@ So if there are three environments, _test_, _staging_, and _production_, there w
 
 <figure>
   <img src="images/singleton-stack.png" alt="A singleton stack has a separate copy of the source code project for each instance"/>
-  <figcaption>A singleton stack has a separate copy of the source code project for each instance.</figcaption>
+  <figcaption>Figure 1. A singleton stack has a separate copy of the source code project for each instance.</figcaption>
 </figure>
 
 
+
+## Why it is used
+
 This is a fairly intuitive way to maintain multiple environments. It avoids issues with the more naive [multi-headed stack](/patterns/stack-replication/many-headed-stack.html) anti-pattern, because at least each environment has its own stack instance, reducing the blast radius of problems with a stack.
+
+Singleton stacks are sometimes used as a way to replicate production infrastructure, for instance, geographically or by customer. For each new customer or location, the stack code is copied, and this copy of the code is tweaked and used to manage the infrastructure.
+
+
+<figure>
+  <img src="images/singleton-product-stack.png" alt="Singleton stacks for separate product instances"/>
+  <figcaption>Figure 2. Singleton stacks for separate product instances.</figcaption>
+</figure>
+
+
+## Challenges
 
 There are several problems with singleton stacks as an approach for multiple instances of the same infrastructure. One is that it increases the chances of errors. After a change is tested in one environment, it is copied into the code for the next environment. The change may not be copied correctly, especially if it actually involves changing the code in several places. The risk might be lower if the code can be completely replaced with the code from the environment.
 
 
 <figure>
   <img src="images/singleton-stack-copying-code.png" alt="Copying code from one project to the next may be harmful"/>
-  <figcaption>Copying code from one project to the next may be harmful.</figcaption>
+  <figcaption>Figure 3. Copying code from one project to the next may be harmful.</figcaption>
 </figure>
 
 
@@ -37,14 +51,18 @@ And because each instance has its own infrastructure code, it's all too easy for
 Drift between instances becomes a different type of problem when singleton stacks are used to replicate the same infrastructure for different products, customers, or services. For example, if your business provides a hosted service for fast food companies, you might create a separate copy of the codebase for each one.
 
 
-<figure>
-  <img src="images/singleton-product-stack.png" alt="Singleton stacks for separate product instances"/>
-  <figcaption>Singleton stacks for separate product instances.</figcaption>
-</figure>
+### Pitfalls with a copy of the stack code per customer
 
+When separate copies of stack code are used for different products or customers, there is even more likelihood that there will be variations between each stack, which makes it even more difficult to manage the infrastructure well.
 
-What typically happens in these cases is that each change needed for one customer is made in the separate copy of the code. Over time, the differences between these stacks becomes so great that it is hard to roll out fixes or other improvements to all of them. Each change that should be applied to all customers becomes a significant effort, carefully tested one by one, and in many cases, implemented differently for each customer.
+What typically happens in these cases is that each change needed for one customer is made in the separate copy of the code. Over time, the differences between these stacks become so great that it is hard to roll out fixes or other improvements to all of them. Each change that should be applied to all customers becomes a significant effort, carefully tested one by one, and in many cases, implemented differently for each customer.
 
 This problem becomes even worse as the business scales to many customers and/or products. Maintaining multiple copies of stack code is annoying for 3 or 4 customers. For 10, 50, 100, or more it is simply unworkable.
 
-So the main challenge with singleton stacks is they make it difficult to keep instances consistently configured. In cases where stack instances are meant to represent the same stack, the [template stack pattern](/patterns/stack-replication/template-stack.html) is usually more appropriate. These are particularly helpful when you need to strictly minimize variations between each instance - particularly important for scaling to very large numbers of instances.
+So the main challenge with singleton stacks is they make it difficult to keep instances consistently configured.
+
+
+## Alternative patterns
+
+In cases where stack instances are meant to represent the same stack, the [template stack pattern](/patterns/stack-replication/template-stack.html) is usually more appropriate. These are particularly helpful when you need to strictly minimize variations between each instance - particularly important for scaling to very large numbers of instances.
+
