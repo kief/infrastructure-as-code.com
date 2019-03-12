@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Template Stack Pattern"
-date: 2019-02-26 09:32:50 +0000
+date: 2019-03-12 09:32:50 +0000
 category: Stack Replication Patterns
 order: 2
 published: true
@@ -51,7 +51,7 @@ It is a red flag when a parameter is used as a conditional that decides whether 
 
 Some teams use the [singleton stack anti-pattern](singleton-stack.html) to manage multiple instances of a stack. This involves creating a new copy of the stack code for each new environment or other instance. While this is a straightforward approach to implement, it makes it difficult to keep each instance consistent.
 
-[Stack code modules](stack-code-module.html) allow code to be defined once, and then shared across multiple stacks. But unlike a template stack project, a stack module is not used directly to create infrastructure. Instead, it is imported into a stack project, which is then used to provision infrastructure.
+[Stack code modules](/patterns/stack-concept/stack-code-module.html) allow code to be defined once, and then shared across multiple stacks. But unlike a template stack project, a stack module is not used directly to create infrastructure. Instead, it is imported into a stack project, which is then used to provision infrastructure.
 
 In other words, a stack module's code is shared by stack projects; a stack template is a single, complete stack project that is used to create multiple instances.
 

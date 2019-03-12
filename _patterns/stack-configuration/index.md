@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Patterns For Configuring Stacks"
-date: 2019-02-26 09:32:50 +0000
+date: 2019-03-12 09:32:50 +0000
 category: Stack Configuration Patterns
 section: true
 order: 20
@@ -110,7 +110,7 @@ An alternative is to define parameter values in [Parameter Files](stack-paramete
 ~~~
 
 
-A variation of parameter files is a [wrapper stack](wrapper-stack.html). With this approach, the code that defines an environment stack is kept in a [stack code module](/patterns/stack-replication/stack-code-module.html). A stack project is then created for each stack instance, whose purpose is to pass values to the module code for the specific instance.
+A variation of parameter files is a [wrapper stack](wrapper-stack.html). With this approach, the code that defines an environment stack is kept in a [stack code module](/patterns/stack-concept/stack-code-module.html). A stack project is then created for each stack instance, whose purpose is to pass values to the module code for the specific instance.
 
 When infrastructure code is applied to environments using a Continuous Delivery Pipeline, [values can be defined in pipeline job configuration](pipeline-defined-parameters.html). Each stage which applies the stack code to a given environment includes configuration values for that environment, which is then passed to the command which applies to the code.
 

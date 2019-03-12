@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Patterns For Structuring Stacks"
-date: 2019-02-12 09:38:53 +0000
+date: 2019-03-12 09:32:50 +0000
 category: Stack Structural Patterns
 section: true
 order: 10
@@ -19,4 +19,4 @@ In the other direction, multiple services are run in a single [multi-service sta
 
 [Shared nothing stacks] take the single service pattern to the extreme of ensuring that stacks do not have dependencies on other stacks. More commonly, stacks do have dependencies, for example a service stack's infrastructure may use networking structures managed by another stack. [Stack integration patterns] is an important topic in infrastructure design.
 
-It is common to simplify infrastructure design by having a stack provide infrastructure used by other stacks. Another technique is to share common infrastructure code as a [stack module](/patterns/stack-replication/stack-code-module.html), imported into multiple stack projects.
+It is common to simplify infrastructure design by having a stack provide infrastructure used by other stacks. Another technique is to share common infrastructure code as a [stack module](/patterns/stack-concept/stack-code-module.html), imported into multiple stack projects.

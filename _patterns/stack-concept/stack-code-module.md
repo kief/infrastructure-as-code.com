@@ -1,9 +1,9 @@
 ---
 layout: pattern
-title:  "Stack Code Module Pattern"
-date: 2019-02-12 09:38:53 +0000
-category: Stack Replication Patterns
-order: 6
+title:  "Stack Code Module"
+date: 2019-03-12 09:32:50 +0000
+category: Stack Concept
+order: 2
 published: true
 status: review
 ---
@@ -14,7 +14,7 @@ Most stack management tools implement modularization for re-use. Terraform has [
 
 
 <figure>
-  <img src="images/stack-code-module.png" alt="A Stack Code Module is a unit of infrastructure code that can be included into one or more infrastructure stack projects"/>
+  <img src="/patterns/stack-concept/images/stack-code-module.png" alt="A Stack Code Module is a unit of infrastructure code that can be included into one or more infrastructure stack projects"/>
   <figcaption>A Stack Code Module is a unit of infrastructure code that can be included into one or more infrastructure stack projects.</figcaption>
 </figure>
 

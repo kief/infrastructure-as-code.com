@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Patterns for Replicating Infrastructure"
-date: 2019-02-26 09:32:50 +0000
+date: 2019-03-12 09:32:50 +0000
 category: Stack Replication Patterns
 section: true
 order: 1
@@ -44,17 +44,4 @@ A Many-Headed Stack defines multiple copies of infrastructure in a single stack 
   <figcaption>Figure 3. A many-headed stack manages the infrastructure for multiple environments in a single stack project.</figcaption>
 </figure>
 
-
-## [Stack code module pattern](stack-code-module.html)
-
-A [stack code module](stack-code-module.html) is infrastructure code that can be included into one or more [infrastructure stack](/patterns/stack-concept/) projects. Most stack management tools implement modularization for re-use. Terraform has [modules](https://www.terraform.io/docs/modules/index.html), Cloudformation has [nested stacks](https://aws.amazon.com/blogs/devops/use-nested-stacks-to-create-reusable-templates-and-support-role-specialization/), etc.
-
-
-<figure>
-  <img src="images/stack-code-module.png" alt="A Stack Code Module is a unit of infrastructure code that can be included into one or more infrastructure stack projects"/>
-  <figcaption>Figure 4. A Stack Code Module is a unit of infrastructure code that can be included into one or more infrastructure stack projects.</figcaption>
-</figure>
-
-
-The difference between a stack code module and a template stack is that a module is code that is included into multiple stack projects, so that it can be re-used. A template stack is a complete stack project, which can be used to create multiple instances. Generally speaking, a module defines a smaller set of elements, that is not useful on its own. However, the [wrapper stack pattern](/patterns/stack-configuration/wrapper-stack.html) is an implementation where an entire stack is defined within a module, using separate stack projects to provide per-instance configuration.
 

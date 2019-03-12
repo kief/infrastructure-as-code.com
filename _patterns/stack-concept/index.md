@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Infrastructure Stack Definition"
-date: 2019-02-26 09:32:50 +0000
+date: 2019-03-12 09:32:50 +0000
 category: Stack Concept
 section: true
 order: 0
@@ -52,16 +52,16 @@ stack-project/
 
 ### Stack component modules
 
-A [stack code module](/patterns/stack-replication/stack-code-module.html) is a package of code that can be shared by multiple stack projects.
+A [stack code module](/patterns/stack-concept/stack-code-module.html) is a package of code that can be shared by multiple stack projects.
 
 
 <figure>
-  <img src="/patterns/stack-replication/images/stack-code-module.png" alt="A stack code module packages code to be shared by multiple stack projects"/>
+  <img src="/patterns/stack-concept/images/stack-code-module.png" alt="A stack code module packages code to be shared by multiple stack projects"/>
   <figcaption>Figure 3. A stack code module packages code to be shared by multiple stack projects.</figcaption>
 </figure>
 
 
-([Read more about stack code modules](/patterns/stack-replication/stack-code-module.html))
+([Read more about stack code modules](/patterns/stack-concept/stack-code-module.html))
 
 
 ## Stack instance
