@@ -19,7 +19,6 @@ So if there are three environments, _test_, _staging_, and _production_, there w
 </figure>
 
 
-
 ## Why it is used
 
 This is a fairly intuitive way to maintain multiple environments. It avoids issues with the more naive [multi-headed stack](/patterns/stack-replication/many-headed-stack.html) anti-pattern, because at least each environment has its own stack instance, reducing the blast radius of problems with a stack.
