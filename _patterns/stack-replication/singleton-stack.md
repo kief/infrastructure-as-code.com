@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Singleton Stack Antipattern"
-date: 2019-02-26 09:32:50 +0000
+date: 2019-03-12 09:32:50 +0000
 category: Stack Replication Patterns
 order: 4
 published: true
