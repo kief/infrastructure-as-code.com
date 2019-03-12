@@ -14,7 +14,7 @@ Most organisations need to run multiple copies of infrastructure, whether it's m
 
 ## [Template stack pattern](template-stack.html)
 
-With the [template stack pattern](/patterns/stack-replication/template-stack.html), a stack source code project is implemented so that it can be used to create multiple instances of the stack, in a consistent way.
+With the [template stack pattern](/patterns/stack-replication/template-stack.html), a stack source code project is implemented so that it can be used to create multiple instances of the stack in a consistent way.
 
 
 <figure>
@@ -32,6 +32,9 @@ The [singleton stack antipattern](singleton-stack.html) is a naive implementatio
   <img src="images/singleton-stack.png" alt="A singleton stack has a separate copy of the source code project for each instance"/>
   <figcaption>Figure 2. A singleton stack has a separate copy of the source code project for each instance.</figcaption>
 </figure>
+
+
+Note that the [wrapper stack pattern](/patterns/stack-configuration/wrapper-stack.html) is essentially implemented like a singleton stack. However, this isn't considered to be an antipattern because each instance project contains only configuration parameters, not infrastructure definition code.
 
 
 ## [Many-headed stack antipattern](many-headed-stack.html)

@@ -13,7 +13,7 @@ A Template Stack is an [infrastructure stack](/patterns/stack-concept/) source c
 
 <figure>
   <img src="images/template-stack.png" alt="A Template Stack is an infrastructure stack project that is designed to be replicated consistently"/>
-  <figcaption>A Template Stack is an infrastructure stack project that is designed to be replicated consistently.</figcaption>
+  <figcaption>Figure 1. A Template Stack is an infrastructure stack project that is designed to be replicated consistently.</figcaption>
 </figure>
 
 
@@ -44,8 +44,6 @@ In cases where there is greater variation between instances of a stack, either t
 
 It is a red flag when a parameter is used as a conditional that decides whether to create large chunks of infrastructure. An example would be a parameter that indicates whether or not to provision a database cluster. If some instances require a database, and some do not, it may be preferable to split the database cluster into its own stack. The decision is then taken at a higher level of which stacks to provision. This keeps each stack simple, and easier to test.
 
->>>  without conflicts. For example, it may not be possible to create more than one instance of an infrastructure element with exactly the same configuration - names, identifiers, IP addresses, etc. may conflict. So the template stack code is written to ensure these are different for each stack instance.
-
 
 ## Related patterns
 
@@ -58,23 +56,18 @@ In other words, a stack module's code is shared by stack projects; a stack templ
 
 <figure>
   <img src="images/code-module-used-by-template-stack.png" alt="A stack source code module is shared by stack projects"/>
-  <figcaption>A stack source code module is shared by stack projects.</figcaption>
+  <figcaption>Figure 2. A stack source code module is shared by multiple stack projects.</figcaption>
 </figure>
 
 
-... wrapper stacks ...
+Like a template stack, [wrapper stacks](/patterns/stack-configuration/wrapper-stack.html) are used to create multiple stack instances from a single codebase. However, the infrastructure code for a wrapper stack is defined in a [module](/patterns/stack-concept/stack-code-module.html), and a separate stack project is created for each instance, to define the instance-specific parameters.
 
 
 ## Considerations
 
-Variations between instances created from a stack source code project create friction for rolling out changes to them. A change made to the project may work on some instances, but not others. This adds to the work needed to design, test, and debug changes to the code, which decreases the frequency and safety of changes.
+Variations between instances created from a single stack source code project create friction for rolling out changes. Each time a change is made, testing needs to be carried out to ensure the code works correctly in each case.
 
+For example, imagine a stack source code project that uses a parameter named 'cluster'. If set to true, then an autoscaling cluster and load balancer are created. If set to false, then a single server instance is created. This needs two different sets of tests, one for each of these configurations.
 
-### Testing infrastructure stack code
+This type of variation adds to the work needed to design, test, and debug changes to the code. This slows the pace of delivering changes and fixes to the infrastructure, and increases the risk for each change.
 
-When making changes to an infrastructure stack's code, being able to provision a test instance enables you to test your changes before applying them to the production instance of the stack. As an individual engineer making changes to infrastructure code, you can provision and test your changes on your own sandbox instance before committing changes. As a team, you can use [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) and [Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) to facilitate a consistent and reliable process for testing and delivering changes to your infrastructure. There are a number of considerations for [testing infrastructure changes] effectively, which will be defined in future patterns.
-
-
-### Delivering changes to infrastructure stacks
-
-Software development teams often use Continuous Delivery pipelines to test and release changes to their software. Infrastructure teams can follow this practice, ensuring that changes to stack source code, and other infrastructure code, are delivered rapidly and reliably using pipelines. Patterns for doing this will be published here later.
