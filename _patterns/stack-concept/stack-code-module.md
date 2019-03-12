@@ -21,8 +21,6 @@ Most stack management tools implement modularization for re-use. Terraform has [
 
 The use case for stack code modules is to re-use code across stacks, and in some cases within stacks. For example, a stack that includes a pool of web servers and a pool of application servers could re-use a "load balancer" module to create two load balancer VIPs, one in front of each server pool.
 
-A stack code module has some similarities to a [library stack](library-stack.html). A library stack normally represents a complete stack, or nearly complete stack, which is customized for different purposes, whereas a stack code module is typically a smaller unit of code that is included within a larger stack project. This distinction is subjective in theory, but in practice code modules are a feature of stack management tools, whereas library stacks tend to be a usage pattern implemented by teams writing infrastructure code.
-
 The [wrapper stack](/patterns/stack-configuration/wrapper-stack.html) pattern makes use of stack code modules in a variation of the library stack and [template stack](template-stack.html) pattern.
 
 Other types of infrastructure tools, for example server configuration tools like Ansible, Chef, and Puppet, also have module or library functionality to enable shared code. This pattern, however, specifically refers to sharing code between stack projects.
