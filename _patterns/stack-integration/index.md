@@ -5,7 +5,7 @@ date: 2019-02-12 09:38:53 +0000
 category: Stack Integration Patterns
 section: true
 order: 40
-published: true
+published: false
 status: todo
 ---
 

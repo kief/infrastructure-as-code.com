@@ -4,8 +4,8 @@ title:  "Shared Infrastructure Stack Pattern"
 date: 2019-02-12 09:38:53 +0000
 category: Multiple Stack Patterns
 order: 31
-published: true
-status: review
+published: false
+status: todo
 ---
 
 A Shared Infrastructure [stack](/patterns/stack-concept/) includes infrastructure elements that are used by other stacks.

@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Monolithic Stack Antipattern"
-date: 2019-02-12 09:38:53 +0000
+date: 2019-03-13 09:32:50 +0000
 category: Stack Structural Patterns
 order: 11
 published: true
@@ -13,8 +13,13 @@ A Monolithic Stack is an [infrastructure stack](/patterns/stack-concept/) that i
 Infrastructure often grows organically, each new piece being naturally added into the existing codebase as we go. Over time, the codebase can become messy and unwieldy. 
 
 
-![A Monolithic Stack is an infrastructure stack that includes too many elements, so that it is difficult to work with](images/monolithic-stack.png)
+<figure>
+  <img src="images/monolithic-stack.png" alt="A Monolithic Stack is an infrastructure stack that includes too many elements, so that it is difficult to work with" />
+  <figcaption>A Monolithic Stack is an infrastructure stack that includes too many elements, so that it is difficult to work with.</figcaption>
+</figure>
 
+
+## Challenges
 
 Whether a given infrastructure stack is a monolith is a matter of judgement. The symptoms of a monolithic stack include:
 
@@ -34,7 +39,7 @@ A key indicator of whether a stack is becoming monolithic is how many people are
 These describe issues within a single team working on an infrastructure stack. Multiple teams often making changes to a single stack is a clear sign of a monolith. Enabling different teams to work easily on clearly separated parts of a system is a key goal for good system architecture.
 
 
-## Alternatives to monolithic stacks
+## Alternatives
 
 Dividing a monolithic stack into multiple smaller [micro stacks](micro-stack.html) can make it easier for multiple people, and multiple teams, to maintain and evolve the system. It's possible that related services can be cleanly maintained in a single [multi-service stack](multi-service-stack.html), with strong engineering discipline. It's often more natural to split a system into [single-service stacks](single-service-stack.html). In some situations, breaking services down into [multiple stacks](cross-stack-service.html) has value.
 

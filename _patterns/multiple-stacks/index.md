@@ -5,8 +5,8 @@ date: 2019-02-12 09:38:53 +0000
 category: Multiple Stack Patterns
 section: true
 order: 30
-published: true
-status: review
+published: false
+status: todo
 ---
 
 As a system grows, it often makes sense to divide the infrastructure into multiple [stacks](/patterns/stack-concept/), in order to avoid a [monolithic stack](/patterns/stack-structures/monolithic-stack.html).

@@ -14,9 +14,14 @@ status: todo
 
 ## How to implement it
 
+## Related patterns
+
+## Challenges
+
 ## Alternatives
 
 ## Considerations
+
 
 
 Context: 

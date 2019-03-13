@@ -4,7 +4,7 @@ title:  "Shared Nothing Stack"
 date: 2019-02-12 09:38:53 +0000
 category: Multiple Stack Patterns
 order: 32
-published: true
+published: false
 status: todo
 ---
 
