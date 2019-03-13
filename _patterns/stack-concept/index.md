@@ -134,7 +134,7 @@ Instances of a template stack often need to be configured to reflect differences
 
 As the size and complexity of infrastructure grows, keeping it all in a single stack becomes messy and difficult to work with. There are various patterns that can be applied to [split up infrastructure stacks](/patterns/multiple-stacks/) to make them more manageable.
 
-When systems are spread across multiple infrastructure stacks in this way, they tend to have dependencies between them. There are a number of [stack integration patterns](/patterns/stack-integration/) which can be used for this.
+When systems are spread across multiple infrastructure stacks in this way, they tend to have dependencies between them. There are a number of stack integration patterns which can be used for this, which will be documented here in the future.
 
 Running a stack tool by hand works well for a single, fairly simple stack. As systems become more complex, with multiple stacks, multiple instances, then configuring them and passing integration information can become challenging. Most teams deal with this by writing [orchestration tools](/patterns/stack-orchestration-tools/) in some scripting language.
 

@@ -121,13 +121,5 @@ Stack instance configuration values can also be set in a [Parameter Registry](st
 
 ### Stack integration patterns
 
-When a system's infrastructure is divided across multiple stacks, configuration usually needs to be passed from one stack to another. The mechanisms for doing this are closely related to those for per-instance configuration, although there are additional things to consider. This is discussed under [stack integration](/patterns/stack-integration/).
-
-
-### Stack orchestration tools
-
-Infrastructure projects often become complex in the number of different stack types, stack instances, and configuration options that are managed. Most stack management tools (such as Terraform, etc.) are designed around the use case of running for one stack instance of a project. Running the tool for multiple projects requires more orchestration, so teams inevitably write [scripts of various shapes and sizes to orchestrate this](/patterns/stack-orchestration-tools/).
-
-
-
+When a system's infrastructure is divided across multiple stacks, configuration usually needs to be passed from one stack to another. The mechanisms for doing this are closely related to those for per-instance configuration, although there are additional things to consider. Stack integration patterns will be included in this pattern catalogue in the future.
 
