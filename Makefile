@@ -9,7 +9,7 @@ ready: bundle ## View ready to publish
 build:
 	bundle exec jekyll build
 
-upload: build ## Publish to live
+upload_old: build ## Publish to the old bucket
 	aws s3 \
 		--profile infrasite \
 		--region us-east-1 \
@@ -21,7 +21,7 @@ upload: build ## Publish to live
 		s3://site.infrastructure-as-code.com/
 
 
-upload_new: build ## Publish to new site
+upload: build ## Publish to new site
 	aws s3 \
 		--profile iac_site_uploader \
 		--region us-east-1 \
