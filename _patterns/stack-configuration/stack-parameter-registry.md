@@ -1,19 +1,21 @@
 ---
 layout: pattern
 title:  "Stack Parameter Registry"
-date: 2019-02-12 09:32:50 +0000
+date: 2019-03-14 08:00:00 +0000
 category: Stack Configuration Patterns
 order: 26
 published: true
 status: review
 ---
 
-Stack instance configuration values can be stored in a parameter registry. The appropriate set of values can be retrieved from the registry by the stack management tool or [stack orchestration tool](/patterns/stack-orchestration-tools/) when applying the code to a stack instance.
+Configuration values for [template stacks](/patterns/stack-replication/template-stack.html) can be stored in a parameter registry. The appropriate set of values can be retrieved from the registry by the stack management tool or [stack orchestration tool](/patterns/stack-orchestration-tools/) when applying the code to a stack instance.
+
 
 <figure>
   <img src="images/configuration-registry.png" alt="Stack instance configuration values can be stored in a parameter registry"/>
   <figcaption>Stack instance configuration values can be stored in a parameter registry.</figcaption>
 </figure>
+
 
 This is normally used with a [template stack](/patterns/stack-replication/template-stack.html), which has parameters that can be set differently for different instances of the stack. For example, a stack that is used to create a web server cluster may have different values for the sizing of the cluster in different environments:
 
@@ -82,7 +84,7 @@ In more complex systems with multiple infrastructure stacks, the configuration r
 
 A configuration registry is essentially a key/value store. There are many products which can be used to provide this service, as well as hosted services. Most cloud platforms, and many related systems such as container orchestration platforms, offer out of the box key/value stores, such as AWS SSM Parameter Store.
 
-It's also possible to implement a simple configuration registry by storing files on a reliable storage, such as a hosted block storage service or a version control system. This can potentially resemble [stack instance configuration files](stack-parameter-files.html), with the difference that files are hosted separately from the stack project code.
+It's also possible to implement a simple configuration registry by storing files on a reliable storage, such as a hosted block storage service or a version control system. This can potentially resemble [stack instance configuration files](stack-instance-configuration-file.html), with the difference that files are hosted separately from the stack project code.
 
 
 

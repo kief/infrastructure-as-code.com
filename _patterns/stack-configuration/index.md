@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Patterns For Configuring Stacks"
-date: 2019-03-13 12:23:00 +0000
+date: 2019-03-14 08:00:00 +0000
 category: Stack Configuration Patterns
 section: true
 order: 20
@@ -14,7 +14,7 @@ Defining an [infrastructure stack](/patterns/stack-concept/) as code enables the
 
 <figure>
   <img src="images/stack-parameters.png" alt="Some aspects of a stack may need to vary for different instances of the stack"/>
-  <figcaption>Some aspects of a stack may need to vary for different instances of the stack.</figcaption>
+  <figcaption>Figure 1. Some aspects of a stack may need to vary for different instances of the stack.</figcaption>
 </figure>
 
 
@@ -25,7 +25,7 @@ The [template stack pattern](/patterns/stack-replication/template-stack.html) en
 
 <figure>
   <img src="/patterns/stack-replication/images/template-stack.png" alt="Template stack, all of the instances are intended to be highly consistent"/>
-  <figcaption>Template stack, all of the instances are intended to be highly consistent.</figcaption>
+  <figcaption>Figure 2. Template stack, all of the instances are intended to be highly consistent.</figcaption>
 </figure>
 
 
@@ -79,7 +79,7 @@ terraform apply \
 ~~~
 
 
-An alternative is to define parameter values in [Parameter Files](stack-parameter-files.html) checked into source control, with one file for each environment. This ensures that the values are captured and are applied consistently.
+An alternative is to define parameter values in [Instance Configuration Files](stack-instance-configuration-file.html) checked into source control, with one file for each environment. This ensures that the values are captured and are applied consistently.
 
 ~~~ console
    ├── src/

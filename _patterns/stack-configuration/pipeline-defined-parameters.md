@@ -31,7 +31,7 @@ This is normally used with a [template stack](/patterns/stack-replication/templa
 
 The pipeline job configuration could specify the command line for running the stack management tool, passing the parameter values on the commandline. This essentially implements the [command-line parameter pattern](command-line-parameters.html).
 
-This pattern could also be used in conjunction with the [stack instance configuration file pattern](stack-parameter-files.html), passing the path to the relevant configuration file to the stack management tool on its command line.
+This pattern could also be used in conjunction with the [stack instance configuration file pattern](stack-instance-configuration-file.html), passing the path to the relevant configuration file to the stack management tool on its command line.
 
 Or, the pipeline job could pass an *instance_id* value to the stack management tool, or to the [orchestration tool](/patterns/stack-orchestration-tools/), that is then used to look up the needed parameter values for the instance in a [parameter registry](stack-parameter-registry.html).
 
