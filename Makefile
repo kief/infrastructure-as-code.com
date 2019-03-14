@@ -10,22 +10,30 @@ build:
 	bundle exec jekyll build
 
 upload: build ## Publish to live
-	aws s3 sync \
-	  --acl public-read \
-	  --exact-timestamps \
-	  --profile infrasite \
-	  --delete \
-	  --region eu-west-1 \
-	  ./_site/ \
-	  s3://infrastructure-as-code.com/
+	aws s3 \
+		--profile infrasite \
+		--region us-east-1 \
+		sync \
+		--acl public-read \
+		--exact-timestamps \
+		--delete \
+		./_site/ \
+		s3://site.infrastructure-as-code.com/
+
+
+upload_new: build ## Publish to new site
+	aws s3 \
+		--profile iac_site_uploader \
+		--region us-east-1 \
+		sync \
+		--acl public-read \
+		--exact-timestamps \
+		--delete \
+		./_site/ \
+		s3://site.infrastructure-as-code.com/
 
 bundle:
 	bundle install
-
-# update: ## Put update time on files that have changed
-#   UPDATED_MARKDOWN_FILES=$(shell git diff --cached --name-status | perl -ne 'if ( /^[MA]\s*(\S+\.md)$/ ) { print "$1 " }' )
-#   sed -i "/---.*/,/---.*/s/^updated:.*$/updated: $(date -u "+%Y-%m-%d %T %Z")/" $(UPDATED_MARKDOWN_FILES)
-#   git add $(UPDATED_MARKDOWN_FILES)
 
 linkcheck: ## Check links in the pattern catalogue
 	mkdir -p tmp
