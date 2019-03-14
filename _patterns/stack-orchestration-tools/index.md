@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Stack Orchestration Tools"
-date: 2019-02-12 09:32:50 +0000
+date: 2019-03-14 08:00:00 +0000
 category: Stack Tools
 section: true
 order: 50
@@ -9,24 +9,32 @@ published: true
 status: todo
 ---
 
-A stack orchestration tool is a tool, usually written by a team, that is used to run a stack management tool such as Terraform, CloudFormation, etc. These are usually written in order to manage configuration and parameters, and in some cases to marshal stack definition code.
+A stack orchestration tool is usually a custom set of scripts written by a team to run their stack management tools. They may be written as Makefiles, shell scripts, batchfiles, or using more advanced scripting languages such as Ruby or Python. In some cases, teams develop complex tools to serve this purpose.
+
+
+## Why these are used
 
 Some typical scenarios:
 
-- Manage multiple stacks as a group, e.g. spin up a database stack, and application server stack, and perhaps a separate networking stack. Manage the order each stack definition is applied.
-- Configuration of stack instances. The orchestrator may read configuration files and use them to pass variables, or even read variables from a configuration registry. Dependency injection.
-- Runtime / integration variables, eg. from other stacks.
-- May also help with managing versioning of stack code.
-- Run tests, smoke tests, etc.
-- Orchestrate different tools. For example, apply terraform, then run ansible. May run command line tools to carry out actions that the stack tool can't do very nicely.
+- To orchestrate multiple stacks. For example, when systems are [split across multiple stacks](/patterns/stack-structures/), scripts may manage the order in which they are provisioned and updated. They may also manage dependencies between the stacks.
+- To orchestrate different layers of infrastructure tools. One tool may be used to provision a stack, and then other tools may be run to configure servers within the stack, deploy applications, load data, etc.
+- To handle [configuration of stack instances](/patterns/stack-configuration/). In more complex configuration scenarios, parameter values may be built up from different levels of defaults depending on environment, location, products, etc. The orchestration tooling may manage the retrieval and resolution of these and provide a resolved set of parameters to each stack instance.
+- To manage versioning of stack project code, perhaps building, uploading, downloading, and unpacking artefacts.
+- Run tests, smoke tests, and other validation checks.
 
-Pitfalls, this can become seriously complicated. Barrier for new people on a team. Very common for this stuff to be the most complicated and buggy part of an infrastructure codebase.
 
-Typical implementations:
-- Shell scripts
-- Makefiles
-- Ruby / rakefiles
-- Python scripts
+## Pitfalls
 
-Also, third party orchestration tools. Terragrunt. Many CloudFormation tools.
+These orchestration tools can become complicated and messy. In many cases, maintaining the scripts and code that run the infrastructure tools is more work than maintaining the code that actually defines the infrastructure.
+
+This may be a smell that indicates design issues, in which case it may be a good idea to reconsider the overall infrastructure design and look for ways to simplify the dependencies and configuration.
+
+A common issue is that orchestration code often lacks automated tests. If this code is at all complex - if there is very much of this code, if it's spread across multiple files, if it's difficult to understand, if debugging and fixing errors takes very much time - then it should have tests to drive cleaner design and reliability of changes.
+
+
+## Example tools
+
+Terragrunt. There are a number of tools for CloudFormation.
+
+A separate discussion is more procedural scripting tools like Pulomi, vs. "classic" declarative tools.
 
