@@ -9,9 +9,9 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-2 April, 2019 [Istanbul Tech Talks](http://www.istanbultechtalks.com/) in Istanbul, Turkey
+2 April, 2019 [Istanbul Tech Talks](http://www.istanbultechtalks.com/) in Istanbul, Turkey.
 
-20 June, 2019 [GOTO Amsterdam](https://gotoams.nl/2019/sessions/759) in Amsterdam, Netherlands
+20 June, 2019 [GOTO Amsterdam](https://gotoams.nl/2019/sessions/759) in Amsterdam, Netherlands.
 
 
 ## Previous
