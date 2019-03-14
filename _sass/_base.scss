@@ -41,6 +41,11 @@ a.promolink {
   text-decoration: underline;
 }
 
+.booktitle {
+  font-style: italic;
+}
+
+
 /**
  * Set main page style
  */
@@ -60,11 +65,6 @@ a.promolink {
   margin-bottom:30px;
   box-shadow: 1px 1px 10px #BBB;
 }
-
-.booktitle { 
-  font-style: italic;
-}
-
 
 /*for media*/
 *, *:before, *:after {
@@ -92,6 +92,7 @@ a.promolink {
 }
 
 
+
 /**
  * Images
  */
@@ -107,6 +108,7 @@ img {
   width:50%;
   height:50%;
 }
+
 
 /**
  * Figures
@@ -152,6 +154,10 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $brand-top-color;
   text-decoration: none;
+
+  &:visited {
+    color: darken($brand-top-color, 25%);
+  }
 
   &:hover {
     color: #669900; //$hover-color;
@@ -288,6 +294,7 @@ pre {
 
 table { 
   padding: 0;
+  margin-bottom: 5px;
   border-collapse: collapse; 
   font-size: $small-font-size;
 }
