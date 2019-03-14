@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Template Stack Pattern"
-date: 2019-03-12 09:32:50 +0000
+date: 2019-03-14 08:00:00 +0000
 category: Stack Replication Patterns
 order: 2
 published: true
@@ -70,4 +70,11 @@ Variations between instances created from a single stack source code project cre
 For example, imagine a stack source code project that uses a parameter named 'cluster'. If set to true, then an autoscaling cluster and load balancer are created. If set to false, then a single server instance is created. This needs two different sets of tests, one for each of these configurations.
 
 This type of variation adds to the work needed to design, test, and debug changes to the code. This slows the pace of delivering changes and fixes to the infrastructure, and increases the risk for each change.
+
+
+## Smells
+
+When different instances of a template stack are becoming customized more than simple parameters can support, this is a design smell. Often, a template stack is not the appropriate pattern for the situation if significant customization is needed. It may be better to break the template down to the true common core, and then implement new template stacks for each variation. Changes to each of the new template stacks can then be tested before being applied to production instances, creating more confidence in the change process.
+
+In other cases, a stack is highly customized because there are different subsets of elements which are needed in different situations. For example, maybe a database is deployed in some scenarios, but not in others. In these cases, it's probably a good idea to split the stack into multiple stacks. This way, each stack template represents a clear set of infrastructure which doesn't tend to vary, and each stack can be provisioned only in those situations where it is required, rather than adding complexity to a single stack.
 

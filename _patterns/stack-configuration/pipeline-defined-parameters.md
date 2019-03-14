@@ -1,14 +1,14 @@
 ---
 layout: pattern
 title:  "Pipeline-Defined Parameters"
-date: 2019-02-12 09:32:50 +0000
+date: 2019-03-14 08:00:00 +0000
 category: Stack Configuration Patterns
-order: 24
+order: 25
 published: true
 status: review
 ---
 
-When infrastructure code is applied to environments using a Continuous Delivery Pipeline, stack instance values can be defined in pipeline job configuration. Each stage which applies the stack code to a given environment includes configuration values for that environment, which is then passed to the command which applies to the code.
+When instances of a [template stack](/patterns/stack-replication/template-stack.html) is managed using a Continuous Delivery Pipeline, stack instance values can be defined in pipeline job configuration. Each stage which applies the stack code to a given environment includes configuration values for that environment, which is then passed to the command which applies to the code.
 
 
 <figure>
@@ -16,6 +16,8 @@ When infrastructure code is applied to environments using a Continuous Delivery 
   <figcaption>Each stage which applies the stack code passes the configuration values for the environment.</figcaption>
 </figure>
 
+
+## How to implement it
 
 This is normally used with a [template stack](/patterns/stack-replication/template-stack.html), which has parameters that can be set differently for different instances of the stack. For example, a stack that is used to create a web server cluster may have different values for the sizing of the cluster in different environments:
 

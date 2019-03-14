@@ -3,7 +3,7 @@ layout: pattern
 title:  "Stack Parameter Registry"
 date: 2019-02-12 09:32:50 +0000
 category: Stack Configuration Patterns
-order: 25
+order: 26
 published: true
 status: review
 ---

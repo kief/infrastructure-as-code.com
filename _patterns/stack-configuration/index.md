@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Patterns For Configuring Stacks"
-date: 2019-03-12 09:32:50 +0000
+date: 2019-03-13 12:23:00 +0000
 category: Stack Configuration Patterns
 section: true
 order: 20
@@ -18,9 +18,9 @@ Defining an [infrastructure stack](/patterns/stack-concept/) as code enables the
 </figure>
 
 
-## Typical uses for configuring stack instances differently
+## Purpose of stack configuration
 
-As described in the [stack replication patterns](/patterns/stack-replication), there are two main patterns used to create multiple stack instances from a single stack project. One is a [template stack](/patterns/stack-replication/template-stack.html), where all of the instances created from a stack project are intended to be highly consistent. There should be very little variation between them. The common case of this is when creating stack instances to test software - the same stack source code is used to create instances for development, test, and production, so that the software is tested in an environment that is consistent with production.
+The [template stack pattern](/patterns/stack-replication/template-stack.html) enables a single stack definition source code project to be used to create multiple stack instances that are highly consistent. A common use case is to create the infrastructure for multiple environments for testing and running software. The same stack source code is used to create instances for development, test, and production, so that the software is tested in an environment that is consistent with production.
 
 
 <figure>
@@ -29,27 +29,12 @@ As described in the [stack replication patterns](/patterns/stack-replication), t
 </figure>
 
 
-The other pattern is the [library stack](/patterns/stack-replication/library-stack.html), where the stack project provides the core configuration for the stack's infrastructure, but each instance is customized or extended to serve a different purpose. An example of this is a stack that creates a database cluster, but separate instances are each customized to be used as a product database, a user database, and a search database.
-
-
-<figure>
-  <img src="/patterns/stack-replication/images/library-stack.png" alt="Library stack, each instance is customized or extended to serve a different purpose"/>
-  <figcaption>Library stack, each instance is customized or extended to serve a different purpose.</figcaption>
-</figure>
-
-
 Because instances of a template stack tend to have little variation - in fact, it's desirable to keep variation to a minimum - configuration tends to be limited to a handful of simple parameters - strings, numbers, lists, key-value maps. So the configuration mechanism for these can be fairly simple, essentially a way to pass a set of variable names and values to the tool when provisioning or updating the stack instance.
-
-Library stacks, on the other hand, often need deeper customization. This might involve providing more complex data structures, large blobs of data (e.g. passing scripts to be executed), or even adding additional infrastructure code (e.g. adding a terraform file to the project before applying it).
-
-
-
-## Stack configuration mechanisms
 
 In order to create instances of a parameterized stack, values need to be provided to the stack management tool (e.g. Terraform, CloudFormation, etc.).
 
 
-### Example stack parameters
+## Example stack parameters
 
 As an example, consider a stack which defines a web server cluster and its networking:
 
@@ -82,8 +67,7 @@ Given three environments, *test*, *staging*, and *production*, these variables m
 | web_production | production | 2 | 5 |
 
 
-### Stack configuration patterns
-
+## Stack configuration patterns
 
 A mechanism is needed to set values for these variables when creating and updating a stack. There are a few different patterns to consider. The simplest is to [pass the values on the command line](command-line-parameters.html). This is easy to do, but it's also easy to make mistakes with it.
 
@@ -117,9 +101,9 @@ When infrastructure code is applied to environments using a Continuous Delivery 
 Stack instance configuration values can also be set in a [Parameter Registry](stack-parameter-registry.html). The stack management tool, or the stack source code, can then retrieve the relevant values for the instance.
 
 
-## Related topics
+## Pitfalls
 
-### Stack integration patterns
+When different instances of a template stack are becoming customized more than simple parameters can support, this is a design smell. Often, a template stack is not the appropriate pattern for the situation if significant customization is needed. It may be better to break the template down to the true common core, and then implement new template stacks for each variation. Changes to each of the new template stacks can then be tested before being applied to production instances, creating more confidence in the change process.
 
-When a system's infrastructure is divided across multiple stacks, configuration usually needs to be passed from one stack to another. The mechanisms for doing this are closely related to those for per-instance configuration, although there are additional things to consider. Stack integration patterns will be included in this pattern catalogue in the future.
+In other cases, a stack is highly customized because there are different subsets of elements which are needed in different situations. For example, maybe a database is deployed in some scenarios, but not in others. In these cases, it's probably a good idea to split the stack into multiple stacks. This way, each stack template represents a clear set of infrastructure which doesn't tend to vary, and each stack can be provisioned only in those situations where it is required, rather than adding complexity to a single stack.
 

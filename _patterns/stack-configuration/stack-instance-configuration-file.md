@@ -1,14 +1,17 @@
 ---
 layout: pattern
-title:  "Instance Configuration File Pattern"
-date: 2019-02-12 09:32:50 +0000
+title:  "Stack Instance Configuration File Pattern"
+date: 2019-03-14 08:00:00 +0000
 category: Stack Configuration Patterns
-order: 22
+order: 23
 published: true
 status: review
 ---
 
-Values can be provided to instances of [template stacks](/patterns/stack-replication/template-stack.html) by putting them into files, checked into version control.
+Values can be provided to instances of [template stacks](/patterns/stack-replication/template-stack.html) by putting them into files, which are then checked into version control.
+
+
+## How to implement it
 
 [Template stacks](/patterns/stack-replication/template-stack.html) typically define parameters which can be set differently for different instances of the stack. For example, a stack that is used to create a web server cluster may have different values for the sizing of the cluster in different environments:
 
@@ -53,9 +56,12 @@ terraform apply -var-file=../environments/test.tfvars
 ~~~
 
 
-## Benefits and drawbacks of parameter files
+## When to use it
 
 Creating environment parameter files for a stack is straightforward and easy to understand. Because the file is committed to the source code repository, it is easy to see what values are used for any given environment ("what is the maximum cluster size for production?"), to trace the history for debugging ("when did the maximum cluster size change?"), and for auditing ("who changed the maximum cluster size?").
+
+
+## Challenges
 
 There are some limitations with parameter files. It increases the work needed to create a new environment, particularly for dynamically created and one-off environments. Although many people are used to having a static set of environments, an advantage of using dynamic cloud-type platforms is that it is easy to spin up new environments on demand, for example for development and testing.
 

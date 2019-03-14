@@ -5,7 +5,7 @@ date: 2019-02-12 09:32:50 +0000
 category: Stack Tools
 section: true
 order: 50
-published: false
+published: true
 status: todo
 ---
 
@@ -16,7 +16,6 @@ Some typical scenarios:
 - Manage multiple stacks as a group, e.g. spin up a database stack, and application server stack, and perhaps a separate networking stack. Manage the order each stack definition is applied.
 - Configuration of stack instances. The orchestrator may read configuration files and use them to pass variables, or even read variables from a configuration registry. Dependency injection.
 - Runtime / integration variables, eg. from other stacks.
-- Grab library stack code and incorporate it.
 - May also help with managing versioning of stack code.
 - Run tests, smoke tests, etc.
 - Orchestrate different tools. For example, apply terraform, then run ansible. May run command line tools to carry out actions that the stack tool can't do very nicely.
