@@ -43,7 +43,7 @@ A VCS is a standard capability in most IT organizations, and many infrastructure
 
 #### Dynamic infrastructure platform
 
-My blog post [Dynamic Infrastructure Platforms](http://infrastructure-as-code.com/book/2016/05/20/infrastructure-platform.html) describes it as _"a system that provides computing resources, particularly servers, storage, and networking, in a way that they can be programmatically allocated and managed."_ In short, it provides a programmable API to provision and manage infrastructure resources.
+My blog post [Dynamic Infrastructure Platforms](https://infrastructure-as-code.com/book/2016/05/20/infrastructure-platform.html) describes it as _"a system that provides computing resources, particularly servers, storage, and networking, in a way that they can be programmatically allocated and managed."_ In short, it provides a programmable API to provision and manage infrastructure resources.
 
 The best known examples are public IaaS cloud providers like Amazon's AWS, Microsoft's Azure, Google's GCE, and Rackspace Cloud. But a dynamic, cloud-like platform can be built in a data center using products like OpenStack and vCloud. And in practice, it isn't necessary that the infrastructure platform be virtualized or shared. Many organizations, including DevOps paragons like [Etsy](https://codeascraft.com/2016/02/22/putting-the-dev-in-devops-bringing-software-engineering-to-operations-infrastructure-tooling/) and [Spotify](https://labs.spotify.com/2016/03/25/managing-machines-at-spotify/), implement Infrastructure as Code on bare metal. Tools such as Cobbler or Foreman can be used with ILO (Integrated Lights Out) hardware features to automatically provision physical servers.
 
@@ -59,7 +59,7 @@ This capability is core to Infrastructure as Code. A definition file can be used
 
 #### Server configuration
 
-When using configuration synchronization rather than the immutable infrastructure model (as described in my blog post [Different models for updating servers](http://infrastructure-as-code.com/book/2016/05/24/models-for-server-updates.html)), your team will need a tool for configuring servers. The infrastructure definition tool described above specifies what servers to create, but the server configuration tool manages what goes inside the server.
+When using configuration synchronization rather than the immutable infrastructure model (as described in my blog post [Different models for updating servers](https://infrastructure-as-code.com/book/2016/05/24/models-for-server-updates.html)), your team will need a tool for configuring servers. The infrastructure definition tool described above specifies what servers to create, but the server configuration tool manages what goes inside the server.
 
 User accounts, software packages, configuration files, etc. are defined and applied using a tool like Ansible, Chef, Puppet, or Saltstack. The infrastructure definition tool may pass parameters for these tools to use, such as the server's role and environment-specific information.
 

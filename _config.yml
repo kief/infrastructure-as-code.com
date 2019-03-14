@@ -6,7 +6,7 @@ email: site@infrastructure-as-code.com
 description: "Information about Infrastructure as Code, supporting the book by Kief Morris"
 keywords: "infrastructure as code, infrastructure, cloud, automation, book, devops, automation, virtualization"
 baseurl: ""
-url: "http://infrastructure-as-code.com"
+url: "https://infrastructure-as-code.com"
 
 # Pattern catalog
 collections:

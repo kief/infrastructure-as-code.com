@@ -43,7 +43,7 @@ This stack is part of my [standalone service stack template](https://github.com/
 
 ## Stack instances
 
-A stack definition can be used to provision, and update, one or more stack instances. This is an important point, because many people tend to use a separate stack definition for each of their stack instances - what I called __Separate stack definition for each environment__ in my post on [environment pipelines](http://infrastructure-as-code.com/book/2017/08/02/environment-pipeline.html).
+A stack definition can be used to provision, and update, one or more stack instances. This is an important point, because many people tend to use a separate stack definition for each of their stack instances - what I called __Separate stack definition for each environment__ in my post on [environment pipelines](https://infrastructure-as-code.com/book/2017/08/02/environment-pipeline.html).
 
 But as I explained in that post, this approach gets messy when you grow beyond very simple setups, particularly for teams. I prefer to use a single, parameterized stack definition template, to provision multiple environment instances.
 

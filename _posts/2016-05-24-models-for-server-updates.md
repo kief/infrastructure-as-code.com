@@ -9,7 +9,7 @@ Most teams begin using automation tools like Terraform, Puppet, Chef, and Ansibl
 
 Chances are, things will have changed on some of those servers. For example, if you have a dozen web servers serving various websites, some sites will have needed an additional plugin or two, configuration tweaks, or even system packages. Problems will have cropped up and been fixed on a few of the servers, but not others.
 
-The little differences and inconsistencies that accumulate between servers over time are [Configuration Drift](http://kief.com/configuration-drift.html). Configuration drift makes it unlikely that a Playbook, Cookbook, Manifest, etc. will run reliably over all of the servers, which leads to the [Automation Fear Spiral](http://infrastructure-as-code.com/book/2015/03/08/automation-fear-spiral.html). This prevents teams from using automated configuration as effectively as they could.
+The little differences and inconsistencies that accumulate between servers over time are [Configuration Drift](http://kief.com/configuration-drift.html). Configuration drift makes it unlikely that a Playbook, Cookbook, Manifest, etc. will run reliably over all of the servers, which leads to the [Automation Fear Spiral](https://infrastructure-as-code.com/book/2015/03/08/automation-fear-spiral.html). This prevents teams from using automated configuration as effectively as they could.
 
 
 ![Rusty car](/images/rusty-car.jpg){: align="right" hspace="5"}
