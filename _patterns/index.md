@@ -76,23 +76,13 @@ Examples of stack management tools include [Hashicorp Terraform](https://www.ter
 [Infrastructure stacks](/patterns/stack-concept/) are a core concept in the patterns described in this catalogue.
 
 
-## Server configuration
+## Still to come
 
-Configuring servers has traditionally been the main focus of infrastructure as code. This involves writing code that declares various aspects of a server's configuration, such as application packages that should be installed, user accounts that should exist, configuration files and their contents, etc. A server configuration tool is then used to read this code, and manipulate the server so that it matches what's declared in the code.
+This catalogue is a work in progress. Topics that I plan to add over time include:
 
-Examples of server configuration tools include Ansible, Chef, Puppet, and Saltstack.
-
-
-<figure>
-  <img src="/patterns/images/server.png" alt="A server configuration tool is used to read the configuration code and manipulate the server so that it matches what's declared in the code"/>
-  <figcaption>Figure 4: A server configuration tool is used to read the configuration code and manipulate the server so that it matches what's declared in the code.</figcaption>
-</figure>
-
-
-Server configuration patterns is a broad topic. The patterns that will be documented here will be fairly high level, including provisioning patterns (push and pull), and patterns for updating servers. Patterns for using server images (e.g. AMIs) will also be covered.
-
-
-## Applications
-
-The purpose of computing infrastructure is almost always to run application software of some sort. Patterns for integrating applications with infrastructure will be covered in this catalogue as it evolves.
-
+- *Server configuration*. How to provision and configure servers, including the use of images and server roles. Push vs. pull, bake vs. fry.
+- *Testing*. How to implement automated testing for infrastructure stacks and server configuration elements.
+- *Pipelines for infrastructure*. Patterns for designing and implementing CD pipelines for delivering changes to infrastructure.
+- *Splitting and integrating stacks*. More patterns and antipatterns for chopping stuff up across stacks. Techniques for integrating infrastructure elements across stacks.
+- *Stack lifecycles and data persistence*.
+- *Applications and infrastructure*. Patterns for integrating infrastructure and application deployment. Code organization (should application and infrastructure code live in the same repository?)
