@@ -33,7 +33,7 @@ The pipeline job configuration could specify the command line for running the st
 
 This pattern could also be used in conjunction with the [stack instance configuration file pattern](stack-instance-configuration-file.html), passing the path to the relevant configuration file to the stack management tool on its command line.
 
-Or, the pipeline job could pass an *instance_id* value to the stack management tool, or to the [orchestration tool](/patterns/stack-orchestration-tools/), that is then used to look up the needed parameter values for the instance in a [parameter registry](stack-parameter-registry.html).
+Or, the pipeline job could pass an *instance_id* value to the stack management tool, or to the [orchestration tool](/patterns/stack-orchestration/), that is then used to look up the needed parameter values for the instance in a [parameter registry](stack-parameter-registry.html).
 
 Generally speaking, these later approaches are preferable, because it keeps the pipeline configuration from becoming overly complicated.
 

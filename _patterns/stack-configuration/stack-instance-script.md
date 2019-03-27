@@ -54,5 +54,5 @@ terraform apply \
 
 ## Related Patterns
 
-This pattern is essentially the same as the [wrapper stack](wrapper-stack.html), but implemented as a script per environment rather than as a stack project per environment. If the script becomes more complicated, then it will rapidly evolve into a [stack orchestration tool](/patterns/stack-orchestration-tools/).
+This pattern is essentially the same as the [wrapper stack](wrapper-stack.html), but implemented as a script per environment rather than as a stack project per environment. If the script becomes more complicated, then it will rapidly evolve into a [stack orchestration tool](/patterns/stack-orchestration/).
 

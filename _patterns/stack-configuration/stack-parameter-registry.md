@@ -8,7 +8,7 @@ published: true
 status: review
 ---
 
-Configuration values for [template stacks](/patterns/stack-replication/template-stack.html) can be stored in a parameter registry. The appropriate set of values can be retrieved from the registry by the stack management tool or [stack orchestration tool](/patterns/stack-orchestration-tools/) when applying the code to a stack instance.
+Configuration values for [template stacks](/patterns/stack-replication/template-stack.html) can be stored in a parameter registry. The appropriate set of values can be retrieved from the registry by the stack management tool or [stack orchestration tool](/patterns/stack-orchestration/) when applying the code to a stack instance.
 
 
 <figure>
@@ -66,7 +66,7 @@ data "registry_value" "web_cluster_minimum" {
 ~~~
 
 
-So the single variable `environment_id` can be used as an input to the stack code, and then used to retrieve all of the other values needed. Alternatively, a [stack orchestration tool](/patterns/stack-orchestration-tools/) might be used which retrieves the values from the registry and passes them to the stack management tool, which is an example of dependency injection (which will be described in a future pattern).
+So the single variable `environment_id` can be used as an input to the stack code, and then used to retrieve all of the other values needed. Alternatively, a [stack orchestration tool](/patterns/stack-orchestration/) might be used which retrieves the values from the registry and passes them to the stack management tool, which is an example of dependency injection (which will be described in a future pattern).
 
 
 ## Comparison with alternatives
