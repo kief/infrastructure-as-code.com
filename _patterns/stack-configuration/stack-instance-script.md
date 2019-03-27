@@ -1,19 +1,28 @@
 ---
 layout: pattern
 title:  "Stack Instance Script Pattern"
-date: 2019-03-13 12:23:00 +0000
+date: 2019-03-27 08:00:00 +0000
 category: Stack Configuration Patterns
 order: 22
 published: true
-status: review
 ---
 
 A separate script, such as a shell script or batch file, can be written to provide the [stack management tool](/patterns/stack-concept/) with the appropriate values for the each stack instance.
 
 
-## When to use it
+## Also Known As
+
+- Environment scripts
+
+
+## Motivation
 
 This is a fairly simple implementation, which might be useful when there are a limited number of stack instances, and when the command needed to apply the stack is simple.
+
+
+## Consequences
+
+Unfortunately, it's very common for the commands used to run the script to become more complicated. This can make it difficult to keep all of the different stack instance scripts consistent. It also means the logic of these scripts becomes complicated, which creates opportunity for errors unless they are well tested.
 
 
 ## Implementation
@@ -43,13 +52,7 @@ terraform apply \
 ~~~
 
 
+## Related Patterns
 
-## Challenges
-
-Unfortunately, it's very common for the commands used to run the script to become more complicated. This can make it difficult to keep all of the different stack instance scripts consistent. It also means the logic of these scripts becomes complicated, which creates opportunity for errors unless they are well tested.
-
-
-## Related patterns and topics
-
-In essence, this pattern is pretty much the same as the [wrapper stack](wrapper-stack.html), simply implemented as a script rather than a stack definition. If the script becomes more complicated, then it will rapidly evolve into a [stack orchestration tool](/patterns/stack-orchestration-tools/).
+This pattern is essentially the same as the [wrapper stack](wrapper-stack.html), but implemented as a script per environment rather than as a stack project per environment. If the script becomes more complicated, then it will rapidly evolve into a [stack orchestration tool](/patterns/stack-orchestration-tools/).
 

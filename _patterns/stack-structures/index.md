@@ -1,12 +1,11 @@
 ---
 layout: pattern-group
 title:  "Patterns For Structuring Stacks"
-date: 2019-03-13 09:32:50 +0000
+date: 2019-03-27 08:00:00 +0000
 category: Stack Structural Patterns
 section: true
 order: 10
 published: true
-status: review
 ---
 
 A key challenge with infrastructure design is deciding how to size and structure [stacks](/patterns/stack-concept/). The infrastructure for a given system may be defined as a single stack, or spread across multiple stacks. Shared code may also be used across stacks.

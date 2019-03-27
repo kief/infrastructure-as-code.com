@@ -11,9 +11,9 @@ status: todo
 
 ## Pattern: (NAME)
 
-## Also Known As
-
 ## Definition (What)
+
+## Also Known As
 
 ## Motivation (Why)
 
@@ -23,7 +23,7 @@ status: todo
 
 ## Implementation (How)
 
-## Examples
+## Known uses
 
 ## Related Patterns
 

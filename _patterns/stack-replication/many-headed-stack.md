@@ -1,11 +1,10 @@
 ---
 layout: pattern
 title:  "Many-headed Stack Antipattern"
-date: 2019-03-12 09:32:50 +0000
+date: 2019-03-27 08:00:00 +0000
 category: Stack Replication Patterns
 order: 5
 published: true
-status: review
 ---
 
 A Many-Headed Stack manages the infrastructure for multiple environments in a single stack project.
@@ -19,12 +18,18 @@ For example, if there are three environments for testing and running an applicat
 </figure>
 
 
-## Why it is used
+## Also Known As
 
-Many people new to an infrastructure stack tool start out by creating this type of structure, because it seems natural to simply add new environments into a project that already exists. But a bit of experience shows the drawbacks of the approach.
+- One stack with many environments
+- All your environments in one basket
 
 
-## Challenges
+## Motivations
+
+Many people new to an infrastructure stack tool start out by creating this type of structure, because it seems natural to simply add new environments into a project that already exists.
+
+
+## Consequences
 
 The problem with including multiple environments in a single stack is that when the tool is run to apply the code to the deployed infrastructure, its scope is all environments in the stack. So if you apply a change to the "test" environment in the example above, it's entirely possible that changes will be inadvertently made to "staging" or "production" environments. 
 
@@ -37,7 +42,12 @@ Certain operational problems can also affect multiple environments managed as a 
 The term "blast radius" is used to describe the potential scope for damage of a particular change. For infrastructure stacks, the blast radius for a change includes everything within the stack.
 
 
-## Alternative patterns
+## Known uses
+
+Charity Majors shared her painful experiences of working with a many-headed stack in [a wonderfully colourful blog post](https://charity.wtf/2016/03/30/terraform-vpc-and-why-you-want-a-tfstate-file-per-env/).
+
+
+## Related patterns
 
 Therefore, it's a good idea to limit the blast radius, and reduce risk of change, by splitting environments into separate stacks. One obvious way to do this is the [singleton stack](singleton-stack.html), where each environment has its own separate stack project, although this is considered an anti-pattern.
 

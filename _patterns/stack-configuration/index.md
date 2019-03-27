@@ -1,12 +1,11 @@
 ---
 layout: pattern-group
 title:  "Patterns For Configuring Stacks"
-date: 2019-03-14 08:00:00 +0000
+date: 2019-03-27 08:00:00 +0000
 category: Stack Configuration Patterns
 section: true
 order: 20
 published: true
-status: review
 ---
 
 Defining an [infrastructure stack](/patterns/stack-concept/) as code enables the creation of multiple instances of the stack. Some aspects of the stack may need to vary for different instances of the stack - at the least, different names, identifiers, and/or tags are needed to distinguish the different instances. There are different techniques for setting configuration for instances of a stack.

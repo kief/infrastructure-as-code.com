@@ -1,16 +1,13 @@
 ---
 layout: pattern
 title:  "Monolithic Stack Antipattern"
-date: 2019-03-13 09:32:50 +0000
+date: 2019-03-27 08:00:00 +0000
 category: Stack Structural Patterns
 order: 11
 published: true
-status: review
 ---
 
 A Monolithic Stack is an [infrastructure stack](/patterns/stack-concept/) that includes too many elements, so that it is difficult to work with.
-
-Infrastructure often grows organically, each new piece being naturally added into the existing codebase as we go. Over time, the codebase can become messy and unwieldy. 
 
 
 <figure>
@@ -19,7 +16,17 @@ Infrastructure often grows organically, each new piece being naturally added int
 </figure>
 
 
-## Challenges
+## Also Known As
+
+- Spaghetti stack
+
+
+## Motivation
+
+Infrastructure often grows organically, each new piece being naturally added into the existing codebase as we go. Over time, the codebase can become messy and unwieldy. 
+
+
+## Consequences
 
 Whether a given infrastructure stack is a monolith is a matter of judgement. The symptoms of a monolithic stack include:
 
@@ -36,10 +43,10 @@ A key indicator of whether a stack is becoming monolithic is how many people are
 
 [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) (CI) is a more sustainable way to make it safer for multiple people to work on a single stack. But as a stack grows more monolithic, the CI build takes longer to run, and it becomes difficult to maintain good build discipline. If your team's CI is sloppy, it's another sign that your stack is a monolith.
 
-These describe issues within a single team working on an infrastructure stack. Multiple teams often making changes to a single stack is a clear sign of a monolith. Enabling different teams to work easily on clearly separated parts of a system is a key goal for good system architecture.
+These describe issues within a single team working on an infrastructure stack. When multiple teams need to make changes to a single stack project this is a clear sign of a monolith. Enabling different teams to work easily on clearly separated parts of a system is a key goal for good system architecture.
 
 
-## Alternatives
+## Related patterns
 
 Dividing a monolithic stack into multiple smaller [micro stacks](micro-stack.html) can make it easier for multiple people, and multiple teams, to maintain and evolve the system. It's possible that related services can be cleanly maintained in a single [multi-service stack](multi-service-stack.html), with strong engineering discipline. It's often more natural to split a system into [single-service stacks](single-service-stack.html). In some situations, breaking services down into [multiple stacks](cross-stack-service.html) has value.
 

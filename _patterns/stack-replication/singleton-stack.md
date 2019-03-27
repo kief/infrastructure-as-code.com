@@ -5,15 +5,7 @@ date: 2019-03-27 08:00:00 +0000
 category: Stack Replication Patterns
 order: 4
 published: true
-status: review
 ---
-
-## Also Known As
-
-- Copy-paste stacks
-
-
-## Definition
 
 The Singleton Stack antipattern uses a separate copy of the stack source code project for each [infrastructure stack](/patterns/stack-concept/) instance.
 
@@ -24,6 +16,11 @@ So if there are three environments, _test_, _staging_, and _production_, there w
   <img src="images/singleton-stack.png" alt="A singleton stack has a separate copy of the source code project for each instance"/>
   <figcaption>Figure 1. A singleton stack has a separate copy of the source code project for each instance.</figcaption>
 </figure>
+
+
+## Also Known As
+
+- Copy-paste stacks
 
 
 ## Motivation

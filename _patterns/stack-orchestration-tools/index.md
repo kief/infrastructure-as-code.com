@@ -38,3 +38,9 @@ Terragrunt. There are a number of tools for CloudFormation.
 
 A separate discussion is more procedural scripting tools like Pulomi, vs. "classic" declarative tools.
 
+
+## Related
+
+Where is the stack management tool run from? Local vs. running from a server, pipeline, etc.
+
+
