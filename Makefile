@@ -3,25 +3,10 @@
 preview: bundle ## View unpublished
 	bundle exec jekyll serve --watch --unpublished
 
-ready: bundle ## View ready to publish
+plan: bundle ## View ready to publish
 	bundle exec jekyll serve --watch
 
-build:
-	bundle exec jekyll build
-
-upload_old: build ## Publish to the old bucket
-	aws s3 \
-		--profile infrasite \
-		--region us-east-1 \
-		sync \
-		--acl public-read \
-		--exact-timestamps \
-		--delete \
-		./_site/ \
-		s3://site.infrastructure-as-code.com/
-
-
-upload: build ## Publish to new site
+apply: build ## Publish to new site
 	aws s3 \
 		--profile iac_site_uploader \
 		--region us-east-1 \
@@ -31,6 +16,13 @@ upload: build ## Publish to new site
 		--delete \
 		./_site/ \
 		s3://site.infrastructure-as-code.com/
+
+ready: plan
+
+upload: apply
+
+build:
+	bundle exec jekyll build
 
 bundle:
 	bundle install

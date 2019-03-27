@@ -8,6 +8,27 @@ published: false
 status: todo
 ---
 
+
+## Pattern: (NAME)
+
+## Also Known As
+
+## Definition (What)
+
+## Motivation (Why)
+
+## Applicability (When)
+
+## Consequences
+
+## Implementation (How)
+
+## Examples
+
+## Related Patterns
+
+
+
 (What it is)
 
 ## When to use it
