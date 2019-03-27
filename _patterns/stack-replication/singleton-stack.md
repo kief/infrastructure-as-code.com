@@ -1,12 +1,19 @@
 ---
 layout: pattern
 title:  "Singleton Stack Antipattern"
-date: 2019-03-12 09:32:50 +0000
+date: 2019-03-27 08:00:00 +0000
 category: Stack Replication Patterns
 order: 4
 published: true
 status: review
 ---
+
+## Also Known As
+
+- Copy-paste stacks
+
+
+## Definition
 
 The Singleton Stack antipattern uses a separate copy of the stack source code project for each [infrastructure stack](/patterns/stack-concept/) instance.
 
@@ -19,9 +26,14 @@ So if there are three environments, _test_, _staging_, and _production_, there w
 </figure>
 
 
-## Why it is used
+## Motivation
 
 This is a fairly intuitive way to maintain multiple environments. It avoids issues with the more naive [multi-headed stack](/patterns/stack-replication/many-headed-stack.html) anti-pattern, because at least each environment has its own stack instance, reducing the blast radius of problems with a stack.
+
+
+## Applicability
+
+Singleton stacks are typically used to define infrastructure for multiple environments in a "path to production" - development, testing, staging, etc. This ensures that infrastructure is the same in each environment, which increases the reliability of software testing and release process. 
 
 Singleton stacks are sometimes used as a way to replicate production infrastructure, for instance, geographically or by customer. For each new customer or location, the stack code is copied, and this copy of the code is tweaked and used to manage the infrastructure.
 
@@ -32,9 +44,9 @@ Singleton stacks are sometimes used as a way to replicate production infrastruct
 </figure>
 
 
-## Challenges
+## Consequences
 
-There are several problems with singleton stacks as an approach for multiple instances of the same infrastructure. One is that it increases the chances of errors. After a change is tested in one environment, it is copied into the code for the next environment. The change may not be copied correctly, especially if it actually involves changing the code in several places. The risk might be lower if the code can be completely replaced with the code from the environment.
+There are several problems with singleton stacks as an approach for maintaining multiple instances of the same infrastructure. One is that it increases the chances of errors. After a change is tested in one environment, it is copied into the code for the next environment. The change may not be copied correctly, especially if it actually involves changing the code in several places. The risk might be lower if the code can be completely replaced with the code from the environment.
 
 
 <figure>
@@ -61,7 +73,12 @@ This problem becomes even worse as the business scales to many customers and/or 
 So the main challenge with singleton stacks is they make it difficult to keep instances consistently configured.
 
 
-## Alternative patterns
+## Implementation
+
+A singleton stack is created by copying the project code for another instance of the stack to a new project, and then editing the code to give it unique identifiers and different parameter values where needed. When a change is made to one stack, it may then be copied and pasted into the projects for other instances of the stack, remembering to change identifiers and variables appropriately.
+
+
+## Related patterns
 
 In cases where stack instances are meant to represent the same stack, the [template stack pattern](/patterns/stack-replication/template-stack.html) is usually more appropriate. These are particularly helpful when you need to strictly minimize variations between each instance - particularly important for scaling to very large numbers of instances.
 

@@ -21,7 +21,7 @@ A Template Stack is an [infrastructure stack](/patterns/stack-concept/) source c
 
 <figure>
   <img src="images/template-stack.png" alt="A Template Stack is an infrastructure stack project that is designed to be replicated consistently"/>
-  <figcaption>Figure 1. A Template Stack is an infrastructure stack project that is designed to be replicated consistently.</figcaption>
+  <figcaption>A Template Stack is an infrastructure stack project that is designed to be replicated consistently.</figcaption>
 </figure>
 
 
