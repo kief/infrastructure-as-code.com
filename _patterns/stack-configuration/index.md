@@ -72,10 +72,9 @@ An alternative is to define parameter values in [Instance Configuration Files](s
 
 ~~~ console
    ├── src/
-   │   ├── variables.infra
    │   ├── cluster.infra
    │   └── networking.infra
-   ├── environments
+   ├── environments/
    │   ├── test.properties
    │   ├── staging.properties
    │   └── production.properties

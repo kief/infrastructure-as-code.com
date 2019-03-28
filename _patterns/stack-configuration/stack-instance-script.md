@@ -41,14 +41,14 @@ our-infra-stack/
 ~~~
 
 
-Each script simply runs the command with the relevant parameter values hard-coded:
+Each script simply runs the command with the relevant parameter values hard-coded, as in this example using a fictional tool:
 
 ~~~ bash
 #!/bin/sh
-terraform apply \
-    -var 'environment_id=test' \
-    -var 'cluster_minimum=1' \
-    -var 'cluster_maximum=1'
+stack up \
+    environment_id=test \
+    cluster_minimum=1 \
+    cluster_maximum=1
 ~~~
 
 

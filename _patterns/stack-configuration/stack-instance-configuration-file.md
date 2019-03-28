@@ -50,11 +50,9 @@ These can be defined in stack parameter files, typically one file for each stack
 
 ~~~ console
    ├── src/
-   │   ├── variables.infra
    │   ├── cluster.infra
    │   └── networking.infra
-   ├── environments
-   │   ├── test.properties
+   ├── environments/
    │   ├── staging.properties
    │   └── production.properties
    └── test/
@@ -82,19 +80,19 @@ When environments are split into multiple infrastructure stacks, managing the co
 
 
 ~~~ console
-   ├── webserver
-   │   ├── infra
+   ├── webserver/
+   │   ├── src/
    │   │   ├── cluster.infra
    │   │   └── networking.infra
-   │   └──environments
+   │   └──environments/
    │       ├── test.properties
    │       ├── staging.properties
    │       └── production.properties
-   └── appserver
-       ├── infra
+   └── appserver/
+       ├── src/
        │   ├── server.infra
        │   └── networking.infra
-       └──environments
+       └──environments/
            ├── test.properties
            ├── staging.properties
            └── production.properties
@@ -105,20 +103,20 @@ The other is to centralize the configuration for all of the stacks in one place:
 
 
 ~~~ console
-   ├── webserver
+   ├── webserver/
    │   ├── cluster.infra
    │   └── networking.infra
-   ├── appserver
+   ├── appserver/
    │   ├── server.infra
    │   └── networking.infra
-   └── environments
-       ├── test
+   └── environments/
+       ├── test/
        │   ├── webserver.properties
        │   └── appserver.properties
-       ├── staging
+       ├── staging/
        │   ├── webserver.properties
        │   └── appserver.properties
-       └── production
+       └── production/
            ├── webserver.properties
            └── appserver.properties
 ~~~

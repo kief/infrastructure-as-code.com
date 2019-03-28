@@ -57,26 +57,26 @@ A configuration registry is usually a key-value store, ideally with a folder-lik
 
 
 ~~~ console
-└── environment_id
-    ├── test
-    │   ├── webserver
+└── environment/
+    ├── test/
+    │   ├── webserver/
     │   │    ├── cluster_minimum = 1
     │   │    └── cluster_maximum = 1
-    │   └── appserver
+    │   └── appserver/
     │        ├── cluster_minimum = 1
     │        └── cluster_maximum = 1
-    ├── staging
-    │   ├── webserver
+    ├── staging/
+    │   ├── webserver/
     │   │    ├── cluster_minimum = 1
     │   │    └── cluster_maximum = 2
-    │   └── appserver
+    │   └── appserver/
     │        ├── cluster_minimum = 2
     │        └── cluster_maximum = 3
-    └── production
-        ├── webserver
+    └── production/
+        ├── webserver/
         │    ├── cluster_minimum = 2
         │    └── cluster_maximum = 3
-        └── appserver
+        └── appserver/
              ├── cluster_minimum = 2
              └── cluster_maximum = 5
 ~~~
@@ -92,8 +92,8 @@ registry:
   hostname: keyvalue.mysystem.mydomain
 
 variables:
-  cluster_minimum: ${registry.my_registry["/${environment_id}/webserver/cluster_minimum"]}
-  cluster_maximum: ${registry.my_registry["/${environment_id}/webserver/cluster_maximum"]}
+  cluster_minimum: ${registry.my_registry["/environment/${environment_id}/webserver/cluster_minimum"]}
+  cluster_maximum: ${registry.my_registry["/environment/${environment_id}/webserver/cluster_maximum"]}
 
 cluster:
   name: webserver-cluster-${environment_id}

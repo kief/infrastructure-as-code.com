@@ -34,16 +34,47 @@ But as of this writing, most stack management tools (Terraform, CloudFormation, 
 
 Because the wrapper stack is a complete stack configuration project, it is possible to add different infrastructure elements to different instances of the stack. This runs against the idea of the [template stack](/patterns/stack-replication/template-stack.html), which is to ensure highly consistent instances across environments. This in turn increases the work needed for effective testing regimes, because more different instances can vary enough that testing one instance doesn't accurately reflect the conditions of other instances.
 
+So it is important to ensure that the wrapper stack code for different instances don't drift apart, with custom logic creeping in. Each instance's code should be strictly limited to passing parameter values to the modules that are imported. Pressure to customize different instances suggests that the design of the infrastructure may need to be split along different dimensions in order to keep the implementation clean and easily testable.
+
 
 ## Implementation
 
 The implementation of wrapper stacks tend to look like [singleton stacks](/patterns/stack-replication/singleton-stack.html), in that each stack instance has its own stack source code project. The difference is that the per-instance wrapper stack project has very little code in it.
 
-The code that defines the infrastructure elements for the stack is maintained in a module, so there is a single copy of the code shared across all instances, as with a [template stack](/patterns/stack-replication/template-stack.html). The wrapper stack project for each instance contains only configuration parameters for that specific instance of the stack. So this pattern can be seen as an alternative way to implement a template stack.
+The code that defines the infrastructure elements for the stack is maintained in a module, so there is a single copy of the code shared across all instances. The wrapper stack project for each instance contains only configuration parameters for that specific instance of the stack.
 
-In some cases, wrapper stacks may be used to customize a core stack project to a wider extent than passing configuration parameters, essentially turning into the [library stack pattern](/patterns/stack-replication/library-stack.html). This may be appropriate, as long as the intention is for each of the different stack instances to be used for different purposes.
+Here is a pseudo-code example project that has a wrapper stack for each environment:
 
-When the instances are intended to be duplicates of the same infrastructure, as with environments used for testing and delivering applications, this kind of variation between instances tends to create inconsistency across environments, diluting their value for accurate replication. In these cases, each wrapper stack should be kept minimal, used strictly as a configuration mechanism rather than a way to extend or alter the core stack structure.
+
+~~~ console
+my_stack/
+   ├── test/
+   │   └── stack.infra
+   ├── staging/
+   │   └── stack.infra
+   └── production/
+       └── stack.infra
+~~~
+
+
+The code for each environment stack simply imports a module and sets values for it:
+
+~~~ yaml
+module:
+  name: webserver_cluster
+  parameters:
+    environment_id: staging
+    cluster_minimum: 1
+    cluster_maximum: 2
+~~~
+
+The module then has its own project structure:
+
+~~~ console
+   ├── webserver_cluster_module/
+   │   ├── cluster.infra
+   │   └── networking.infra
+   └── test/
 
 
 ## Known Uses

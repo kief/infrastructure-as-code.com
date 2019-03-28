@@ -36,15 +36,15 @@ Each stack has source code that declares what infrastructure elements should be 
 </figure>
 
 
-Below is an example of a folder structure for a stack source code project, in this case Terraform:
+Below is an example of a folder structure for a stack source code project, using pseudo-code:
 
 ~~~ console
 stack-project/
    ├── src/
-   │   ├── dns.tf
-   │   ├── load_balancers.tf
-   │   ├── networking.tf
-   │   └── webserver.tf
+   │   ├── dns.infra
+   │   ├── load_balancers.infra
+   │   ├── networking.infra
+   │   └── webserver.infra
    └── test/
 ~~~
 
@@ -99,12 +99,12 @@ Common uses for creating multiple instances from a single code project include: 
 </figure>
 
 
-The typical way to create multiple stack instances from a single stack code project is to provide options to the stack management tool to give each stack instance a unique identity.
+The typical way to create multiple stack instances from a single stack code project is to provide options to the stack management tool to give each stack instance a unique identity. This example uses a fictional tool called "stack":
 
 
 ~~~ console
-terraform apply -var 'instance_id=A'
-terraform apply -var 'instance_id=B'
+stack up instance_id=A
+stack up instance_id=B
 ~~~
 
 
