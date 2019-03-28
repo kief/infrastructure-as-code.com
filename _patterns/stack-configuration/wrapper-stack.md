@@ -48,7 +48,7 @@ When the instances are intended to be duplicates of the same infrastructure, as 
 
 ## Known Uses
 
-[Terragrunt](https://github.com/gruntwork-io/terragrunt) is a [stack orchestration tool](/patterns/stack-orchestration/) that implements the wrapper stack pattern.
+[Terragrunt](https://github.com/gruntwork-io/terragrunt) is a stack orchestration tool that implements the wrapper stack pattern.
 
 
 ## Related Patterns
