@@ -21,6 +21,8 @@ ready: plan
 
 upload: apply
 
+up: apply
+
 build:
 	bundle exec jekyll build
 
