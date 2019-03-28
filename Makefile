@@ -32,7 +32,7 @@ bundle:
 linkcheck: ## Check links in the pattern catalogue
 	mkdir -p tmp
 	rm -f tmp/linkcheck.log
-	wget --spider --accept-regex '\/patterns' -r -nv -l 3 -w 2 -p -P tmp/ --delete-after -nd -o tmp/linkcheck.log http://localhost:4000/patterns.html
+	wget --spider --accept-regex '\/patterns' -r -nv -l 3 -w 2 -p -P tmp/ --delete-after -nd -o tmp/linkcheck.log http://localhost:4000/patterns/
 
 full-linkcheck: ## Check links in the whole (local) site
 	mkdir -p tmp
