@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Command-line Stack Parameters Pattern"
-date: 2019-03-27 08:00:00 +0000
+date: 2019-03-28 10:07
 category: Stack Configuration Patterns
 order: 21
 published: true
@@ -29,19 +29,19 @@ Manually typing parameter values on the command line is less useful for managing
 
 | Stack Instance | environment_id | cluster_minimum | cluster_maximum |
 |-------|--------|---------|
-| web_test | test | 1 | 1 |
-| web_staging | staging | 1 | 2 |
-| web_production | production | 2 | 5 |
+| webserver_test | test | 1 | 1 |
+| webserver_staging | staging | 1 | 2 |
+| webserver_production | production | 2 | 5 |
 
 
-With the command-line parameter pattern, the values are simply passed on the command-line when running the stack management tool. For example:
+With the command-line parameter pattern, the values are simply passed on the command-line when running the stack management tool. For example, with a fictional tool called "stack":
 
 
 ~~~ console
-terraform apply \
-    -var 'environment_id=test' \
-    -var 'cluster_minimum=1' \
-    -var 'cluster_maximum=1'
+stack up \
+    environment_id=test \
+    cluster_minimum=1 \
+    cluster_maximum=1
 ~~~
 
 
@@ -51,4 +51,6 @@ The challenge with this is that it requires the person running the command to re
 ## Related Patterns
 
 There are a number of alternative patterns for [configuring stacks](/patterns/stack-configuration/) that may be considered to improve on this.
+
+Other patterns for configuring stack instances include [stack instance scripts](stack-instance-script.html), [stack instance configuration files](stack-instance-configuration-file.html), [wrapper stacks](wrapper-stack.html), [pipeline-defined parameters](pipeline-defined-parameters.html), and [a stack parameter registry](stack-parameter-registry.html).
 

@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Stack Instance Configuration File Pattern"
-date: 2019-03-27 08:00:00 +0000
+date: 2019-03-28 10:07
 category: Stack Configuration Patterns
 order: 23
 published: true
@@ -40,9 +40,9 @@ Another drawback of stack parameter files comes when a stack is managed through 
 
 | Stack Instance | environment_id | cluster_minimum | cluster_maximum |
 |-------|--------|---------|
-| web_test | test | 1 | 1 |
-| web_staging | staging | 1 | 2 |
-| web_production | production | 2 | 5 |
+| webserver_test | test | 1 | 1 |
+| webserver_staging | staging | 1 | 2 |
+| webserver_production | production | 2 | 5 |
 
 
 These can be defined in stack parameter files, typically one file for each stack instance:
@@ -50,13 +50,13 @@ These can be defined in stack parameter files, typically one file for each stack
 
 ~~~ console
    ├── src/
-   │   ├── variables.tf
-   │   ├── cluster.tf
-   │   └── networking.tf
+   │   ├── variables.infra
+   │   ├── cluster.infra
+   │   └── networking.infra
    ├── environments
-   │   ├── test.tfvars
-   │   ├── staging.tfvars
-   │   └── production.tfvars
+   │   ├── test.properties
+   │   ├── staging.properties
+   │   └── production.properties
    └── test/
 ~~~
 
@@ -74,7 +74,7 @@ cluster_maximum = 1
 The parameter file for the environment is passed to the stack management tool when running it to provision or update the relevant stack instance:
 
 ~~~ console
-terraform apply -var-file=../environments/test.tfvars
+stack up --config=../environments/test.properties
 ~~~
 
 
@@ -82,22 +82,22 @@ When environments are split into multiple infrastructure stacks, managing the co
 
 
 ~~~ console
-   ├── web
+   ├── webserver
    │   ├── infra
-   │   │   ├── cluster.tf
-   │   │   └── networking.tf
+   │   │   ├── cluster.infra
+   │   │   └── networking.infra
    │   └──environments
-   │       ├── test.tfvars
-   │       ├── staging.tfvars
-   │       └── production.tfvars
-   └── app1
+   │       ├── test.properties
+   │       ├── staging.properties
+   │       └── production.properties
+   └── appserver
        ├── infra
-       │   ├── server.tf
-       │   └── networking.tf
+       │   ├── server.infra
+       │   └── networking.infra
        └──environments
-           ├── test.tfvars
-           ├── staging.tfvars
-           └── production.tfvars
+           ├── test.properties
+           ├── staging.properties
+           └── production.properties
 ~~~
 
 
@@ -105,24 +105,27 @@ The other is to centralize the configuration for all of the stacks in one place:
 
 
 ~~~ console
-   ├── web
-   │   ├── cluster.tf
-   │   └── networking.tf
-   ├── app1
-   │   ├── server.tf
-   │   └── networking.tf
+   ├── webserver
+   │   ├── cluster.infra
+   │   └── networking.infra
+   ├── appserver
+   │   ├── server.infra
+   │   └── networking.infra
    └── environments
        ├── test
-       │   ├── web.tfvars
-       │   └── app.tfvars
+       │   ├── webserver.properties
+       │   └── appserver.properties
        ├── staging
-       │   ├── web.tfvars
-       │   └── app.tfvars
+       │   ├── webserver.properties
+       │   └── appserver.properties
        └── production
-           ├── web.tfvars
-           └── app.tfvars
+           ├── webserver.properties
+           └── appserver.properties
 ~~~
 
 
 Both approaches can become messy and confusing, from different directions. When you need to make a change to all of the things in an environment, making changes to configuration files across dozens of stack projects is painful. When you need to change the configuration for a single stack across the various environments it's in, trawling through a tree full of configuration for dozens of other stacks is also not fun.
 
+## Related Patterns
+
+Other patterns for configuring stack instances include [command line parameters](command-line-parameters.html), [stack instance configuration files](stack-instance-configuration-file.html), [wrapper stacks](wrapper-stack.html), [pipeline-defined parameters](pipeline-defined-parameters.html), and [a stack parameter registry](stack-parameter-registry.html).

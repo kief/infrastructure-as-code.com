@@ -15,13 +15,13 @@ status: todo
 
 ## Also Known As
 
-## Motivation (Why)
+## Motivation
 
-## Applicability (When)
+## Applicability
 
 ## Consequences
 
-## Implementation (How)
+## Implementation
 
 ## Known uses
 

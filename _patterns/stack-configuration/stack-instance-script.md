@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Stack Instance Script Pattern"
-date: 2019-03-27 08:00:00 +0000
+date: 2019-03-28 10:07
 category: Stack Configuration Patterns
 order: 22
 published: true
@@ -54,5 +54,6 @@ terraform apply \
 
 ## Related Patterns
 
-This pattern is essentially the same as the [wrapper stack](wrapper-stack.html), but implemented as a script per environment rather than as a stack project per environment. If the script becomes more complicated, then it will rapidly evolve into a [stack orchestration tool](/patterns/stack-orchestration/).
+This pattern is essentially the same as the [wrapper stack](wrapper-stack.html), but implemented as a script per environment rather than as a stack project per environment. It is also very similar to the [stack instance configuration file](stack-instance-configuration-file.html) pattern, with the difference that the configuration files can't include logic, so are simpler.
 
+Other patterns for configuring stack instances include [command line parameters](command-line-parameters.html), [pipeline-defined parameters](pipeline-defined-parameters.html), and [a stack parameter registry](stack-parameter-registry.html).

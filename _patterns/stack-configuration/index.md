@@ -1,7 +1,7 @@
 ---
 layout: pattern-group
 title:  "Patterns For Configuring Stacks"
-date: 2019-03-27 08:00:00 +0000
+date: 2019-03-28 10:07
 category: Stack Configuration Patterns
 section: true
 order: 20
@@ -40,30 +40,20 @@ As an example, consider a stack which defines a web server cluster and its netwo
 
 ~~~ console
    ├── src/
-   │   ├── variables.tf
-   │   ├── cluster.tf
-   │   └── networking.tf
+   │   ├── cluster.infra
+   │   └── networking.infra
    └── test/
 ~~~
 
 
-The stack takes parameters that set an environment id string used to name and tag things, and minimum and maximum sizes for the cluster:
-
-
-~~~ hcl
-variable "environment_id" {}
-variable "cluster_minimum" { default = "1" }
-variable "cluster_maximum" { default = "1" }
-~~~
-
-Given three environments, *test*, *staging*, and *production*, these variables may need to be set to different values:
+The stack takes parameters that set an environment id string used to name and tag things, and minimum and maximum sizes for the cluster. Given three environments, *test*, *staging*, and *production*, these variables may need to be set to different values:
 
 
 | Stack Instance | environment_id | cluster_minimum | cluster_maximum |
 |-------|--------|---------|
-| web_test | test | 1 | 1 |
-| web_staging | staging | 1 | 2 |
-| web_production | production | 2 | 5 |
+| webserver_test | test | 1 | 1 |
+| webserver_staging | staging | 1 | 2 |
+| webserver_production | production | 2 | 5 |
 
 
 ## Stack configuration patterns
@@ -71,10 +61,10 @@ Given three environments, *test*, *staging*, and *production*, these variables m
 A mechanism is needed to set values for these variables when creating and updating a stack. There are a few different patterns to consider. The simplest is to [pass the values on the command line](command-line-parameters.html). This is easy to do, but it's also easy to make mistakes with it.
 
 ~~~ console
-terraform apply \
-    -var 'environment_id=test' \
-    -var 'cluster_minimum=1' \
-    -var 'cluster_maximum=1'
+stack up \
+    environment_id=test
+    cluster_minimum=1
+    cluster_maximum=1
 ~~~
 
 
@@ -82,13 +72,13 @@ An alternative is to define parameter values in [Instance Configuration Files](s
 
 ~~~ console
    ├── src/
-   │   ├── variables.tf
-   │   ├── cluster.tf
-   │   └── networking.tf
+   │   ├── variables.infra
+   │   ├── cluster.infra
+   │   └── networking.infra
    ├── environments
-   │   ├── test.tfvars
-   │   ├── staging.tfvars
-   │   └── production.tfvars
+   │   ├── test.properties
+   │   ├── staging.properties
+   │   └── production.properties
    └── test/
 ~~~
 

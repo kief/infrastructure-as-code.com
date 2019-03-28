@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Wrapper Stack Pattern"
-date: 2019-03-27 08:00:00 +0000
+date: 2019-03-28 10:07
 category: Stack Configuration Patterns
 order: 24
 published: true
@@ -51,9 +51,6 @@ When the instances are intended to be duplicates of the same infrastructure, as 
 [Terragrunt](https://github.com/gruntwork-io/terragrunt) is a [stack orchestration tool](/patterns/stack-orchestration/) that implements the wrapper stack pattern.
 
 
-## Alternatives
+## Related Patterns
 
-An alternative is to implement versioning functionality for the stack project. For example, many teams package artefacts from Terraform, CloudFormation, and other projects as zip files or tarballs, adding version numbers and uploading them to shared file storage. Other teams use more general packaging and versioning systems to provide this, for example RPMs or even Docker images.
-
-Parameter values can then be managed by using other patterns. [Stack instance configuration files](stack-instance-configuration-file.html) are very similar to wrapper stacks, without adding the ability to customize stack instances beyond passing parameter values.
-
+Other patterns for configuring stack instances include [command line parameters](command-line-parameters.html), [stack instance scripts](stack-instance-script.html), [stack instance configuration files](stack-instance-configuration-file.html), [pipeline-defined parameters](pipeline-defined-parameters.html), and [a stack parameter registry](stack-parameter-registry.html).

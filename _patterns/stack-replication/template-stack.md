@@ -1,7 +1,7 @@
 ---
 layout: pattern
 title:  "Template Stack Pattern"
-date: 2019-03-27 08:00:00 +0000
+date: 2019-03-28 10:07
 category: Stack Replication Patterns
 order: 2
 published: true
@@ -55,7 +55,7 @@ This may be a commandline parameter, as with this example using a fictional tool
 
 
 ~~~ console
-> stack up instance_id=staging
+> stack up environment_id=staging
 ~~~
 
 
@@ -64,8 +64,8 @@ Some names or identifiers in the infrastructure code may create clashes between 
 
 ~~~ yaml
 server:
-  name: appserver
-  subnet_id: appserver-subnet
+  name: webserver
+  subnet_id: webserver-subnet
 ~~~
 
 
@@ -73,10 +73,10 @@ In this example, running the stack tool to create the second stack instance will
 
 
 ~~~ console
-> stack up instance_id=development
+> stack up environment_id=development
 SUCCESS: stack 'development' created
-> stack up instance_id=staging
-FAILURE: server 'appserver' already exists in another stack
+> stack up environment_id=staging
+FAILURE: server 'webserver' already exists in another stack
 ~~~
 
 
@@ -89,8 +89,8 @@ The earlier pseudo-code definition for a server is updated below to use a variab
 
 ~~~ yaml
 server:
-  name: appserver-${instance_id}
-  subnet_id: appserver-subnet-${instance_id}"
+  name: webserver-${environment_id}
+  subnet_id: webserver-subnet-${environment_id}"
 ~~~
 
 
@@ -99,8 +99,8 @@ In many cases, it's necessary to define other elements of a stack differently by
 
 ~~~ yaml
 cluster:
-  name: appserver-cluster-${instance_id}
-  server_role: appserver
+  name: webserver-cluster-${environment_id}
+  server_role: webserver
   minimum: ${cluster_minimum}
   maximum: ${cluster_maximum}
 ~~~

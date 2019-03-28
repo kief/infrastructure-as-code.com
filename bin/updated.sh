@@ -2,11 +2,9 @@
 
 set -eu
 
-# MARKDOWN_FILES=$(git diff --cached --name-status | perl -ne 'if ( /^[MA]\s*(\S+\.md)$/ ) { print "$1 " }')
-MARKDOWN_FILES=$(find _patterns -type f -name '*.md')
+CHANGED_FILES=$(git status --porcelain _patterns/**/*.md | sed 's/...//')
+DATESTAMP=$(date '+%Y-%m-%d %H:%M')
+echo "DATE-TIME: ${DATESTAMP}"
+echo "CHANGED FILES: ${CHANGED_FILES}"
 
-for filename in ${MARKDOWN_FILES} ; do
-  changetime=$(git log -1 --format="%ad" --date=iso -- ${filename})
-  echo "${filename}: ${changetime}"
-  perl -pi -e "s/^date:.*$/date: ${changetime}/" ${filename}
-done
+perl -pibak -e "s/^date:.*$/date: ${DATESTAMP}/" ${CHANGED_FILES}
