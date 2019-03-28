@@ -4,7 +4,7 @@ title:  "Introduction to Infrastructure Patterns"
 link_title:  "Patterns"
 date: 2019-02-13 09:09:39 +0000
 published: true
-permalink: /patterns.html
+permalink: /patterns/
 ---
 
 ## What is this for?
