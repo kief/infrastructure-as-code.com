@@ -7,4 +7,4 @@ DATESTAMP=$(date '+%Y-%m-%d %H:%M')
 echo "DATE-TIME: ${DATESTAMP}"
 echo "CHANGED FILES: ${CHANGED_FILES}"
 
-perl -pibak -e "s/^date:.*$/date: ${DATESTAMP}/" ${CHANGED_FILES}
+perl -pi -e "s/^date:.*$/date: ${DATESTAMP}/" ${CHANGED_FILES}
