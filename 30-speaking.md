@@ -9,11 +9,17 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-27 July, XConf Australia in Melbourne.
-
-25 July, XConf Australia in Sydney.
-
 20 June, 2019 [GOTO Amsterdam](https://gotoams.nl/2019/sessions/759) in Amsterdam, Netherlands.
+
+3 July, 2019 #XConfEU in Manchester
+
+4 July, 2019 #XConfEU in Munich
+
+5 July, 2019 #XConfEU in Barcelona
+
+23 July, 2019 [XConf in Sydney](https://www.thoughtworks.com/xconf-au-2019), #XConfAU19
+
+25 July, 2019 [XConf in Melbourne](https://www.thoughtworks.com/xconf-au-2019), #XConfAU19
 
 
 ## Previous
