@@ -9,17 +9,17 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-20 June, 2019 [GOTO Amsterdam](https://gotoams.nl/2019/sessions/759) in Amsterdam, Netherlands.
+20 June, 2019 [GOTO Amsterdam](https://gotoams.nl/2019/sessions/759) in Amsterdam, Netherlands
 
-3 July, 2019 #XConfEU in Manchester
+3 July, 2019 [XConf in Manchester](https://www.thoughtworks.com/xconf-eu-2019), UK
 
-4 July, 2019 #XConfEU in Munich
+4 July, 2019 [XConf in Munich](https://www.thoughtworks.com/xconf-eu-2019), Germany
 
-5 July, 2019 #XConfEU in Barcelona
+5 July, 2019 [XConf in Barcelona](https://www.thoughtworks.com/xconf-eu-2019), Spain
 
-23 July, 2019 [XConf in Sydney](https://www.thoughtworks.com/xconf-au-2019), #XConfAU19
+23 July, 2019 [XConf in Sydney](https://www.thoughtworks.com/xconf-au-2019), Australia
 
-25 July, 2019 [XConf in Melbourne](https://www.thoughtworks.com/xconf-au-2019), #XConfAU19
+25 July, 2019 [XConf in Melbourne](https://www.thoughtworks.com/xconf-au-2019), Australia
 
 
 ## Previous
