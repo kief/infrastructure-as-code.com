@@ -9,20 +9,22 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-20 June, 2019 [GOTO Amsterdam](https://gotoams.nl/2019/sessions/759) in Amsterdam, Netherlands
-
-3 July, 2019 [XConf in Manchester](https://www.thoughtworks.com/xconf-eu-2019), UK
-
-4 July, 2019 [XConf in Munich](https://www.thoughtworks.com/xconf-eu-2019), Germany
-
-5 July, 2019 [XConf in Barcelona](https://www.thoughtworks.com/xconf-eu-2019), Spain
-
-23 July, 2019 [XConf in Sydney](https://www.thoughtworks.com/xconf-au-2019), Australia
-
-25 July, 2019 [XConf in Melbourne](https://www.thoughtworks.com/xconf-au-2019), Australia
+Taking a break for the Autumn conference season, spring TBC!
 
 
 ## Previous
+
+25 July, 2019 [XConf in Melbourne](https://www.thoughtworks.com/xconf-au-2019), Australia
+
+23 July, 2019 [XConf in Sydney](https://www.thoughtworks.com/xconf-au-2019), Australia
+
+5 July, 2019 [XConf in Barcelona](https://www.thoughtworks.com/xconf-eu-2019), Spain
+
+4 July, 2019 [XConf in Munich](https://www.thoughtworks.com/xconf-eu-2019), Germany
+
+3 July, 2019 [XConf in Manchester](https://www.thoughtworks.com/xconf-eu-2019), UK
+
+20 June, 2019 [GOTO Amsterdam](https://gotoams.nl/2019/sessions/759) in Amsterdam, Netherlands
 
 2 April, 2019 [Istanbul Tech Talks](http://www.istanbultechtalks.com/) in Istanbul, Turkey.
 
