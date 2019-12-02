@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Break up your Terraform project before it breaks you"
-date:   2019-12-25  14:20:00
+date:   2019-12-01  14:20:00
 categories: practices
 published: false
 ---
@@ -51,6 +51,9 @@ There's two key things here. One is where to draw the boundaries between your pr
 
 The other key thing is _how_ your projects integrate. Going back to one project making a subnet, and another creating a server in that subnet, how does your server project know the `subnet_id` to use?
 
+
+### Avoid tight coupling between projects
+
 This is a question of integration interfaces. What is the interface that one project - the one making the subnet - provides for another project to consume? With software that integrates over the network, you have an API, using a protocol like [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). With Terraform, you have a few options.
 
 The most popular way to integrate across Terraform projects is to point your server project at the subnet project's statefile. You write a `data "terraform_remote_state"` block, and then refer to the outputs from the other project, as in this [example from the Terraform docs](https://www.terraform.io/docs/providers/terraform/d/remote_state.html).
@@ -63,36 +66,39 @@ _Coupling_ is a way to talk about how easy or hard it is to change one project -
 
 When you write your server project to use an output of the subnet project, you are coupling to that output, and its name. That's usually OK. The team that owns the subnet project needs to understand that's the deal - their outputs are a contract. It's a constraint on them, they can't go changing that output name whenever they want without breaking other code. As long as everyone understands that, you're OK.
 
-But integrating to the output in the statefile, at least the way Terraform currently implements it, couples more tightly than to to the output name. It couples to the data structure. The thing is, 
+But integrating to the output in the statefile, at least the way Terraform currently implements it, couples more tightly than to to the output name. It couples to the data structure. When you apply your consumer project, Terraform reads the statefile for your provider project to find the subnet id.
+
+This can be a problem if you used different versions of Terraform for the projects. If you upgrade to a new version of Terraform that changes the data structures in the statefiles, you need to upgrade all of your projects together.
+
+The point is that you need to be aware of how your projects are coupled. Requiring all of your infrastructure projects to use the same version of the same tool is tight coupling.
+
+So what are the alternatives?
+
+You can integrate using `data "aws_subnet"`, discovering the subnet based on its name or tags. The integration contract is then the name or tag. The project that creates the subnet can't change these things without breaking consumers.
+
+Another is to use a configuration registry, something like Hashicorp's Consul, or any key-value parameter store. Your provider stack puts the value of the subnet_id in the registry, your consumer stack reads it from there. This makes the integration point more explicit - the provider stack code needs to put the value under a certain name.
+
+Another way you can do this is with dependency injection. My colleague [Vincenzo Fabrizi](https://twitter.com/zipponap) suggested this to me. Your consumer project code shouldn't know how to get the value it depends on. Instead, you pass the value in as a parameter. If you run Terraform with a script or makefile or something, then that script fetches it and passes it in. This keeps your code completely decoupled, which will come in handy for testing.
 
 
+## Testing your Terraform projects
 
+You should write automated tests for your projects, and use CI or even CD to run those tests every time someone commits a change. Testing Terraform code is a big, messy topic. I'll foist you off to my former colleague Rosemary Wang, who wrote about [TDD for infrastructure](https://medium.com/@joatmon08/test-driven-development-techniques-for-infrastructure-a73bd1ab273b), and current colleagues Effy Elden and Shohre Mansouri who created a site with [examples of infrastructure testing tools and code](https://dobetterascode.com/)
 
- you're deeply coupling your project to the other project. 
+Having brushed the specific technical stuff aside, the main thing I have to add is recommending that you be sure you can create and test an instance of each of your Terraform projects on its own. Avoid needing to create instances of other projects in order to test one project. Doing this enforces loose coupling. If you can't do this, then your projects are probably too tightly coupled. Put in the effort to redesign and restructure your projects until you can.
 
-It's one thing to couple projects based on code - you knowing the details of how the other project's code is written.
-
-
-- Integration points, contracts
-- Integrating in statefiles == bad idea.
-- Integrating using data sources is slightly less bad, but still pretty bad
-- Think about these as contracts, and be clear on what people should and shouldn't depend on
-- Consider dependency injection. Benefits. Drawbacks - you need some logic to orchestrate the values. This can lead to horrible messes of scripts. That's a topic for another day.
-
-- Keep each piece right-sized
-- Think about boundaries. Conway's Law.
-
-- Make sure you can create an instance of each project on its own.
-- Having automated tests for each piece, and using a pipeline, 
+If you can create a standalone instance of your project, and have automated tests you can run against it, then you can use a pipeline to deliver changes to different environments.
 
 
 ## Automate your automation
 
-Like with microservices, managing micro infrastructure stacks requires sophisticated stuff. "You must be this tall."
+One of the problems you have in your team is environments getting hosed when different people apply changes to them. One person works on a change and applies it to a test environment. Then someone else runs apply and wipes out the changes the first person had made to their code.
 
-* Reuse the code for those pieces, don't copy/paste
-* Make sure you can test each piece at all!
-* Use a pipeline to apply changes, so they get made the same way every time
+You need to make sure that the code for any given instance of the project is only applied from one place. If you're applying code from your laptop, nobody else should be doing anything on that environment. Nobody should apply code from their laptop to shared use environments, like dev, staging, and production, except in an emergency. Instead, the code should be applied from a server of some sort.
+
+You might use a hosted service like [Terraform Cloud](https://www.terraform.io/docs/cloud/getting-started/runs.html) to apply your code. Or you may use a CD pipeline, and run Terraform there. Either way, you can use the central service to control what version of code is applied where. A central runner also ensures Terraform runs from a consistent environment, with the same version of Terraform.
+
+In addition to managing applies to your environments more cleanly, using a central runner helps to enforce the decoupled design of your infrastructure code. Every time someone commits a change, the project has to run cleanly on its own.
 
 
 ## Refactoring for fun and profit
