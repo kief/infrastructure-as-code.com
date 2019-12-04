@@ -11,11 +11,11 @@ Your Terraform project is out of control. Oh, it started fine. You and your crew
 
 ## Playing dice with your universe
 
-But look at it now. You started building containers for your application as it turned into a bunch of micro(ish)-services, and obviously, you needed a Kubernetes cluster to run them. There's code for the cluster, and more to build the host nodes and manage how they get scaled up and down. You've reshuffled that code a few times, nicely organized into four .tf files rather than one massive .tf file.
+But look at it now. You started building containers for your application as it turned into a bunch of micro(ish)-services, and obviously, you needed a Kubernetes cluster to run them. There's code for the cluster, and more to build the host nodes and manage how they get scaled up and down. You've reshuffled that code a few times, nicely organized into four `.tf` files rather than one massive `.tf` file.
 
-At least you finally moved off your hand-rolled ELK stack onto your cloud provider's log aggregation service, but that's still a couple of .tf files. And few people on your team are working on the new API gateway implementation, which will be handy now that you're running a couple dozen micro(ish)-services.
+At least you finally moved off your hand-rolled ELK stack onto your cloud provider's log aggregation service, but that's still a couple of `.tf` files. And few people on your team are working on the new API gateway implementation, which will be handy now that you're running a couple dozen micro(ish)-services.
 
-This environment is a beast. Running `terraform apply` can take an hour, sometimes more. And gods help you if it fails and leaves the state file wedged.
+This environment is a beast. Running `terraform apply` can take an hour, sometimes more. And just hope it doesn't fail and leave the state file wedged.
 
 You're up to four environments now, and whenever you make a change to one, you have to copy it to the other three projects. Sometimes you don't have time to copy a change to all of them. Because of this, the code for each project is ... different. "Special."
 
@@ -28,7 +28,7 @@ I bet you can guess what I'm going to tell you. Sure, the title of this article 
 
 Let's make one thing clear. Modules won't help you with this. I'm not saying that you shouldn't use modules to share code, that's fine. But modules won't shrink your big hairy Terraform project; they'll only make it look organized. When you run `terraform apply`, you're still rolling dice with a big honking pile of infrastructure and a single state file.
 
-So when we talk about breaking your project up, we're talking about breaking it up so that a given environment is composed of multiple state files. We're talking about making it so you can change the code for one project, and plan and apply it on its own.
+So when we talk about breaking your project up, we're talking about breaking it up so that a given environment is composed of multiple state files. We're talking about making it so you can change the code for one project, and `plan` and `apply` it on its own.
 
 If your team has chewed over the idea of breaking up your project this way, you've probably also considered some of the things that would make it hard to pull off:
 
@@ -41,7 +41,7 @@ I have suggestions.
 
 ## Integrate loosely
 
-I suspect you're aware of microservices, given the buzz (not to say hype) in the industry. You can read what my colleague [James Lewis wrote](https://martinfowler.com/articles/microservices.html) on Martin' Fowler's website a few years ago, or our friend Sam Newman's [books on the subject](https://samnewman.io/books/).
+I suspect you're aware of microservices, given the buzz (not to say hype) in the industry. You can read what my colleague [James Lewis wrote](https://martinfowler.com/articles/microservices.html) on Martin' Fowler's website a few years ago, or read our friend Sam Newman's [books on the subject](https://samnewman.io/books/).
 
 The "small pieces, loosely joined" idea behind microservice architecture make a lot of sense for infrastructure, too. Just like with user-facing software, you should organize your projects so that they're not very tightly coupled. The point is that you can make a change to one project, and not worry too much about the others. If every time you change one project, you also have to change code in other projects, you're doing it wrong.
 
@@ -52,7 +52,7 @@ The other key concern is _how_ your projects integrate. Returning to the example
 
 ### Avoid tight coupling between projects
 
-How does the project that makes the subnet make it available to projects that use the subnet? With software that integrates over the network, you have an API, using a protocol like [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). With Terraform, you have a few options.
+How does the project that creates the subnet make it available to projects that use the subnet? With software that integrates over the network, you have an API, using a protocol like [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). With Terraform, you have a few options.
 
 The most popular way to integrate across Terraform projects is to point your server project at the subnet project's state file. You write a `data "terraform_remote_state"` block, and then refer to the outputs from the other project, as in this [example from the Terraform docs](https://www.terraform.io/docs/providers/terraform/d/remote_state.html).
 
@@ -60,9 +60,9 @@ This is a bad idea. Integrating using state files creates a tight coupling betwe
 
 As you may know, _coupling_ is a term that describes how easy or hard it is to change one project without affecting the other.
 
-When you write your server project to use an output of the subnet project, you are coupling to that output and its name. That's usually OK. The team that owns the subnet project needs to understand that its outputs are a contract. They have the constraint that they can't change that output name whenever they want without breaking other code. As long as everyone understands that, you're OK.
+When you write your server project to depend on an output of the subnet project, you are coupling to that output and its name. That's usually OK. The team that owns the subnet project needs to understand that its outputs are a contract. They have the constraint that they can't change that output name whenever they want without breaking other code. As long as everyone understands that, you're OK.
 
-But integration with the output in a state file, at least the way Terraform currently implements it, couples more tightly than to the output name. It couples to the data structure. When you apply your consumer project, Terraform reads the state file for your provider project to find the subnet id.
+But integration with the output in a state file, at least the way Terraform currently implements it, couples more tightly than just integrating with the output name. It couples to the data structure. When you apply your consumer project, Terraform reads the state file for your provider project to find the subnet id.
 
 Doing this can be a problem if you used different versions of Terraform for the projects. If you upgrade to a new version of Terraform that changes the data structures in the state files, you need to upgrade all of your projects together.
 
@@ -72,11 +72,11 @@ So what are the alternatives?
 
 You can integrate using `data "aws_subnet"`, discovering the subnet based on its name or tags. The integration contract is then the name or tag. The project that creates the subnet can't change these things without breaking consumers.
 
-Another is to use a configuration registry, something like Hashicorp's Consul, or any key-value parameter store. Your provider stack puts the value of the subnet_id in the registry, your consumer stack reads it from there. Doing this makes the integration point more explicit - the provider stack code needs to put the value under a specific name.
+Another is to use a configuration registry, something like Hashicorp's Consul, or any key-value parameter store. Your provider stack puts the value of the `subnet_id` in the registry, your consumer stack reads it from there. Doing this makes the integration point more explicit - the provider stack code needs to put the value under a specific name.
 
-Another way you can do this is with [dependency injection](https://martinfowler.com/articles/injection.html). My colleague [Vincenzo Fabrizi](https://twitter.com/zipponap) suggested this to me. 
+Another way you can do this is with [dependency injection](https://martinfowler.com/articles/injection.html). My colleague [Vincenzo Fabrizi](https://twitter.com/zipponap) suggested this to me.
 
-Your consumer project code shouldn't be responsible for getting the value. Instead, you pass the value as a parameter. If you run Terraform with a script or makefile or something, then that script fetches it and passes it in. This keeps your code decoupled, which comes in handy for testing.
+Your consumer project code shouldn't be responsible for getting the value. Instead, you pass the value as a parameter. If you run Terraform with a script or Makefile, then that script fetches it and passes it in. This keeps your code decoupled, which comes in handy for testing.
 
 
 ## Testing your Terraform projects
@@ -107,7 +107,7 @@ Refactoring application code is straightforward. Change the code, rebuild it, ru
 
 The Terraform CLI includes the [state](https://www.terraform.io/docs/commands/state/mv.html) command, which you can use to move state from one state file to another. You create your new Terraform project, and you transfer the state for resources from the original project's state file to the new project state file. You can run `terraform plan` as you go to check that each piece is moved. You know everything is complete when `terraform plan` reports that it won't change anything on the new project.
 
-This is a very tricky operation. I've never had the guts to do it on a real project, although people have told me about doing it. They compare it to brain surgery - one slip of the fingers, one wrong command, and you're in a crisis, scrambling to undo the damage. If you back up your state files beforehand and don't run `terraform apply` until `terraform plan` tells you you're clear, you shouldn't damage your live system. But it's a painstaking process, and overly manual.
+This is a very tricky operation. One wrong command, and you're in a crisis, scrambling to undo the damage. If you back up your state files beforehand and don't run `terraform apply` until `terraform plan` tells you you're clear, you shouldn't damage your live system. But it's a painstaking process, and overly manual.
 
 I'm not currently aware of any tools to automate this process, but I'm sure we'll see them soon. However, I have a technique that can de-risk the process that you can use today.
 
@@ -121,7 +121,7 @@ In a nutshell, this is a three-step process:
 
 You can handle the projects in different ways. For example, rather than creating the subnet in a new project and leaving the server in the old one, you might do it the other way around. Or you might make two new projects, one for the subnet and one for the server, completely retiring the original project once everything is moved out.
 
-The advantage of expanding and contracting infrastructure, rather than editing state files, is that you can implement it entirely with CD pipelines, avoiding the need to run any special one-off commands. Create a pipeline for each project involved and then push the code changes through them. The expand, migrate, and contract steps are each commits to the codebase, pushed through the pipeline. The pipeline tests each change in an upstream environment before being applying it to production.
+The advantage of expanding and contracting infrastructure, rather than editing state files, is that you can implement it entirely with CD pipelines, avoiding the need to run any special one-off commands. Create a pipeline for each project involved and then push the code changes through them. The expand, migrate, and contract steps are each a commit to the codebase, pushed through the pipeline. The pipeline tests each change in an upstream environment before being applying it to production.
 
 
 ## Splitting stacks for fun and profit
