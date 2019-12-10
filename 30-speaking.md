@@ -14,9 +14,9 @@ Taking a break for the Autumn conference season, spring TBC!
 
 ## Previous
 
-25 July, 2019 [XConf in Melbourne](https://www.thoughtworks.com/xconf-au-2019), Australia
+25 July, 2019 [XConf in Melbourne](https://www.thoughtworks.com/xconf-au-19-content), Australia [[video](https://www.thoughtworks.com/xconf-au-19-content#Keynote)]
 
-23 July, 2019 [XConf in Sydney](https://www.thoughtworks.com/xconf-au-2019), Australia
+23 July, 2019 [XConf in Sydney](https://www.thoughtworks.com/xconf-au-19-content), Australia
 
 5 July, 2019 [XConf in Barcelona](https://www.thoughtworks.com/xconf-eu-2019), Spain
 
@@ -36,7 +36,7 @@ Taking a break for the Autumn conference season, spring TBC!
 
 18 September, 2018 [Continuously Delivering Infrastructure as Code](https://www.eventbrite.co.uk/e/continuously-delivering-infrastructure-as-code-tickets-48119985171) in Glasgow, Scotland
 
-6-7 September, 2018 [Jazoon Tech Days](http://jazoon.com/) in Bern, Switzerland [video](https://www.youtube.com/watch?v=YggX1YcIlLo)
+6-7 September, 2018 [Jazoon Tech Days](http://jazoon.com/) in Bern, Switzerland [[video](https://www.youtube.com/watch?v=YggX1YcIlLo)]
 
 6-10 August, 2018 [Agile2018](https://www.slideshare.net/KiefMorris/evolutionary-infrastructure-agile-2018-kief-morris) in San Diego, USA
 
@@ -48,7 +48,7 @@ Taking a break for the Autumn conference season, spring TBC!
 
 25 October, 2017 [DevOpsDays Singapore](https://www.devopsdays.org/events/2017-singapore/program/kief-morris/) in Singapore
 
-July 13, 2017 [XConf Manchester](https://info.thoughtworks.com/XConf-2017-EU) [Video](https://www.thoughtworks.com/talks/infrastructure-design-patterns-xconf-eu-2017)
+July 13, 2017 [XConf Manchester](https://info.thoughtworks.com/XConf-2017-EU) [[Video](https://www.thoughtworks.com/talks/infrastructure-design-patterns-xconf-eu-2017)]
 
 July 11, 2017 [XConf Hamburg](https://info.thoughtworks.com/XConf-2017-EU)
 
