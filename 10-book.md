@@ -4,6 +4,22 @@ title: Book
 permalink: /book/
 ---
 
+## Second edition (early release)
+
+<p>
+The <a href="http://shop.oreilly.com/product/0636920294382.do">second edition of Infrastructure as Code</a> is now available as an early release. This is the first eight chapters, of what looks to be eighteen or so. Check it out and please let me know what you think!
+</p>
+
+<a href="http://shop.oreilly.com/product/0636920294382.do"><img
+  title="Infrastructure as Code 2nd edition book cover"
+  src="/images/iac_2nd_edition_tiny.gif"
+  alt="Book cover" width="180" height="263"
+  /></a>
+
+<hr/>
+
+## First edition
+
 <p>
 <span class="booktitle">Infrastructure as Code</span>, written by Kief Morris, from O'Reilly Publishing.
 </p>
