@@ -8,5 +8,5 @@ Kief Morris (he/him) is Global Director of Cloud Engineering at ThoughtWorks, an
 
 ![Kief staring into the future, looking serious](/images/kief_profile.jpg)
 
-![Kief saying something](images/kief-at-goto.jpg)
+![Kief saying something](/images/kief-at-goto.jpg)
 
