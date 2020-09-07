@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pulumi, CDK, Terraform - We're missing the point on infrastructure coding languages"
-date:   yyyy-mm-dd hh:mm:ss
+date:   2020-09-01 16:20:00
 published: false
 ---
 
