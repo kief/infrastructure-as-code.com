@@ -18,6 +18,8 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 September, 2020 [Tech Lead Journal]https://techleadjournal.dev/episodes/5/ hosted by Henry Suryawirawan
 
+August, 2020 [Pragmatism in Practice]https://www.thoughtworks.com/podcasts/building-business-resilience-in-the-cloud-era
+
 September, 2016 [Software Engineering Radio]https://www.se-radio.net/2016/09/se-radio-episode-268-kief-morris-on-infrastructure-as-code/
 
 
