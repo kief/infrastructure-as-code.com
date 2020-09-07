@@ -4,12 +4,22 @@ title: Speaking
 permalink: /speaking/
 ---
 
-These are the talks Kief currently has scheduled, as well as links to previous talks.
+These are the talks Kief currently has scheduled, as well as links to previous talks and podcast appearances.
+
 
 
 ## Upcoming
 
-Taking a break for the Autumn conference season, spring TBC!
+7, 8 October, 2020 [Cloud Engineering Summit]https://cloudengineering.heysummit.com/
+
+
+
+## Podcasts
+
+September, 2020 [Tech Lead Journal]https://techleadjournal.dev/episodes/5/ hosted by Henry Suryawirawan
+
+September, 2016 [Software Engineering Radio]https://www.se-radio.net/2016/09/se-radio-episode-268-kief-morris-on-infrastructure-as-code/
+
 
 
 ## Previous
