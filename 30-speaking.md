@@ -14,7 +14,7 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 7, 8 October, 2020 [Cloud Engineering Summit](https://cloudengineering.heysummit.com/)
 
-15 October, 2020, [ThoughtWorks Munich](https://www.meetup.com/ThoughtWorks-Muenchen/events/273589327/)
+15 October, 2020 [ThoughtWorks Munich](https://www.meetup.com/ThoughtWorks-Muenchen/events/273589327/)
 
 
 ## Podcasts
