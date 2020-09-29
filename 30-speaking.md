@@ -10,6 +10,8 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
+1 October, 2020 [ScotSoft](https://www.scotsoft.scot/)
+
 7, 8 October, 2020 [Cloud Engineering Summit](https://cloudengineering.heysummit.com/)
 
 
