@@ -4,16 +4,16 @@ title: Book
 permalink: /book/
 ---
 
-## Second edition (early release)
+## Second edition (coming December 2020)
 
 <p>
-The <a href="http://shop.oreilly.com/product/0636920294382.do">second edition of Infrastructure as Code</a> is now available as an early release. This is the first eight chapters, of what looks to be eighteen or so. Check it out and please let me know what you think!
+The <a href="http://shop.oreilly.com/product/0636920294382.do">second edition of Infrastructure as Code</a> is coming in December of 2020. The print edition is available for pre-order, or you can read an earlier draft on the O'Reilly Learning Platform.
 </p>
 
 <a href="http://shop.oreilly.com/product/0636920294382.do"><img
   title="Infrastructure as Code 2nd edition book cover"
-  src="/images/iac_2nd_edition_tiny.gif"
-  alt="Book cover" width="180" height="263"
+  src="/images/infrastructure_as_code_2ed_small.png"
+  alt="Book cover" width="320" height="420"
   /></a>
 
 <hr/>
