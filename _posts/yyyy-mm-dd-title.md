@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  ""
-date:   yyyy-mm-dd hh:mm:ss
+date:   2099-01-01 16:20:20
 categories: book
 published: false
 ---
 
-[Example Link](https://infrastructre-as-code.com)
+[Example Link](https://infrastructure-as-code.com)
