@@ -10,11 +10,7 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-1 October, 2020 [ScotSoft](https://www.scotsoft.scot/)
-
-7, 8 October, 2020 [Cloud Engineering Summit](https://cloudengineering.heysummit.com/)
-
-15 October, 2020 [ThoughtWorks Munich](https://www.meetup.com/ThoughtWorks-Muenchen/events/273589327/)
+9 February, 2021 ThoughtWorks Infrastructure as Code webinar (details coming soon)
 
 
 ## Podcasts
@@ -28,6 +24,12 @@ September, 2016 [Software Engineering Radio](https://www.se-radio.net/2016/09/se
 
 
 ## Previous
+
+15 October, 2020 [ThoughtWorks Munich](https://www.meetup.com/ThoughtWorks-Muenchen/events/273589327/)
+
+7, 8 October, 2020 [Cloud Engineering Summit](https://cloudengineering.heysummit.com/)
+
+1 October, 2020 [ScotSoft](https://www.scotsoft.scot/)
 
 25 July, 2019 [XConf in Melbourne](https://www.thoughtworks.com/xconf-au-19-content), Australia [[video](https://www.thoughtworks.com/xconf-au-19-content#Keynote)]
 
