@@ -4,7 +4,7 @@ title:  "Cross-Stack Service Pattern"
 date: 2019-03-27 08:00:00 +0000
 category: Stack Structural Patterns
 order: 15
-published: true
+published: false
 ---
 
 Defining the infrastructure to host an application across multiple [infrastructure stacks](/patterns/stack-concept/) is the Cross Stack Service pattern. This is a variation of the [micro stack pattern](micro-stack.html).

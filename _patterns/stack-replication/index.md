@@ -5,7 +5,7 @@ date: 2019-03-27 08:00:00 +0000
 category: Stack Replication Patterns
 section: true
 order: 1
-published: true
+published: false
 ---
 
 Most organisations need to run multiple copies of infrastructure, whether it's multiple environments for testing a system, or separate instances of an application for different customers. This pattern catalogue describes the concept of an [infrastructure stack](/patterns/stack-concept/) as a collection of infrastructure defined and provisioned as a unit - a Terraform project, CloudFormation stack, etc. There are different ways to replicate infrastructure in relation to these stacks. Some of these ways are useful, which are described here as patterns. Other ways are best avoided, which are described as antipatterns.

@@ -4,7 +4,7 @@ title:  "Monolithic Stack Antipattern"
 date: 2019-03-27 08:00:00 +0000
 category: Stack Structural Patterns
 order: 11
-published: true
+published: false
 ---
 
 A Monolithic Stack is an [infrastructure stack](/patterns/stack-concept/) that includes too many elements, so that it is difficult to work with.

@@ -4,7 +4,7 @@ title:  "Stack Instance Configuration File Pattern"
 date: 2019-03-28 10:07
 category: Stack Configuration Patterns
 order: 23
-published: true
+published: false
 ---
 
 Values can be provided to instances of [template stacks](/patterns/stack-replication/template-stack.html) by putting them into files, which are then checked into version control.

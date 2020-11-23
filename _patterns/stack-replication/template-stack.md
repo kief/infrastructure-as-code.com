@@ -4,7 +4,7 @@ title:  "Template Stack Pattern"
 date: 2019-03-28 10:07
 category: Stack Replication Patterns
 order: 2
-published: true
+published: false
 ---
 
 A Template Stack is an [infrastructure stack](/patterns/stack-concept/) source code project that is used to create multiple instances of the same thing. This is in contrast to [singleton stacks](singleton-stack.html), where a separate copy of the source code is maintained for each stack instance, and the [many headed stack](many-headed-stack.html), where multiple environments are all included in a single stack.

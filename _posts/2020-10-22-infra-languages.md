@@ -6,13 +6,13 @@ categories: book
 published: false
 ---
 
-Many infrastructure projects are an atrocity of messy, tangled code. Many people, especially developers, blame the languages. Most infrastructure tools use declarative languages. [Ansible](https://docs.ansible.com/) extends YAML, [CloudFormation](https://aws.amazon.com/cloudformation/) offers both JSON and YAML, and [Terraform](https://www.terraform.io/) uses [HCL](https://github.com/hashicorp/hcl), a [DSL](http://martinfowler.com/books/dsl.html).
+Too many infrastructure projects are an atrocity of messy, tangled code. Some people, especially developers, blame the use of custom, declarative languages for infrastructure coding. [Ansible](https://docs.ansible.com/) extends YAML, [CloudFormation](https://aws.amazon.com/cloudformation/) offers both JSON and YAML, and [Terraform](https://www.terraform.io/) uses [HCL](https://github.com/hashicorp/hcl), a [DSL](http://martinfowler.com/books/dsl.html).
 
-So maybe the answer is switching to a "real", [Turing-complete](https://wiki.c2.com/?TuringComplete) language, so we can write real code rather than jumped-up configuration files? [Pulumi](https://www.pulumi.com/) and the [AWS CDK](https://aws.amazon.com/cdk/) represent a new generation of infrastructure tools that support writing infrastructure code using languages like JavaScript, Typescript, and Python.
+The idea is that infrastructure code should be written using a "real", [Turing-complete](https://wiki.c2.com/?TuringComplete) language, so we can write real programming code rather than editing jumped-up configuration files. [Pulumi](https://www.pulumi.com/) and the [AWS CDK](https://aws.amazon.com/cdk/) represent a new generation of infrastructure tools that support writing infrastructure code using languages like JavaScript, Typescript, and Python.
 
 This new generation of tools is exciting, creating opportunities for much better infrastructure projects. But the languages aren't the root cause of horrific infrastructure code. The true problem is that infrastructure projects are poorly designed.
 
-So, my hypothesis is that the path to better infrastructure code isn't to replace all declarative code with imperative code, but instead to apply good design principles, like SOLID. Choosing the appropriate language for each job is part of the solution, but isn't possible until you've got the design right.
+So, my hypothesis is that the path to better infrastructure code isn't to replace all declarative code with imperative code, but instead to apply good design principles, like [SOLID](https://en.wikipedia.org/wiki/SOLID). Choosing the appropriate language for each job is part of the solution, but that isn't possible until you've got the design right.
 
 
 ## Bad infrastructure code
@@ -36,13 +36,13 @@ server_instance:
 ```
 
 
-The rest of the code would define other attributes of the server and related infrastructure like networking. Most likely, the environment and application would be used to decide other options, such as whether to make the server available to the public internet or how much storage to allocate to a database.
+The rest of the code would define other attributes of the server and related infrastructure like networking. Most likely, the environment and application would be used to decide other options, such as whether to make the server available to the public Internet or how much storage to allocate to a database.
 
-This example is ugly - even as I made it up, I had to stop and think about when each instance_type will be applied. But real-world code often gets far messier.
+This example is hard to read and write. Even as I was making it up, I had to stop and think about when each instance_type will be applied. But real-world code often gets far messier.
 
-Some people will look at this code and decide to just copy the code into separate projects for each combination of environment and application. Each copy of the code becomes very clear and simple. But it fails the [DRY principle](https://wiki.c2.com/?DontRepeatYourself), by repeating code that represents the same thing in multiple places. Making changes to the code is painful.
+Some people will look at this code and decide to just split the code into separate projects for each combination of environment and application. Each copy of the code becomes very clear and simple. But it fails the [DRY principle](https://wiki.c2.com/?DontRepeatYourself), by repeating code that represents the same thing in multiple places. Making changes to the code is painful.
 
-Other people see the use of YAML to write logic as the main problem. And it is part of the problem, but the root problem is the code mixes [concerns](https://en.wikipedia.org/wiki/Separation_of_concerns). One concern is creating a server instance. The other concern is deciding how to configure the server instance depending on how it will be used.
+Other people see the use of YAML to write logic as the main problem. And it is part of the problem, but the root problem is the code [mixes concerns](https://en.wikipedia.org/wiki/Separation_of_concerns). One concern is creating a server instance. The other concern is deciding how to configure the server instance depending on how it will be used.
 
 A solution to this problem is to extract the configuration out of the server code, which now looks like this:
 

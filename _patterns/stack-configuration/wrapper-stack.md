@@ -4,7 +4,7 @@ title:  "Wrapper Stack Pattern"
 date: 2019-03-28 10:07
 category: Stack Configuration Patterns
 order: 24
-published: true
+published: false
 ---
 
 A Wrapper Stack is an [infrastructure stack project](/patterns/stack-concept/) which is a thin wrapper to create a specific stack instance, using infrastructure code shared in a [stack code module](/patterns/stack-concept/stack-code-module.html). The purpose of the wrapper is to define the [stack parameter values](/patterns/stack-configuration/) for stack instances managed using [template stacks](/patterns/stack-replication/template-stack.html).

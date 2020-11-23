@@ -4,7 +4,7 @@ title:  "Many-headed Stack Antipattern"
 date: 2019-03-27 08:00:00 +0000
 category: Stack Replication Patterns
 order: 5
-published: true
+published: false
 ---
 
 A Many-Headed Stack manages the infrastructure for multiple environments in a single stack project.

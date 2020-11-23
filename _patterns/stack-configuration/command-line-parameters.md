@@ -4,7 +4,7 @@ title:  "Command-line Stack Parameters Pattern"
 date: 2019-03-28 10:07
 category: Stack Configuration Patterns
 order: 21
-published: true
+published: false
 ---
 
 The simplest way to provide values for a [stack instance](/patterns/stack-concept/) is to pass the values on the command line.

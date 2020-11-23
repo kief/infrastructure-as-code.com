@@ -4,7 +4,7 @@ title:  "Stack Code Module"
 date: 2019-03-13 09:32:50 +0000
 category: Stack Concept
 order: 2
-published: true
+published: false
 ---
 
 A Stack Code Module is infrastructure code that can be included into one or more [infrastructure stack](/patterns/stack-concept/) projects.

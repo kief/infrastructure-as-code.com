@@ -5,7 +5,7 @@ date: 2019-03-27 08:00:00 +0000
 category: Stack Concept
 section: true
 order: 0
-published: true
+published: false
 ---
 
 An *Infrastructure Stack* is a collection of infrastructure elements that is defined, provisioned, and updated as a unit. The elements of the stack are defined in *source code*, and may include a combination of compute, networking, and/or storage resources. A *stack management tool* reads the source code and interacts with an infrastructure platform to ensure the specified resources are provisioned as an *instance* of the stack.

@@ -4,7 +4,7 @@ title:  "Stack Parameter Registry"
 date: 2019-03-28 10:07
 category: Stack Configuration Patterns
 order: 26
-published: true
+published: false
 ---
 
 Configuration values for [template stacks](/patterns/stack-replication/template-stack.html) can be stored in a parameter registry. The appropriate set of values can be retrieved from the registry by the stack management tool or wrapper script when applying the code to a stack instance.

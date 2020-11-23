@@ -4,7 +4,7 @@ title:  "Singleton Stack Antipattern"
 date: 2019-03-27 08:00:00 +0000
 category: Stack Replication Patterns
 order: 4
-published: true
+published: false
 ---
 
 The Singleton Stack antipattern uses a separate copy of the stack source code project for each [infrastructure stack](/patterns/stack-concept/) instance.

@@ -4,7 +4,7 @@ title:  "Stack Instance Script Pattern"
 date: 2019-03-28 10:07
 category: Stack Configuration Patterns
 order: 22
-published: true
+published: false
 ---
 
 A separate script, such as a shell script or batch file, can be written to provide the [stack management tool](/patterns/stack-concept/) with the appropriate values for the each stack instance.
