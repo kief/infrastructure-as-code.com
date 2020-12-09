@@ -18,7 +18,7 @@ The <a href="http://shop.oreilly.com/product/0636920294382.do">second edition of
     >Amazon.co.uk</a>]
   [<a class="promolink"
     onclick="captureOutboundLink('amazon.in print');"
-    href="https://www.amazon.in/Infrastructure-Code-2E-Dynamic-Systems/dp/1098114671/?tag=kiefcom07-20"
+    href="https://www.amazon.in/Infrastructure-Code-Dynamic-Systems-Cloud-ebook/dp/B08Q35FM4B/?tag=kiefcom07-20"
     >Amazon.in</a>]
   [<a class="promolink"
     onclick="captureOutboundLink('safari');"
