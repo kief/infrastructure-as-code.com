@@ -10,7 +10,9 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-9 February, 2021 ThoughtWorks Infrastructure as Code webinar (details coming soon)
+January 27, 2021 O'Reilly [Infrastructure & Ops Superstream Series: CI/CD](https://learning.oreilly.com/live-training/courses/infrastructure-ops-superstream-series-cicd/0636920051970/) hosted by [Sam Newman](https://samnewman.io/).
+
+9 February, 2021 ThoughtWorks Infrastructure as Code [webinar](https://www.thoughtworks.com/books/infrastructure-as-code-2nd-edition-webinar) hosted by [Thao Dang](https://www.thoughtworks.com/profiles/thao-dang)
 
 
 ## Podcasts
