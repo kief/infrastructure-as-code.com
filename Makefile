@@ -29,6 +29,9 @@ build:
 bundle:
 	bundle install
 
+bundleup:
+	bundle update
+
 linkcheck: ## Check links in the pattern catalogue
 	mkdir -p tmp
 	rm -f tmp/linkcheck.log
