@@ -9,12 +9,7 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-13 May, 2021 [Webinar in Brightalk](https://www.brighttalk.com/webcast/18640/481398?utm_source=ThoughtWorks&utm_medium=brighttalk&utm_campaign=481398), a conversation with [Angela Bishop](https://www.thoughtworks.com/profiles/angela-bishop) about how organizations have used cloud in dealing with the business shifts over the past year.
-
-20-21 May, 2021 [XConf TWSEA](https://thght.works/3uce2kQ) with [Ankit Wal](https://www.ankitwal.com/), we'll be talking about how to compose complex infrastructure using stacks as components.
-
-17 June, 2021 [ThoughtWorks Romania](https://www.thoughtworks.com/careers/romania)
-
+29 June, 2021, HackaJob event (details to follow)
 
 
 ## Podcasts
@@ -29,6 +24,12 @@ September, 2016 [Software Engineering Radio](https://www.se-radio.net/2016/09/se
 
 
 ## Previous
+
+17 June, 2021 [ThoughtWorks Romania](https://www.thoughtworks.com/careers/romania)
+
+20-21 May, 2021 [XConf TWSEA](https://thght.works/3uce2kQ) with [Ankit Wal](https://www.ankitwal.com/), we'll be talking about how to compose complex infrastructure using stacks as components.
+
+13 May, 2021 [Webinar in Brightalk](https://www.brighttalk.com/webcast/18640/481398?utm_source=ThoughtWorks&utm_medium=brighttalk&utm_campaign=481398), a conversation with [Angela Bishop](https://www.thoughtworks.com/profiles/angela-bishop) about how organizations have used cloud in dealing with the business shifts over the past year.
 
 9 February, 2021 ThoughtWorks Infrastructure as Code [webinar](https://www.thoughtworks.com/books/infrastructure-as-code-2nd-edition-webinar) hosted by [Thao Dang](https://www.thoughtworks.com/profiles/thao-dang)
 
