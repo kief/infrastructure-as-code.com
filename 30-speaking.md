@@ -9,7 +9,7 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-29 June, 2021, HackaJob event (details to follow)
+29 June, 2021, [Application Driven Infrastructure](https://us02web.zoom.us/webinar/register/4416230777533/WN_6a3Vt89STKyLZ0MmJOioxg) by ThoughtWorks and Hackajob
 
 
 ## Podcasts
