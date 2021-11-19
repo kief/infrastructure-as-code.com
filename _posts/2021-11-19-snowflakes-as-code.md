@@ -30,46 +30,46 @@ Each instance of code may have differences, even if very small differences. A ch
 
 ## Motivation
 
-Different environments, even ones intended to be consistent, will always need some variations between them. Resources like clusters and storage may be sized differently for a test environment than for production, for example. If nothing else, resources may need different names, such as database-test, database-staging, and database-prod.
+Different environments, even ones intended to be consistent, will always need some variations between them. Resources like clusters and storage may be sized differently for a test environment than for production, for example. If nothing else, resources may need different names, such as _database-test_, _database-staging_, and _database-prod_.
 
 Maintaining a separate copy of infrastructure code for each environment is an obvious way to handle these variations.
 
 
 ## Consequences
 
-The issue with maintaining slightly different versions of infrastructure code for each environment is that it encourages inconsistency - configuration drift. Once you accept editing code when copying or merging it between environments as a way to handle configuration, it becomes easy for larger differences to persist. For example:
+The issue with maintaining different versions of infrastructure code for each environment is that it encourages inconsistency - configuration drift. Once you accept editing code when copying or merging it between environments as a way to handle configuration, it becomes easy for larger differences to persist. For example:
 
-I make a fix to the production infrastructure, but don’t have time to copy it back to upstream environments. The fix then clashes with changes you make in upstream environments.
+* I make a fix to the production infrastructure, but don't have time to copy it back to upstream environments. The fix then clashes with changes you make in upstream environments.
+* I'm working on a fairly complex change in the staging environment that drags on for days, or longer. Meanwhile, you need to make a small, quick fix and take it into production. Testing in staging becomes unreliable because it doesn't currently reflect production.
+* We need to define security policies differently in production than for non-production environments. We implement this with different code in each environment, and hope nobody accidentally copies the wrong file to the wrong place.
 
-I’m working on a fairly complex change in the staging environment that drags on for days, or longer. Meanwhile, you need to make a small, quick fix and take it into production. Testing in staging becomes unreliable because it doesn’t currently reflect production.
-
-Tools that we’re using in the test environment need modifications to its infrastructure that we don’t need in production. Every time one of us makes a change to the infrastructure, we need to tweak it for the test environment.
-
-Another consequence is the likelihood of making a mistake when copying or merging changes from one environment to the next. Don’t forget to copy/replace every instance of staging to prod! Don’t forget to change the maximum node count for the database cluster from 2 to 6! Ooops!
+Another consequence is the likelihood of making a mistake when copying or merging changes from one environment to the next. Don't forget to copy/replace every instance of *staging* to *prod*! Don't forget to change the maximum node count for the database cluster from *2* to *6*! Ooops!
 
 
 ## Implementation
 
-The two main ways people implement snowflakes as code is using folders and using branches.
+The two main ways people implement snowflakes as code are folders and branches.
 
 
 ![Environment folders and environment branches](/images/snowflakes-folders-branches.png)
 
 
-Teams who use branches to maintain infrastructure code for each of their environments (as described below under Implementation) do this because they are using GitOps, where tools apply code from git to infrastructure. Doing this becomes snowflakes as code when the code needs to be edited after merging from one environment to the next.
+Teams who use branches to maintain infrastructure code for each of their environments (as described below under Implementation) often do this because they are using GitOps. GitOps uses tools that apply code from git branches to the infrastructure, so encourages maintaining a separate branch for each environment.
 
-Other teams use a separate infrastructure project folder for each environment. In an ideal world, they edit the code for the upstream environment (for example, dev) first, then copy it to each environment in turn after testing and approvals. Again, it’s the need to edit files when copying them to a new environment that signals this antipattern.
+It's possible to use branches this way without them becoming snowflakes, as described below in Alternatives. But when your process for promoting code involves merging and tweaking code to maintain environment-specific differences, then you've got snowflakes as code.
+
+Other teams use a folder structure to maintain separate projects for each environment. They copy and edit code between projects to make changes across environments. Again, it's the need to edit files when copying them to a new environment that signals this antipattern.
 
 
 ## Alternatives
 
-The alternative to snowflakes as code is to treat infrastructure code as immutable as it moves from one environment to the next. This is Continuous Delivery 101 - only make changes in the origin (usually trunk), then copy the code, unmodified, from one environment to the next.
+The alternative to snowflakes as code is to treat infrastructure code as immutable as it moves from one environment to the next. This is Continuous Delivery 101 - only make changes in the origin (for example, trunk), then copy the code, unmodified, from one environment to the next.
 
-Infrastructure code could be copied or merged by an automated process, removing manual actions and the temptation to “tweak” code as it moves along.
+Using an automated process to promote infrastructure code from one environment to the next reduces the opportunity for manual errors. It also removes the opportunity to "tweak" code to maintain differences across environments, forcing better discipline.
 
-If the need for a change is discovered in a downstream environment, the change is first made to the origin, then progressed without further changes.
+If the need for a change is discovered in a downstream environment, the change is first made to the origin, then progressed to the downstream environment without modifications. This ensures that every code change has been put through all of the tests and approvals needed.
 
-Where there is a need for variations between environments, this should be captured as per-environment configuration values, and passed to the code when it is applied. Chapter 7 of my book covers different patterns for doing this, including configuration files and configuration registries.
+As mentioned earlier, there usually is a need for some variations between environments, such as resource sizing and names. These variations should be extracted into per-environment configuration values, and passed to the code when it is applied to the given environment. Chapter 7 of [my book](/book/) covers different patterns for doing this, including configuration files and configuration registries.
 
 
 ![Separating infrastructure code and per-environment configuration](/images/non-snowflake-configuration.png)
