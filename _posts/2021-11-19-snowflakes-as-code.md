@@ -8,11 +8,11 @@ published: true
 
 One of the earliest benefits that drew people like me to infrastructure as code was the promise of eliminating [snowflake servers](https://martinfowler.com/bliki/SnowflakeServer.html).
 
-In the old times, we built servers by logging into them and running commands. We might build, update, fix, optimize, or otherwise change servers in different environments in different ways at different times. This led to (configuration drift)[http://kief.com/configuration-drift.html], inconsistencies across environments.
+In the old times, we built servers by logging into them and running commands. We might build, update, fix, optimize, or otherwise change servers in different environments in different ways at different times. This led to [configuration drift](http://kief.com/configuration-drift.html), inconsistencies across environments.
 
 Thanks to snowflakes and configuration drift, we spent huge amounts of effort to get an application build that worked fine in the development environment to deploy and run in production.
 
-Flash forward 10+ years, infrastructure as code has become commonplace, helping us to manage (all kinds of stuff)[https://infrastructure-as-code.com/book/2018/03/28/defining-stacks.html] in addition to, and often instead of, servers. You'd think snowflake infrastructure would be a thing of the past.
+Flash forward 10+ years, infrastructure as code has become commonplace, helping us to manage [all kinds of stuff](https://infrastructure-as-code.com/book/2018/03/28/defining-stacks.html) in addition to, and often instead of, servers. You'd think snowflake infrastructure would be a thing of the past.
 
 But it's actually quite common to see people following practices that lead to differences between environments - _snowflakes as code_.
 
