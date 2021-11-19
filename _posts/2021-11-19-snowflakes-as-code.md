@@ -2,8 +2,10 @@
 layout: post
 title:  "The Snowflakes as Code antipattern"
 date:   2021-11-19 13:30:00
+image:  /images/snowflakes-as-code.png
+image_alt:  Multiple environments, each with its own set of code
 categories: book
-published: true
+published:  true
 ---
 
 One of the earliest benefits that drew people like me to infrastructure as code was the promise of eliminating [snowflake servers](https://martinfowler.com/bliki/SnowflakeServer.html).

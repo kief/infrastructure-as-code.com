@@ -2,6 +2,8 @@
 layout: full
 title: Book
 permalink: /book/
+image:  /images/infrastructure_as_code_2ed_small.png
+image_alt:  Infrastructure as Code 2nd edition book cover
 ---
 
 ## Second edition out now!
