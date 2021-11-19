@@ -19,7 +19,7 @@ But it's actually quite common to see people following practices that lead to di
 
 ## Antipattern: Snowflakes as code
 
-Snowflakes as code is an antipattern where a separate instance of code is maintained for each environment, although the environments are intended to run the same or similar workloads.
+Snowflakes as code is an antipattern where a separate instance of infrastructure code is maintained for each environment, although the environments are intended to run the same or similar workloads.
 
 
 ![Multiple environments, each with its own set of code](/images/snowflakes-as-code.png)
