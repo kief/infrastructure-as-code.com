@@ -2,6 +2,8 @@
 layout: post
 title:  "Second edition of Infrastructure as Code available now!"
 date:   2020-12-09 16:20:20
+image:  /images/infrastructure_as_code_2ed_small.png
+image_alt:  Infrastructure as Code 2nd edition book cover
 categories: book
 published: true
 ---
