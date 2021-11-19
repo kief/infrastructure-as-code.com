@@ -2,6 +2,8 @@
 layout: post
 title:  "Why your team doesn't need to use pull requests"
 date:   2021-01-02 11:57:00
+image:  /images/2021-01-02-pull-request-process.png
+image_alt:  Pull request process
 categories: book
 published: true
 ---
