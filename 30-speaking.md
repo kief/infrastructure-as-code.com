@@ -9,10 +9,11 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-29 June, 2021, [Application Driven Infrastructure](https://us02web.zoom.us/webinar/register/4416230777533/WN_6a3Vt89STKyLZ0MmJOioxg) by ThoughtWorks and Hackajob
-
+[DevOps fwdays'22 conference](https://fwdays.com/en/event/devops-fwdays-2022/review/scaling-infrastructure-as-code) Online (Kiev)
 
 ## Podcasts
+
+29 June, 2021, [Application Driven Infrastructure](https://us02web.zoom.us/webinar/register/4416230777533/WN_6a3Vt89STKyLZ0MmJOioxg) by ThoughtWorks and Hackajob
 
 27 April, 2021 [Infrastructure WebConf Europe Vol.4](https://www.thoughtworks.com/infrastructure-webconf)
 
