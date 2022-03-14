@@ -9,7 +9,7 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-[DevOps fwdays'22 conference](https://fwdays.com/en/event/devops-fwdays-2022/review/scaling-infrastructure-as-code) Online (Kiev)
+TBD [DevOps fwdays'22 conference](https://fwdays.com/en/event/devops-fwdays-2022/review/scaling-infrastructure-as-code) Online (Kyiv) *POSTPONED DUE TO WAR*
 
 ## Podcasts
 
