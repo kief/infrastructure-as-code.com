@@ -23,7 +23,7 @@ upload: apply
 
 up: apply
 
-build:
+build: bundle
 	bundle exec jekyll build
 
 bundle:
