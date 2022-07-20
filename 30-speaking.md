@@ -9,10 +9,8 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-22 March, 2022, [Developer Observability Masterclass](https://go.lightrun.com/developer-observability-masterclass) by Lightrun, Thoughtworks, and RedMonk.
+29 July, 2022, [XConf Latinoamérica 2022](https://www.thoughtworks.com/es-cl/about-us/events/xconf-america-latina-2022)
 
-
-TBD, [DevOps fwdays'22 conference](https://fwdays.com/en/event/devops-fwdays-2022/review/scaling-infrastructure-as-code) Online (Kyiv) *POSTPONED DUE TO WAR*
 
 ## Podcasts
 
@@ -28,6 +26,8 @@ September, 2016 [Software Engineering Radio](https://www.se-radio.net/2016/09/se
 
 
 ## Previous
+
+22 March, 2022, [Developer Observability Masterclass](https://go.lightrun.com/developer-observability-masterclass) by Lightrun, Thoughtworks, and RedMonk.
 
 17 June, 2021 [ThoughtWorks Romania](https://www.thoughtworks.com/careers/romania)
 
