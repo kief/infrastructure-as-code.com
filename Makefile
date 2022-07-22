@@ -23,14 +23,17 @@ upload: apply
 
 up: apply
 
-build: bundle
-	bundle exec jekyll build
+build:
+	jekyll build
 
-bundle:
-	bundle install
+# build: bundle
+# 	bundle exec jekyll build
 
-bundleup:
-	bundle update
+# bundle:
+# 	bundle install
+
+# bundleup:
+# 	bundle update
 
 linkcheck: ## Check links in the pattern catalogue
 	mkdir -p tmp
