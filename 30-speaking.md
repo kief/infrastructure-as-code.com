@@ -9,7 +9,9 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-29 July, 2022, [XConf Latinoamérica 2022](https://www.thoughtworks.com/es-cl/about-us/events/xconf-america-latina-2022)
+29 July, 2022, [XConf Latinoamérica 2022](https://www.thoughtworks.com/es-cl/about-us/events/xconf-america-latina-2022) in Quito, Ecuador, by Thoughtworks LATAM
+
+3 August, 2022, [Ambev Tech & Cheers](https://www.ambevtechandcheers.com.br/capa) in São Paulo, Brazil, by Ambev Tech
 
 
 ## Podcasts
