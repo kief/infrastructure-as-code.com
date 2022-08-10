@@ -9,16 +9,14 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
-29 July, 2022, [XConf Latinoamérica 2022](https://www.thoughtworks.com/es-cl/about-us/events/xconf-america-latina-2022) in Quito, Ecuador, by Thoughtworks LATAM
-
-3 August, 2022, [Ambev Tech & Cheers](https://www.ambevtechandcheers.com.br/capa) in São Paulo, Brazil, by Ambev Tech
+29-30 September, 2022, [DevOpsDays London 2022](https://devopsdays.org/events/2022-london/program) in London
 
 
 ## Podcasts
 
-29 June, 2021, [Application Driven Infrastructure](https://us02web.zoom.us/webinar/register/4416230777533/WN_6a3Vt89STKyLZ0MmJOioxg) by ThoughtWorks and Hackajob
+July 14, 2022, [Thoughtworks Technology Podcast](https://www.thoughtworks.com/en-gb/insights/podcasts/technology-podcasts/sensible-defaults), Starting out with sensible default practices, with Birgitta Böckeler, hosted by Mike Mason and Neal Ford
 
-27 April, 2021 [Infrastructure WebConf Europe Vol.4](https://www.thoughtworks.com/infrastructure-webconf)
+February 25, 2021, [Thoughtworks Technology Podcast](https://www.thoughtworks.com/en-gb/insights/podcasts/technology-podcasts/infrastructure-as-code), Exploring infrastructure as code, with Rebecca Parsons and Neal Ford
 
 September, 2020 [Tech Lead Journal](https://techleadjournal.dev/episodes/5/) hosted by Henry Suryawirawan
 
@@ -29,13 +27,21 @@ September, 2016 [Software Engineering Radio](https://www.se-radio.net/2016/09/se
 
 ## Previous
 
+3 August, 2022, [Ambev Tech & Cheers](https://www.ambevtechandcheers.com.br/capa) in São Paulo, Brazil, by Ambev Tech
+
+29 July, 2022, [XConf Latinoamérica 2022](https://www.thoughtworks.com/es-cl/about-us/events/xconf-america-latina-2022) in Quito, Ecuador, by Thoughtworks LATAM
+
 22 March, 2022, [Developer Observability Masterclass](https://go.lightrun.com/developer-observability-masterclass) by Lightrun, Thoughtworks, and RedMonk.
+
+29 June, 2021, [Application Driven Infrastructure](https://us02web.zoom.us/webinar/register/4416230777533/WN_6a3Vt89STKyLZ0MmJOioxg) by ThoughtWorks and Hackajob
 
 17 June, 2021 [ThoughtWorks Romania](https://www.thoughtworks.com/careers/romania)
 
 20-21 May, 2021 [XConf TWSEA](https://thght.works/3uce2kQ) with [Ankit Wal](https://www.ankitwal.com/), we'll be talking about how to compose complex infrastructure using stacks as components.
 
 13 May, 2021 [Webinar in Brightalk](https://www.brighttalk.com/webcast/18640/481398?utm_source=ThoughtWorks&utm_medium=brighttalk&utm_campaign=481398), a conversation with [Angela Bishop](https://www.thoughtworks.com/profiles/angela-bishop) about how organizations have used cloud in dealing with the business shifts over the past year.
+
+27 April, 2021 [Infrastructure WebConf Europe Vol.4](https://www.thoughtworks.com/infrastructure-webconf)
 
 9 February, 2021 ThoughtWorks Infrastructure as Code [webinar](https://www.thoughtworks.com/books/infrastructure-as-code-2nd-edition-webinar) hosted by [Thao Dang](https://www.thoughtworks.com/profiles/thao-dang)
 

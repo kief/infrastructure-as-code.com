@@ -1,10 +1,10 @@
 .DEFAULT_GOAL := help
 
-preview: bundle ## View unpublished
-	bundle exec jekyll serve --watch --unpublished
+preview: ## View unpublished
+	jekyll serve --host=0.0.0.0 --watch --unpublished
 
-plan: bundle ## View ready to publish
-	bundle exec jekyll serve --watch
+plan: ## View ready to publish
+	jekyll serve --host=0.0.0.0 --watch
 
 apply: build ## Publish to new site
 	aws s3 \
@@ -25,15 +25,6 @@ up: apply
 
 build:
 	jekyll build
-
-# build: bundle
-# 	bundle exec jekyll build
-
-# bundle:
-# 	bundle install
-
-# bundleup:
-# 	bundle update
 
 linkcheck: ## Check links in the pattern catalogue
 	mkdir -p tmp
