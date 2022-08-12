@@ -29,7 +29,7 @@ September, 2016 [Software Engineering Radio](https://www.se-radio.net/2016/09/se
 
 3 August, 2022, [Ambev Tech & Cheers](https://www.ambevtechandcheers.com.br/capa) in São Paulo, Brazil, by Ambev Tech
 
-29 July, 2022, [XConf Latinoamérica 2022](https://www.thoughtworks.com/es-cl/about-us/events/xconf-america-latina-2022) in Quito, Ecuador, by Thoughtworks LATAM
+29 July, 2022, [XConf Latinoamérica 2022](https://www.thoughtworks.com/es-cl/about-us/events/xconf-america-latina-2022) in Quito, Ecuador, by Thoughtworks LATAM [[video][(https://www.youtube.com/watch?v=T3adeOfg6Go)]
 
 22 March, 2022, [Developer Observability Masterclass](https://go.lightrun.com/developer-observability-masterclass) by Lightrun, Thoughtworks, and RedMonk.
 
