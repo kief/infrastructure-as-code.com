@@ -9,14 +9,16 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 ## Upcoming
 
+24 September, 2022, [Software Architecture fwdays'22 conference](https://fwdays.com/en/event/architecture-fwdays-2022) online (Ukraine)
+
 29-30 September, 2022, [DevOpsDays London 2022](https://devopsdays.org/events/2022-london/program) in London
 
 
 ## Podcasts
 
-July 14, 2022, [Thoughtworks Technology Podcast](https://www.thoughtworks.com/en-gb/insights/podcasts/technology-podcasts/sensible-defaults), Starting out with sensible default practices, with Birgitta Böckeler, hosted by Mike Mason and Neal Ford
+14 July 2022, [Thoughtworks Technology Podcast](https://www.thoughtworks.com/en-gb/insights/podcasts/technology-podcasts/sensible-defaults), Starting out with sensible default practices, with Birgitta Böckeler, hosted by Mike Mason and Neal Ford
 
-February 25, 2021, [Thoughtworks Technology Podcast](https://www.thoughtworks.com/en-gb/insights/podcasts/technology-podcasts/infrastructure-as-code), Exploring infrastructure as code, with Rebecca Parsons and Neal Ford
+25 February, 2021, [Thoughtworks Technology Podcast](https://www.thoughtworks.com/en-gb/insights/podcasts/technology-podcasts/infrastructure-as-code), Exploring infrastructure as code, with Rebecca Parsons and Neal Ford
 
 September, 2020 [Tech Lead Journal](https://techleadjournal.dev/episodes/5/) hosted by Henry Suryawirawan
 
