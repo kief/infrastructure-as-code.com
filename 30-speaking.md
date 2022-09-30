@@ -7,11 +7,9 @@ permalink: /speaking/
 These are the talks Kief currently has scheduled, as well as links to previous talks and podcast appearances.
 
 
-## Upcoming
+## Upcoming talks
 
-24 September, 2022, [Software Architecture fwdays'22 conference](https://fwdays.com/en/event/architecture-fwdays-2022) online (Ukraine)
-
-29-30 September, 2022, [DevOpsDays London 2022](https://devopsdays.org/events/2022-london/program) in London
+TBD
 
 
 ## Podcasts
@@ -27,11 +25,15 @@ August, 2020 [Pragmatism in Practice](https://www.thoughtworks.com/podcasts/buil
 September, 2016 [Software Engineering Radio](https://www.se-radio.net/2016/09/se-radio-episode-268-kief-morris-on-infrastructure-as-code/)
 
 
-## Previous
+## Previous talks
+
+29-30 September, 2022, [DevOpsDays London 2022](https://devopsdays.org/events/2022-london/program) in London [[slides](https://bit.ly/3E7WGha)]
+
+24 September, 2022, [Software Architecture fwdays'22 conference](https://fwdays.com/en/event/architecture-fwdays-2022) online (Ukraine)
 
 3 August, 2022, [Ambev Tech & Cheers](https://www.ambevtechandcheers.com.br/capa) in São Paulo, Brazil, by Ambev Tech
 
-29 July, 2022, [XConf Latinoamérica 2022](https://www.thoughtworks.com/es-cl/about-us/events/xconf-america-latina-2022) in Quito, Ecuador, by Thoughtworks LATAM [[video][(https://www.youtube.com/watch?v=T3adeOfg6Go)]
+29 July, 2022, [XConf Latinoamérica 2022](https://www.thoughtworks.com/es-cl/about-us/events/xconf-america-latina-2022) in Quito, Ecuador, by Thoughtworks LATAM [[video](https://www.youtube.com/watch?v=T3adeOfg6Go)]
 
 22 March, 2022, [Developer Observability Masterclass](https://go.lightrun.com/developer-observability-masterclass) by Lightrun, Thoughtworks, and RedMonk.
 
