@@ -29,7 +29,7 @@ September, 2016 [Software Engineering Radio](https://www.se-radio.net/2016/09/se
 
 29-30 September, 2022, [DevOpsDays London 2022](https://devopsdays.org/events/2022-london/program) in London [[slides](https://bit.ly/3E7WGha)]
 
-24 September, 2022, [Software Architecture fwdays'22 conference](https://fwdays.com/en/event/architecture-fwdays-2022) online (Ukraine)
+24 September, 2022, [Software Architecture fwdays'22 conference](https://fwdays.com/en/event/architecture-fwdays-2022) online (Ukraine) [[Video](https://www.youtube.com/watch?v=zfovhjyhtXA)]
 
 3 August, 2022, [Ambev Tech & Cheers](https://www.ambevtechandcheers.com.br/capa) in São Paulo, Brazil, by Ambev Tech
 
