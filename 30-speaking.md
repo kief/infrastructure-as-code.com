@@ -12,20 +12,9 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 TBD
 
 
-## Podcasts
-
-14 July 2022, [Thoughtworks Technology Podcast](https://www.thoughtworks.com/en-gb/insights/podcasts/technology-podcasts/sensible-defaults), Starting out with sensible default practices, with Birgitta Böckeler, hosted by Mike Mason and Neal Ford
-
-25 February, 2021, [Thoughtworks Technology Podcast](https://www.thoughtworks.com/en-gb/insights/podcasts/technology-podcasts/infrastructure-as-code), Exploring infrastructure as code, with Rebecca Parsons and Neal Ford
-
-September, 2020 [Tech Lead Journal](https://techleadjournal.dev/episodes/5/) hosted by Henry Suryawirawan
-
-August, 2020 [Pragmatism in Practice](https://www.thoughtworks.com/podcasts/building-business-resilience-in-the-cloud-era)
-
-September, 2016 [Software Engineering Radio](https://www.se-radio.net/2016/09/se-radio-episode-268-kief-morris-on-infrastructure-as-code/)
-
-
 ## Previous talks
+
+21 September, 2023, [XConf Europe 2023](https://www.thoughtworks.com/en-gb/about-us/events/xconf/2023/europe) in Amsterdam [[slides](https://www.slideshare.net/KiefMorris/taming-cloud-sprawl-xconf-europe-2023-kiefpdf)] [[video](https://www.youtube.com/watch?v=NjE3CopsjtI)]
 
 29-30 September, 2022, [DevOpsDays London 2022](https://devopsdays.org/events/2022-london/program) in London [[slides](https://bit.ly/3E7WGha)]
 
@@ -41,7 +30,7 @@ September, 2016 [Software Engineering Radio](https://www.se-radio.net/2016/09/se
 
 17 June, 2021 [ThoughtWorks Romania](https://www.thoughtworks.com/careers/romania)
 
-20-21 May, 2021 [XConf TWSEA](https://thght.works/3uce2kQ) with [Ankit Wal](https://www.ankitwal.com/), we'll be talking about how to compose complex infrastructure using stacks as components.
+20-21 May, 2021 [XConf TWSEA](https://thght.works/3uce2kQ) with [Ankit Wal](https://www.ankitwal.com/)
 
 13 May, 2021 [Webinar in Brightalk](https://www.brighttalk.com/webcast/18640/481398?utm_source=ThoughtWorks&utm_medium=brighttalk&utm_campaign=481398), a conversation with [Angela Bishop](https://www.thoughtworks.com/profiles/angela-bishop) about how organizations have used cloud in dealing with the business shifts over the past year.
 
@@ -144,4 +133,17 @@ July 11, 2017 [XConf Hamburg](https://info.thoughtworks.com/XConf-2017-EU)
 13 April, 2016 [GOTONights Amsterdam](http://www.meetup.com/GOTO-Nights-Amsterdam/events/228863905/) [[Video](https://www.youtube.com/watch?v=Lifb3TovNtY)] in Amsterdam, Netherlands
 
 24-25 September, 2015 [operability.io London](http://operability.io/2015/) [[Video](https://www.youtube.com/watch?v=a4PuAkI7uGg)] in London, UK
+
+
+## Podcasts
+
+14 July 2022, [Thoughtworks Technology Podcast](https://www.thoughtworks.com/en-gb/insights/podcasts/technology-podcasts/sensible-defaults), Starting out with sensible default practices, with Birgitta Böckeler, hosted by Mike Mason and Neal Ford
+
+25 February, 2021, [Thoughtworks Technology Podcast](https://www.thoughtworks.com/en-gb/insights/podcasts/technology-podcasts/infrastructure-as-code), Exploring infrastructure as code, with Rebecca Parsons and Neal Ford
+
+September, 2020 [Tech Lead Journal](https://techleadjournal.dev/episodes/5/) hosted by Henry Suryawirawan
+
+August, 2020 [Pragmatism in Practice](https://www.thoughtworks.com/podcasts/building-business-resilience-in-the-cloud-era)
+
+September, 2016 [Software Engineering Radio](https://www.se-radio.net/2016/09/se-radio-episode-268-kief-morris-on-infrastructure-as-code/)
 
