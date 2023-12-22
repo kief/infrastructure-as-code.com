@@ -27,7 +27,7 @@ The third edition of the O'Reilly book Infrastructure as Code is underway, with 
 </p>
 
 <p>
-  With the third edition, the shift to using infrastructure code to provide application runtimes based on containers and serverless over configuring server images is much farther along. More people are interested in coding infrastructure using procedural languages, as enabled by CDK and Pulmi, and there is curiosity about shifting to integrating application and infrastructure code.
+  With the third edition, the shift to using infrastructure code to provide application runtimes based on containers and serverless over configuring server images is much farther along. More people are interested in coding infrastructure using procedural languages, as enabled by CDK and Pulumi, and there is curiosity about shifting to integrating application and infrastructure code.
 </p>
 
 <p>
