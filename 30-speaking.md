@@ -12,6 +12,8 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 31 January, 2024, [O'Reilly Infrastructure & Ops Superstream: Platform Automation and Infrastructure as Code](https://www.oreilly.com/live-events/infrastructure-ops-superstream-platform-automation-and-infrastructure-as-code/0790145047216/0790145047208/), Online
 
+5 Feb, 2024, [Config Management Camp 2024](https://cfp.cfgmgmtcamp.org/2024/talk/9YRHZ9/), Ghent, Belgium
+
 21 Feb, 2024 [DeveloperWeek Onsite](https://www.developerweek.com/), Oakland, California, USA
 
 27 Feb, 2024 [DeveloperWeek Online](https://www.developerweek.com/), Online
