@@ -10,11 +10,7 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 ## Upcoming talks
 
 
-31 January, 2024, [O'Reilly Infrastructure & Ops Superstream: Platform Automation and Infrastructure as Code](https://www.oreilly.com/live-events/infrastructure-ops-superstream-platform-automation-and-infrastructure-as-code/0790145047216/0790145047208/), Online
-
-5 Feb, 2024, [Config Management Camp 2024](https://cfp.cfgmgmtcamp.org/2024/talk/9YRHZ9/), Ghent, Belgium
-
-21 Feb, 2024 [DeveloperWeek Onsite](https://www.developerweek.com/), Oakland, California, USA
+21 Feb, 2024 [DeveloperWeek Onsite](https://sched.co/1VpA9), Oakland, California, USA
 
 27 Feb, 2024 [DeveloperWeek Online](https://www.developerweek.com/), Online
 
@@ -22,6 +18,8 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 
 
 ## Previous talks
+
+5 Feb, 2024, [Config Management Camp 2024](https://cfp.cfgmgmtcamp.org/2024/talk/9YRHZ9/), Ghent, Belgium, [[video](https://www.youtube.com/watch?v=7-y_Cp73VAs)]
 
 21 September, 2023, [XConf Europe 2023](https://www.thoughtworks.com/en-gb/about-us/events/xconf/2023/europe) in Amsterdam [[slides](https://www.slideshare.net/KiefMorris/taming-cloud-sprawl-xconf-europe-2023-kiefpdf)] [[video](https://www.youtube.com/watch?v=NjE3CopsjtI)]
 
