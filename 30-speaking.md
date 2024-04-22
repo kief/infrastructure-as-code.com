@@ -10,14 +10,18 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 ## Upcoming talks
 
 
-21 Feb, 2024 [DeveloperWeek Onsite](https://sched.co/1VpA9), Oakland, California, USA
+18 May, 2024, [DevOpsDays São Paulo](https://devopsdays.org/events/2024-sao-paulo/welcome/), São Paulo, Brazil
 
-27 Feb, 2024 [DeveloperWeek Online](https://www.developerweek.com/), Online
+12 June, 2024, [PlatformCon 2024](https://platformcon.com/), Virtual
 
 4 July, 2024 [Agile on the Beach](https://agileonthebeach.com/), Cornwall, UK
 
 
 ## Previous talks
+
+27 Feb, 2024 [DeveloperWeek Online](https://www.developerweek.com/), Online
+
+21 Feb, 2024 [DeveloperWeek Onsite](https://sched.co/1VpA9), Oakland, California, USA
 
 5 Feb, 2024, [Config Management Camp 2024](https://cfp.cfgmgmtcamp.org/2024/talk/9YRHZ9/), Ghent, Belgium, [[video](https://www.youtube.com/watch?v=7-y_Cp73VAs)]
 
