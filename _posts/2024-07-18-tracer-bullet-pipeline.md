@@ -13,7 +13,7 @@ On my current project we're developing an essentially green field application, a
 
 In order to get the team moving quickly, we've kicked this all off using what we've called a "tracer bullet" (or "trail marker", for a less violent image). The idea is to get the simplest implementation of a pipeline in place, priortizing a fully working skeleton that stretches across the full path to production over a fully featured, final-design functionality for each stage of the pipeline.
 
-![People hiking in the woods, with an orange blaze visible on a tree in the foreground](images/trail_marker.jpg)
+![People hiking in the woods, with an orange blaze visible on a tree in the foreground](/images/trail_marker.jpg)
 
 Our goal is to get a "Hello World" application using our initial technology stack into a source code repository, and be able to push changes to it through the core stages of a pipeline into a placeholder production environment. This sets the stage for the design and implementation of the pipeline, infrastructure, and application itself to evolve in conjunction.
 
