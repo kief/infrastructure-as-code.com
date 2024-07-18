@@ -6,8 +6,6 @@ categories: book
 published: true
 ---
 
-[Example Link](https://infrastructure-as-code.com)
-
 (Originally posted 26 November, 2012)
 
 
