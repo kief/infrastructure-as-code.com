@@ -9,3 +9,5 @@ published: false
 ---
 
 [Example Link](https://infrastructure-as-code.com)
+
+![Image Alt Text](/images/image.png)

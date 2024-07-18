@@ -10,14 +10,16 @@ These are the talks Kief currently has scheduled, as well as links to previous t
 ## Upcoming talks
 
 
-18 May, 2024, [DevOpsDays São Paulo](https://devopsdays.org/events/2024-sao-paulo/welcome/), São Paulo, Brazil
-
-12 June, 2024, [PlatformCon 2024](https://platformcon.com/), Virtual
-
-4 July, 2024 [Agile on the Beach](https://agileonthebeach.com/), Cornwall, UK
+Stay tuned!
 
 
 ## Previous talks
+
+4 July, 2024 [Agile on the Beach](https://agileonthebeach.com/), Cornwall, UK
+
+12 June, 2024, [PlatformCon 2024](https://platformcon.com/), Online
+
+18 May, 2024, [DevOpsDays São Paulo](https://devopsdays.org/events/2024-sao-paulo/welcome/), São Paulo, Brazil
 
 27 Feb, 2024 [DeveloperWeek Online](https://www.developerweek.com/), Online
 
